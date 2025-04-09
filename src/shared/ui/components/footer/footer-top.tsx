@@ -35,10 +35,10 @@ const navigation = [
   {
     title: 'Legal',
     list: [
-      { label: 'Terms and Conditions', link: '/terms-and-conditions' },
-      { label: 'Privacy Policy', link: '/privacy-policy' },
-      { label: 'Cookie Policy', link: '/cookie-policy' },
-      { label: 'Refund Policy', link: '/refund-policy' },
+      { label: 'Terms and Conditions', link: '/legal/terms-and-conditions' },
+      { label: 'Privacy Policy', link: '/legal/privacy-policy' },
+      { label: 'Cookie Policy', link: '/legal/cookie-policy' },
+      { label: 'Refund Policy', link: '/legal/refund-policy' },
     ],
   },
 ];
