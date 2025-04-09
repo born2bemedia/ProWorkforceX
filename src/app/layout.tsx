@@ -1,19 +1,20 @@
-import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import type { Metadata } from 'next';
+import { Outfit } from 'next/font/google';
 
-import Footer from "@/shared/ui/components/footer/footer";
-import Header from "@/shared/ui/components/header/header";
+import { Footer } from '@/shared/ui/components/footer';
+import { Header } from '@/shared/ui/components/header';
 
-import "./globals.css";
+import './globals.css';
+import './reset.css';
 
 const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
+  variable: '--font-outfit',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "ProWorkforceX",
-  description: "ProWorkforceX",
+  title: 'ProWorkforceX',
+  description: 'ProWorkforceX',
 };
 
 export default function RootLayout({
@@ -23,9 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable}`}>
+      <body className={outfit.variable}>
         <Header />
-        <main>{children}</main>
+        <main className="main-layout">{children}</main>
         <Footer />
       </body>
     </html>

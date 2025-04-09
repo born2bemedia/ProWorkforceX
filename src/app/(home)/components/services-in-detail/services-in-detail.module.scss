@@ -1,0 +1,91 @@
+.layout {
+  margin: 220px 60px 0 60px;
+}
+
+.titleLayout {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./04.png') no-repeat left top;
+    z-index: -1;
+  }
+}
+
+.text {
+  width: 424px;
+}
+
+.grid {
+  margin-top: 32px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+
+  @media (max-width: 1430px) {
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.card {
+  border-radius: 24px;
+  padding: 28px;
+  height: 365px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.greyCard {
+  border: 1px solid var(--gray-200);
+  background: var(--gray-100);
+}
+
+.secondaryCard {
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: var(--secondary);
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./rectangles.svg') no-repeat right top;
+    z-index: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titleLayout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .layout {
+    margin: 40px 16px 0 16px;
+  }
+
+  .text {
+    width: 100%;
+  }
+}

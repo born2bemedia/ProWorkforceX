@@ -1,6 +1,13 @@
-"use client";
-import st from "./footer.module.scss";
+'use client';
 
-export default function Footer() {
-  return <footer className={st.footer}>Footer</footer>;
+import { FooterBottom } from './footer-bottom';
+import { FooterTop } from './footer-top';
+
+export function Footer() {
+  return (
+    <footer>
+      <FooterTop />
+      <FooterBottom />
+    </footer>
+  );
 }

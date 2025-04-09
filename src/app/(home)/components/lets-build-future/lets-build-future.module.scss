@@ -1,0 +1,42 @@
+.layout {
+  margin: 140px 60px 100px 60px;
+  border-radius: 22px;
+  background: #DFF56B;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.text {
+  margin-bottom: 44px;
+  margin-top: 18px;
+}
+
+.content {
+  padding: 63px 50px;
+  width: 50%;
+}
+
+.navBtn {
+  margin-top: 42px;
+}
+
+.imgLayout {
+  width: 551px !important;
+  opacity: 0.2;
+  left: auto !important;
+  right: -60px !important;
+}
+
+
+@media (max-width: 768px) {
+  .layout {
+    margin: 40px 0;
+  }
+
+  .content {
+    width: 100%;
+    padding: 63px 15px;
+  }
+}
