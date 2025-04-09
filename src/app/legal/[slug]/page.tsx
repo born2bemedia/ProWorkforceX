@@ -11,17 +11,16 @@ type PageParams = {
 
 export async function generateStaticParams(): Promise<PageParams[]> {
   const slugs = await getPageSlugs();
-
   return slugs.map(slug => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: PageParams;
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const awaitedParams = await params;
-  const slug = awaitedParams.slug;
+  const { slug } = awaitedParams;
   const page = await getPage(slug);
   const pageTitle = `${page.title} | ProWorkforceX`;
   return {
@@ -33,13 +32,13 @@ export async function generateMetadata({
   };
 }
 
-type Props = {
-  params: PageParams;
-};
-
-export default async function PolicyPage(props: Props) {
-  const awaitedParams = await props.params;
-  const slug = awaitedParams.slug;
+export default async function PolicyPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const awaitedParams = await params;
+  const { slug } = awaitedParams;
   const page = await getPage(slug);
   return (
     <>
