@@ -52,14 +52,10 @@ export function FooterTop() {
         </Link>
         <address className={st.addressLayout}>
           <Text color="primary" weight={300}>
-            Office address: Galvaniho 7/D, 821 04 Bratislava, Slovakia
+            Registered addresses: 2nd Floor College House, 17 King Edwards Road, Ruislip, London, United Kingdom, HA4 7AE
           </Text>
           <Text color="primary" weight={300}>
-            Registered address: Biskupa Kondého Street 5138/30, 929 01 Dunajská
-            Streda, Slovakia
-          </Text>
-          <Text color="primary" weight={300}>
-            Registered number: 53623878
+            Registered number: 16342190
           </Text>
         </address>
       </section>

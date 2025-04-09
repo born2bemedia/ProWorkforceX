@@ -19,8 +19,8 @@ export function FooterBottom() {
           <Link href="tel:+421221011939">
             <Text color="white">+421221011939</Text>
           </Link>
-          <Link href="mailto:proworkerforce@email.com">
-            <Text color="white">proworkerforce@email.com</Text>
+          <Link href="mailto:info@proworkforcex.com">
+            <Text color="white">info@proworkforcex.com</Text>
           </Link>
         </div>
         <SocialNetworks />
