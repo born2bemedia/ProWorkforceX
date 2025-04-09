@@ -1,22 +1,25 @@
 import React from 'react';
+import type { Metadata } from 'next';
 
 import { getPage, getPageSlugs } from '@/features/policy/policy';
 
 import st from './page.module.scss';
 
-type Props = {
-  params: {
-    slug: string;
-  };
+type PageParams = {
+  slug: string;
 };
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<PageParams[]> {
   const slugs = await getPageSlugs();
 
   return slugs.map(slug => ({ slug }));
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({
+  params,
+}: {
+  params: PageParams;
+}): Promise<Metadata> {
   const slug = params.slug;
   const page = await getPage(slug);
   const pageTitle = `${page.title} | ProWorkforceX`;
@@ -29,7 +32,7 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function PolicyPage({ params }: Props) {
+export default async function PolicyPage({ params }: { params: PageParams }) {
   const slug = params.slug;
   const page = await getPage(slug);
   return (
