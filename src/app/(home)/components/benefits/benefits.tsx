@@ -1,0 +1,74 @@
+'use client';
+
+import type { JSX } from 'react';
+import Link from 'next/link';
+
+import { CaseIcon, ChartIcon, HandshakeIcon } from '@/shared/ui/icons/green';
+import { ArrowTopRight } from '@/shared/ui/icons/yellow';
+import { Button } from '@/shared/ui/kit/button';
+import { Chip } from '@/shared/ui/kit/chip';
+import { Text } from '@/shared/ui/kit/text';
+import { Title } from '@/shared/ui/kit/title';
+
+import st from './benefits.module.scss';
+
+const benefits = [
+  {
+    icon: <HandshakeIcon />,
+    tag: 'Support',
+    title: 'Customized Support for Your Personal Goals',
+    desc: 'We customize every service to fit your career aspirations, ensuring the best possible outcome.',
+  },
+  {
+    icon: <CaseIcon />,
+    tag: 'Growth',
+    title: 'Expert HR Guidance Every Step of the Way',
+    desc: 'Our experienced HR professionals provide ongoing support to help you succeed, from job coaching to career development.',
+  },
+  {
+    icon: <ChartIcon />,
+    tag: 'Impact',
+    title: 'Proven Track Record of Success',
+    desc: 'Thanks to our strategic HR services, our clients consistently report positive career transitions and growth.',
+  },
+];
+
+export function Benefits() {
+  return (
+    <section className={st.layout}>
+      <section className={st.cards}>
+        {benefits.map(benefit => (
+          <Card key={benefit.tag} {...benefit} />
+        ))}
+      </section>
+      <Link href="/contact-us" className={st.contactLink}>
+        <Button variant="primaryInverted" size="md">
+          Contact Us <ArrowTopRight />
+        </Button>
+      </Link>
+    </section>
+  );
+}
+
+function Card({
+  tag,
+  desc,
+  icon,
+  title,
+}: {
+  icon: JSX.Element;
+  tag: string;
+  title: string;
+  desc: string;
+}) {
+  return (
+    <article className={st.card}>
+      {icon}
+      <section className={st.cardText}>
+        <Chip>{tag}</Chip>
+        <Title level={3}>{title}</Title>
+        <Text>{desc}</Text>
+      </section>
+    </article>
+  );
+}

@@ -1,0 +1,16 @@
+.chip {
+  border-radius: 100px;
+  background: rgba(9, 50, 36, 0.40);
+  backdrop-filter: blur(7px);
+  color: var(--secondary);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 16px;
+  max-width: max-content;
+  text-transform: uppercase;
+}
