@@ -20,7 +20,8 @@ export async function generateMetadata({
 }: {
   params: PageParams;
 }): Promise<Metadata> {
-  const slug = params.slug;
+  const awaitedParams = await params;
+  const slug = awaitedParams.slug;
   const page = await getPage(slug);
   const pageTitle = `${page.title} | ProWorkforceX`;
   return {
@@ -32,8 +33,13 @@ export async function generateMetadata({
   };
 }
 
-export default async function PolicyPage({ params }: { params: PageParams }) {
-  const slug = params.slug;
+type Props = {
+  params: PageParams;
+};
+
+export default async function PolicyPage(props: Props) {
+  const awaitedParams = await props.params;
+  const slug = awaitedParams.slug;
   const page = await getPage(slug);
   return (
     <>
