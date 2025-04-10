@@ -9,17 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
+    "@radix-ui/react-checkbox": "^1.1.5",
     "@radix-ui/react-dialog": "^1.1.6",
+    "@radix-ui/react-dropdown-menu": "^2.1.7",
     "classnames": "^2.5.1",
     "framer-motion": "^12.6.3",
+    "google-libphonenumber": "^3.2.40",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sass": "^1.86.3"
+    "react-dropzone": "^14.3.8",
+    "react-hook-form": "^7.55.0",
+    "react-international-phone": "^4.5.0",
+    "googleapis": "^148.0.0",
+    "sass": "^1.86.3",
+    "zod": "^3.24.2",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
+    "@types/google-libphonenumber": "^7.4.30",
+    "@types/node": "^20.17.30",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

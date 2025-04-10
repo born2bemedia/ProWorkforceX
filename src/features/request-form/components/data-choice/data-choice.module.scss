@@ -1,0 +1,21 @@
+.choice {
+  border-radius: 24px;
+  background: #DFF56B;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+}
+
+.separator {
+  height: 20px;
+  background: var(--black);
+  width: 1px;
+}
+
+.cancelIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

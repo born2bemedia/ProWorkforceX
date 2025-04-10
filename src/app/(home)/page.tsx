@@ -1,3 +1,5 @@
+import { RequestDialog, RequestForm } from '@/features/request-form/components';
+
 import {
   Benefits,
   CareerJourney,
@@ -9,6 +11,7 @@ import {
   Solution,
   WhyChoose,
 } from './components';
+import st from './page.module.css';
 
 export default function Home() {
   return (
@@ -22,6 +25,9 @@ export default function Home() {
       <PackagesAndPricing />
       <CareerJourney />
       <LetsBuildFuture />
+      <RequestDialog>
+        <RequestForm className={st.layout} />
+      </RequestDialog>
     </>
   );
 }

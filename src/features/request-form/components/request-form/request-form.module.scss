@@ -1,0 +1,51 @@
+.titleLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.formSection {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hrData {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.placeholder {
+  color: #676767;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-size: 16px;
+}
+
+.titleLabel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.detailsLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dropdzone {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.submitBtn {
+  margin-top: 24px;
+}

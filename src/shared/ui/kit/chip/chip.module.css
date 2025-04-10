@@ -1,8 +1,5 @@
 .chip {
   border-radius: 100px;
-  background: rgba(9, 50, 36, 0.40);
-  backdrop-filter: blur(7px);
-  color: var(--secondary);
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -13,4 +10,16 @@
   padding: 6px 16px;
   max-width: max-content;
   text-transform: uppercase;
+}
+
+.primary {
+  background: rgba(9, 50, 36, 0.40);
+  backdrop-filter: blur(7px);
+  color: var(--secondary);
+}
+
+.secondary {
+  background: rgba(223, 245, 107, 0.50);
+  backdrop-filter: blur(2px);
+  color: var(--primary)
 }
