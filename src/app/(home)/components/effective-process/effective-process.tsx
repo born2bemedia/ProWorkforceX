@@ -1,3 +1,7 @@
+'use client';
+
+import { useRequestDialogStore } from '@/features/request-form/services';
+
 import { Line } from '@/shared/ui/icons/outline/line';
 import { LineMob } from '@/shared/ui/icons/outline/line-mob';
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
@@ -8,6 +12,8 @@ import { Title } from '@/shared/ui/kit/title';
 import st from './effective-process.module.scss';
 
 export function EffectiveProcess() {
+  const { setOpen } = useRequestDialogStore();
+
   return (
     <>
       <div className={st.layout}>
@@ -87,7 +93,11 @@ export function EffectiveProcess() {
         </section>
       </div>
       <section className={st.btn}>
-        <Button size="md" variant="primaryInverted">
+        <Button
+          size="md"
+          variant="primaryInverted"
+          onClick={() => setOpen(true)}
+        >
           Request More Information <ArrowTopRight />
         </Button>
       </section>
