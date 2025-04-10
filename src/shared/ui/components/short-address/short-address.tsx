@@ -12,8 +12,8 @@ export function ShortAddress() {
       <Link href="tel:+00 000 000 00">
         <Text color="gray600">+00 000 000 00</Text>
       </Link>
-      <Link href="mailto:proworkerforce@email.com">
-        <Text color="gray600">proworkerforce@email.com</Text>
+      <Link href="mailto:info@proworkforcex.com">
+        <Text color="gray600">info@proworkforcex.com</Text>
       </Link>
     </address>
   );
