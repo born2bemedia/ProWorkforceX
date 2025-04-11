@@ -1,15 +1,20 @@
 :root {
   --primary: #093224;
-  --secondary: #DFF56B;
+  --secondary: #dff56b;
 
   --white: #ffffff;
-  --white-10: #FCFCFA;
+  --white-10: #fcfcfa;
 
-  --gray-100: #F6F6F4;
-  --gray-200: #E6E6E4;
-  --gray-600: #8E8E89;
+  --gray-100: #f6f6f4;
+  --gray-200: #e6e6e4;
+  --gray-600: #8e8e89;
 
-  --black: #1F2420;
+  --black: #1f2420;
+}
+
+html body[data-scroll-locked] {
+  --removed-body-scroll-bar-size: 0 !important;
+  margin-right: 0 !important;
 }
 
 html,
@@ -26,6 +31,7 @@ body {
   font-family: var(--font-outfit), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  top: 0 !important;
 }
 
 * {
@@ -36,4 +42,8 @@ body {
 
 .main-layout {
   flex: 1;
+}
+
+.skiptranslate {
+  display: none !important;
 }

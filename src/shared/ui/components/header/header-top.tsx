@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 
+import { LangSwitcher } from '@/features/lang-switcher/components';
+
 import { ShortAddress } from '@/shared/ui/components/short-address';
 import { SocialNetworks } from '@/shared/ui/components/social-networks';
 import { Text } from '@/shared/ui/kit/text';
@@ -17,7 +19,10 @@ export function HeaderTop() {
             <Text size="2xl">ProWorkforceX</Text>
           </Link>
           <ShortAddress />
-          <SocialNetworks />
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <LangSwitcher />
+            <SocialNetworks />
+          </div>
         </div>
       </section>
     </>
