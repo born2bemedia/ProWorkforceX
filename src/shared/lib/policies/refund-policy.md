@@ -42,7 +42,7 @@ If you have any questions or need further clarification regarding our Refund Pol
 <img src="/images/policy/email.svg"> <span>Via email at <a href="mailto:info@proworkforcex.com">info@proworkforcex.com</a>;</span></div>
 
 <div class="contact-info">
-<img src="/images/policy/phone.svg"> <span>Via phone number PHONE NUMBER;</span>
+<img src="/images/policy/phone.svg"> <span>Via phone number <a href="tel:+447878591056">+447878591056</a></span>
 </div>
 
 <div class="contact-info">

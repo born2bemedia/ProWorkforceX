@@ -52,7 +52,12 @@ export function FooterTop() {
         </Link>
         <address className={st.addressLayout}>
           <Text color="primary" weight={300}>
-            Registered addresses: 2nd Floor College House, 17 King Edwards Road, Ruislip, London, United Kingdom, HA4 7AE
+            Office address: 9 Albert Embankment (Unit C), Lambeth, London,
+            United Kingdom, SE1 7HD
+          </Text>
+          <Text color="primary" weight={300}>
+            Registered addresses: 2nd Floor College House, 17 King Edwards Road,
+            Ruislip, London, United Kingdom, HA4 7AE
           </Text>
           <Text color="primary" weight={300}>
             Registered number: 16342190
