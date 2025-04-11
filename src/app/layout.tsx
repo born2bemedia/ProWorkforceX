@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 
+import {
+  RequestDialog,
+  RequestForm,
+  RequestScrollContainer,
+} from '@/features/request-form/components';
+
 import { Footer } from '@/shared/ui/components/footer';
 import { Header } from '@/shared/ui/components/header';
 
@@ -28,6 +34,11 @@ export default function RootLayout({
         <Header />
         <main className="main-layout">{children}</main>
         <Footer />
+        <RequestDialog>
+          <RequestScrollContainer>
+            <RequestForm />
+          </RequestScrollContainer>
+        </RequestDialog>
       </body>
     </html>
   );

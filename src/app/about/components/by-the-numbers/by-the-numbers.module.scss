@@ -1,0 +1,58 @@
+.layout {
+  margin: 120px 60px 0 60px;
+
+  @media (max-width: 768px) {
+    margin: 120px 15px 0 15px;
+  }
+}
+
+.cards {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardLayout {
+  width: 100%;
+  border-radius: 24px;
+  background: #DFF56B;
+  padding: 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./grid.png') no-repeat center center;
+    z-index: 0;
+  }
+}
+
+.row {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.img {
+  object-fit: contain;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
