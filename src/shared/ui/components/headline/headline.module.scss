@@ -1,0 +1,107 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleEl {
+  width: 60%;
+  position: relative;
+}
+
+.num1 {
+  &:before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./01.png') no-repeat left top;
+    z-index: -1;
+  }
+}
+
+.num2 {
+  &:before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./02.png') no-repeat left top;
+    z-index: -1;
+  }
+}
+
+.num3 {
+  &:before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./03.png') no-repeat left top;
+    z-index: -1;
+  }
+}
+
+.num4 {
+  &:before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./04.png') no-repeat left top;
+    z-index: -1;
+  }
+}
+
+.num5 {
+  &:before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./05.png') no-repeat left top;
+    z-index: -1;
+  }
+}
+
+.textEl {
+  width: 30%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.alignLeft {
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    margin: 100px 15px 0 15px;
+  }
+
+  .title {
+    flex-direction: column;
+  }
+
+  .textEl {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .titleEl {
+    width: 100%;
+
+    &:before {
+      top: -40px;
+    }
+  }
+}
