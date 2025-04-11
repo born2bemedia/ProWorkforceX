@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
+import Script from 'next/script';
 
 import {
   RequestDialog,
@@ -30,6 +31,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Marketifire</title>
+        <Script src="/scripts/translation.js" strategy="beforeInteractive" />
+        {process.env.GOOGLE_TRANSLATION_CONFIG && (
+          <Script
+            src="//translate.google.com/translate_a/element.js?cb=TranslateInit"
+            strategy="afterInteractive"
+          />
+        )}
+      </head>
       <body className={outfit.variable}>
         <Header />
         <main className="main-layout">{children}</main>
