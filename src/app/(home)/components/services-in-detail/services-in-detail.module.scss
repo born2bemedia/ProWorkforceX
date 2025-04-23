@@ -28,12 +28,8 @@
   margin-top: 32px;
   display: grid;
   grid-auto-flow: column;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 24px;
-
-  @media (max-width: 1430px) {
-    grid-template-rows: repeat(3, 1fr);
-  }
 }
 
 .card {

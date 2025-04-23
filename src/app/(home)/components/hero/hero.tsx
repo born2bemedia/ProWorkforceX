@@ -24,11 +24,13 @@ export function Hero() {
       <section className={st.topBottom}>
         <div className={st.title}>
           <Title color="white">
-            Empowering Your Career, Streamlining Your HR Needs
+            Empowering Your Workforce, Streamlining HR for Your Business
           </Title>
           <Text color="white" size="xl">
-            ProWorkforceX offers personalized Human Resources services tailored
-            to help individuals thrive in their careers and personal HR needs.
+            At ProWorkforceX, we specialize in providing businesses with
+            tailored HR solutions to help them attract, manage, and retain top
+            talent. Whether you need assistance with recruitment, HR management,
+            employee benefits, or workplace mediation, we’ve got you covered.
           </Text>
         </div>
         <Chip className={st.chip}>
