@@ -77,10 +77,11 @@ export function RequestForm({ className }: { className?: string }) {
           Begin Your Journey <br /> with ProWorkforceX
         </Title>
         <Chip variant="secondary">Let’s Shape Your Path to Career Growth</Chip>
-        <Text color="primary" size="lg" weight={300}>
-          Share your career objectives, obstacles, and aspirations, and we’ll
-          design a custom plan to help you succeed. Complete the form below, and
-          let’s take the next step toward achieving your career ambitions.
+        <Text color="primary" size="lg" weight={400}>
+          Tell us about your career goals, challenges, and aspirations, and
+          we’ll create a personalized plan to help you succeed. Fill out the
+          form below, and let’s take the first step toward achieving your career
+          ambitions.
         </Text>
       </section>
       <section className={st.formSection}>

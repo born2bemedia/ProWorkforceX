@@ -26,10 +26,13 @@ export function ContactUs() {
         <div className={st.contactTitle}>
           <Title level={2}>Contact Us</Title>
           <Text size="lg" color="primary">
-            We’re here to help you take the next step in your career. Our team
-            can assist you if you have questions about our services or are ready
-            to start. Reach out today and work together to achieve your career
-            goals.
+            We’re here to help you take the next step in optimizing your
+            business’s workforce. Whether you have questions about our services
+            or are ready to start, ProWorkforceX is here to help you achieve
+            your HR goals. <br />
+            <br />
+            Please complete the form below to request a consultation, and our
+            team will contact you shortly.
           </Text>
         </div>
         <Button

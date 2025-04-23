@@ -25,11 +25,12 @@ export function Hero() {
         <div className={st.title}>
           <Title color="white">Crafting the Future of Your Career</Title>
           <Text color="white" size="xl">
-            At ProWorkforceX, we specialize in providing personalized human
-            resources services to help individuals thrive in their careers.
-            Whether navigating the complexities of your current role, seeking
-            career advancement, or facing workplace challenges, we’re here to
-            provide the support and guidance you need to achieve your goals.
+            At ProWorkforceX, we specialize in providing businesses with
+            personalized human resources services designed to optimize workforce
+            management. Whether you need support with talent acquisition,
+            employee benefits, workplace conflict resolution, or leadership
+            development, we’re here to help you build and maintain a
+            high-performing workforce.
           </Text>
         </div>
         <Chip className={st.chip}>

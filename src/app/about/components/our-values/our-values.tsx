@@ -14,19 +14,19 @@ const values = [
   {
     icon: <HelpIcon />,
     title: 'Personalized HR Support',
-    desc: 'Every individual’s career and workplace needs differ, and we tailor our services to help you achieve your aspirations.',
+    desc: 'We understand that each business is different, and we tailor our services to meet the unique workforce needs of your company.',
     imgUrl: '/images/about-us/values/1.jpeg',
   },
   {
     icon: <RoadIcon />,
     title: 'Transparency and Flexibility',
-    desc: 'If you need one-time guidance or ongoing support, we believe in flexible pricing and service options that fit your unique situation.',
+    desc: 'Whether you require one-time guidance or ongoing support, we offer flexible pricing and service options to suit your business’s evolving HR needs.',
     imgUrl: '/images/about-us/values/2.jpeg',
   },
   {
     icon: <CapaIcon />,
     title: 'Continuous Development',
-    desc: 'Thanks to our strategic HR services, our clients consistently report positive career transitions and growth.',
+    desc: 'Our clients consistently report positive changes in their workforce management, from smoother recruitment to improved employee satisfaction.',
     imgUrl: '/images/about-us/values/3.jpeg',
   },
 ];
@@ -36,7 +36,12 @@ export function OurValues() {
     <section className={st.layout}>
       <Headline
         title="Our Values"
-        description="Our crew is committed to:"
+        description={
+          <>
+            Our team is committed to helping businesses succeed through a <br />
+            customized and strategic approach to HR. Here’s what drives us:
+          </>
+        }
         number={1}
         alignLeft
       />
