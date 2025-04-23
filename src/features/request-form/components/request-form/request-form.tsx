@@ -77,10 +77,11 @@ export function RequestForm({ className }: { className?: string }) {
           Begin Your Journey <br /> with ProWorkforceX
         </Title>
         <Chip variant="secondary">Let’s Shape Your Path to Career Growth</Chip>
-        <Text color="primary" size="lg" weight={300}>
-          Share your career objectives, obstacles, and aspirations, and we’ll
-          design a custom plan to help you succeed. Complete the form below, and
-          let’s take the next step toward achieving your career ambitions.
+        <Text color="primary" size="lg" weight={400}>
+          Tell us about your career goals, challenges, and aspirations, and
+          we’ll create a personalized plan to help you succeed. Fill out the
+          form below, and let’s take the first step toward achieving your career
+          ambitions.
         </Text>
       </section>
       <section className={st.formSection}>
@@ -132,11 +133,12 @@ export function RequestForm({ className }: { className?: string }) {
           name="companyName"
           control={control}
           render={({ field, fieldState: { error } }) => (
-            <TextField
+            <TextArea
               label="Company Name (optional)"
-              placeholder="If HR support is related to your role in a company"
+              placeholder="Required if your company seeks HR support for managing your workforce or business operations."
               intent={error?.message ? 'danger' : 'primary'}
               hint={error?.message}
+              height={72}
               {...field}
             />
           )}
@@ -145,11 +147,12 @@ export function RequestForm({ className }: { className?: string }) {
           name="website"
           control={control}
           render={({ field, fieldState: { error } }) => (
-            <TextField
+            <TextArea
               label="Your Website (optional)"
-              placeholder="If HR support is related to your business or self-employment"
+              placeholder="Please provide your company's website if you feel it's relevant to understanding your business needs or HR requirements."
               intent={error?.message ? 'danger' : 'primary'}
               hint={error?.message}
+              height={72}
               {...field}
             />
           )}

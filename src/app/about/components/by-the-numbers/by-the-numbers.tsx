@@ -11,29 +11,32 @@ import st from './by-the-numbers.module.scss';
 const stats = [
   {
     title: '85%',
-    desc: 'of clients report a successful career transition within 3 months of using our services.',
+    desc: 'of businesses report a successful workforce transition within 3 months of using our services.',
   },
   {
     imgUrl: '/images/about-us/stats/1.png',
   },
-  { title: '200+', desc: 'resumes polished and optimized for job seekers.' },
+  {
+    title: '200+',
+    desc: 'recruitment processes were completed, with top talent in key roles.',
+  },
   {
     imgUrl: '/images/about-us/stats/2.png',
   },
   {
     title: '90%',
-    desc: 'of clients who used our Workplace Conflict Resolution service reported a positive outcome.',
+    desc: 'of businesses who used our Workplace Conflict Resolution service reported a positive outcome.',
   },
   {
     title: '5,000+',
-    desc: 'hours of career coaching provided to individuals seeking professional growth.',
+    desc: 'hours of HR consulting provided to businesses across multiple industries.',
   },
   {
     imgUrl: '/images/about-us/stats/3.png',
   },
   {
     title: '1,000+',
-    desc: 'employees have benefited from our Employee Benefits Optimization program, saving an average of €1,800 annually.',
+    desc: 'employees have benefited from our Employee Benefits Optimization program, saving an average of €1,800 annually per employee.',
   },
 ];
 

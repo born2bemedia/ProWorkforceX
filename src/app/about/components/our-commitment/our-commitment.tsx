@@ -12,17 +12,17 @@ import st from './our-commitment.module.scss';
 const items = [
   {
     title: 'Continuous Support',
-    desc: 'Our crew of career coaches helps you set clear career goals, enhance your professional skills, and navigate key transitions.',
+    desc: 'Our team works with you at every stage of your business, adapting our services to meet your company’s evolving HR needs.',
     icon: <SupportIcon />,
   },
   {
     title: 'Personalized Guidance',
-    desc: 'Experts in employee benefits management ensure you optimize your entitlements and maximize your options.',
+    desc: 'Whether you’re scaling your workforce, or implementing benefits optimization, we tailor our solutions to help your business grow and succeed.',
     icon: <MindIcon />,
   },
   {
     title: 'Your Success Is Our Success',
-    desc: 'Our workplace mediation specialists help resolve conflicts efficiently, fostering a healthy, productive work environment.',
+    desc: 'We measure our success by the positive outcomes we achieve. We are committed to helping your business maximize its HR potential.',
     icon: <CupIcon />,
   },
 ];
@@ -31,8 +31,14 @@ export function OurCommitment() {
   return (
     <section className={st.layout}>
       <Headline
-        title="Our Commitment to You"
-        description="At ProWorkforceX, we’re not just here to offer advice but to support you throughout your career journey."
+        title="Our Commitment to Your Business"
+        description={
+          <>
+            At ProWorkforceX, we don’t just offer advice — we are <br />
+            committed to supporting your company throughout its <br /> entire HR
+            journey.
+          </>
+        }
         number={5}
       />
       <section className={st.cardsWithImg}>

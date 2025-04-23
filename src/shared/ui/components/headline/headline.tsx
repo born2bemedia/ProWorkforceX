@@ -15,7 +15,7 @@ export function Headline({
   alignLeft = false,
 }: {
   title: ReactNode;
-  description: string;
+  description: ReactNode;
   number: 1 | 2 | 3 | 4 | 5;
   alignLeft?: boolean;
 }) {

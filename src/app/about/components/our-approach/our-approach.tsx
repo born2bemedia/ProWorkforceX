@@ -21,14 +21,14 @@ export function OurApproach() {
       <section className={st.titleLayout}>
         <Title level={2}>Our Approach</Title>
         <Text color="primary" size="lg" className={st.text}>
-          We understand that career development and HR needs are evolving
-          rapidly. We stay ahead of the curve with innovative solutions,
-          including career coaching, resume optimization, workplace conflict
-          resolution, and employee benefits management. <br />
-          <br /> Our expert team consists of seasoned HR professionals
-          passionate about helping you succeed. Whether you’re a job seeker, an
-          employee looking to optimize your benefits, or someone facing
-          workplace challenges, ProWorkforceX guides you every step.
+          We understand that HR needs are constantly evolving. That’s why we
+          stay ahead of the curve with innovative HR solutions, including talent
+          acquisition, employee benefits management, conflict resolution, and
+          leadership development. <br />
+          <br /> Our team of experienced HR professionals is dedicated to
+          helping your business succeed. Whether you’re improving your
+          recruitment processes, navigating workplace issues, or optimizing
+          employee benefits, we’re here to guide you every step of the way.
         </Text>
       </section>
     </section>
