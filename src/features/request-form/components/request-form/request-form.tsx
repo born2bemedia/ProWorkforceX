@@ -133,11 +133,12 @@ export function RequestForm({ className }: { className?: string }) {
           name="companyName"
           control={control}
           render={({ field, fieldState: { error } }) => (
-            <TextField
+            <TextArea
               label="Company Name (optional)"
-              placeholder="If HR support is related to your role in a company"
+              placeholder="Required if your company seeks HR support for managing your workforce or business operations."
               intent={error?.message ? 'danger' : 'primary'}
               hint={error?.message}
+              height={72}
               {...field}
             />
           )}
@@ -146,11 +147,12 @@ export function RequestForm({ className }: { className?: string }) {
           name="website"
           control={control}
           render={({ field, fieldState: { error } }) => (
-            <TextField
+            <TextArea
               label="Your Website (optional)"
-              placeholder="If HR support is related to your business or self-employment"
+              placeholder="Please provide your company's website if you feel it's relevant to understanding your business needs or HR requirements."
               intent={error?.message ? 'danger' : 'primary'}
               hint={error?.message}
+              height={72}
               {...field}
             />
           )}

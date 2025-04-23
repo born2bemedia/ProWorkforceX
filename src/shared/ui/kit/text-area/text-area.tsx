@@ -12,12 +12,14 @@ export function TextArea({
   className,
   label,
   hint,
+  height,
   intent = 'primary',
   ...args
 }: InputHTMLAttributes<HTMLTextAreaElement> & {
   label?: string;
   hint?: string;
   intent?: 'primary' | 'danger';
+  height?: number;
 }) {
   const textareaClasses = cn(
     st.textField,
@@ -40,7 +42,11 @@ export function TextArea({
           </Text>
         )}
       </div>
-      <textarea className={textareaClasses} {...args} />
+      <textarea
+        className={textareaClasses}
+        style={{ height: height ? `${height}px` : '128px' }}
+        {...args}
+      />
     </label>
   );
 }
