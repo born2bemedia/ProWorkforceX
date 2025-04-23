@@ -19,26 +19,26 @@ import st from './career-journey.module.scss';
 const steps = [
   {
     icon: <LineUpIcon />,
-    title: 'Growth?',
-    desc: 'Deep insights into your industry and competitors.',
+    title: 'The Future of Career Development: What’s Next in Employee Growth?',
+    desc: 'From skill-building to remote work opportunities, career development is evolving fast. Find out what’s next and how to stay ahead of the competition.',
     url: '#',
   },
   {
     icon: <TableIcon />,
     title: 'Effective Conflict Resolution in the Workplace',
-    desc: 'Managing conflict is an essential skill for career growth. Discover how to address workplace challenges to maintain a positive, productive environment.',
+    desc: 'Managing conflict is a critical skill for maintaining a positive and productive environment. Discover how to address workplace challenges with effective strategies.',
     url: '#',
   },
   {
     icon: <LoopIcon />,
-    title: 'Navigating Employee Benefits: A Complete Guide',
-    desc: 'Maximize your benefits package and understand your entitlements. This guide helps you maximize what your employer offers to improve your career and well-being.',
+    title: 'Navigating Employee Benefits: A Complete Guide for Employers',
+    desc: 'Maximize your business’s benefits package and understand how to offer competitive entitlements to attract and retain top talent.',
     url: '#',
   },
   {
     icon: <SecurityIcon />,
-    title: 'Building a Work-Life Balance in a Fast-Paced World',
-    desc: 'Learn how to improve your productivity and overall well-being by mastering the art of balancing professional and personal life.',
+    title: 'Building a Work-Life Balance in the Modern Workplace',
+    desc: 'Learn how to help your employees improve productivity and overall well-being by mastering the art of balancing professional and personal life.',
     url: '#',
   },
 ];
@@ -48,14 +48,14 @@ export function CareerJourney() {
     <section className={st.layout}>
       <section className={st.titleLayout}>
         <Title color="primary">
-          Stay Ahead in Your Career <br /> Journey
+          Stay Ahead in Your HR <br /> Strategy
         </Title>
         <Text className={st.text} color="primary">
-          Success in the workplace demands constant growth — stay ahead with
-          insights, trends, and expert advice on career development, HR
-          strategies, and workplace dynamics. Whether seeking guidance or aiming
-          for career advancement, these readings will help you stay at the
-          forefront of professional success.
+          Business success requires continuous growth — stay ahead with
+          insights, trends, and expert advice on HR strategies, employee
+          development, and workplace management. Whether seeking guidance on
+          workforce planning or looking to advance your HR practices, these
+          resources will help you stay at the forefront of business success.
         </Text>
       </section>
       <Title level={6} className={st.subTitle}>

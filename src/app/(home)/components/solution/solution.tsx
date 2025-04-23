@@ -14,27 +14,27 @@ import st from './solution.module.scss';
 const solutions = [
   {
     title: 'HR Consultations & Advice',
-    desc: 'Receive tailored advice on career decisions, workplace dynamics, and more.',
+    desc: 'Tailored guidance on career decisions, employee rights, and workplace management.',
   },
   {
-    title: 'Resume Writing & Interview Coaching',
-    desc: 'Professional services to polish your resume and help you ace interviews.',
+    title: 'Talent Acquisition & Recruitment',
+    desc: 'Helping businesses find the right talent to drive success.',
   },
   {
     title: 'Employee Benefits Optimization',
-    desc: 'Ensure you are fully aware of and make the most of your employee benefits.',
+    desc: 'Ensuring your business offers the best benefits package to attract and retain employees.',
   },
   {
     title: 'Workplace Conflict Resolution',
-    desc: 'We offer expert mediation to resolve workplace issues.',
+    desc: 'Offering mediation services to resolve issues efficiently and professionally.',
   },
   {
     title: 'Career Development Programs',
-    desc: 'Invest in your future with comprehensive programs that promote professional growth.',
+    desc: 'Supporting employee growth through customized career development solutions.',
   },
   {
-    title: 'Personalized Job Search Assistance',
-    desc: 'Get support in finding the right job opportunities that align with your skills and career goals, with guidance on applications and networking strategies.',
+    title: 'Onboarding & Integration Support',
+    desc: 'Ensuring new hires seamlessly integrate into your company culture.',
   },
 ];
 
@@ -46,10 +46,8 @@ export function Solution() {
           Your One-Stop HR Solution with ProWorkforceX
         </Title>
         <Text color="primary" size="lg" className={st.textEl}>
-          At ProWorkforceX, we specialize in providing comprehensive HR services
-          designed to meet the needs of individuals. Whether you want to advance
-          your career, optimize employee benefits, or need expert HR advice,
-          we’re here to help you achieve your objectives.
+          We provide businesses with comprehensive services that support
+          workforce management and HR operations. Here’s how we can help:
         </Text>
       </section>
       <section className={st.solutions}>

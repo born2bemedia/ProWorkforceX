@@ -15,4 +15,5 @@ export * from './people';
 export * from './persons';
 export * from './road';
 export * from './rocket';
+export * from './stars';
 export * from './support';

@@ -18,7 +18,7 @@
 }
 
 .imgLayout {
-  margin-top: 16px;
+  margin-top: auto;
   position: relative;
   height: 180px;
   width: 100%;
@@ -40,6 +40,9 @@
   border: 1px solid var(--gray-200);
   background: var(--gray-100);
   padding: 28px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 .text {

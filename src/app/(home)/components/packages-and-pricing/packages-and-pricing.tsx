@@ -12,15 +12,15 @@ import st from './packages-and-pricing.module.scss';
 const packages = [
   {
     title: 'Transparent and Flexible Pricing',
-    desc: 'We provide the right pricing model to fit your goals and budget, whether you need one-time consultations, ongoing support, or comprehensive career development.',
+    desc: 'We offer tailored pricing models that align with your company’s goals and budget, whether you need one-time consultations, long-term support, or comprehensive HR solutions. Our flexible pricing ensures your business gets the right level of service at the right price.',
   },
   {
     title: 'Predefined Packages',
-    desc: 'Explore our predefined packages, designed for different levels of career development, workplace support, and HR guidance. Each package ensures maximum value and the proper support at the right price.',
+    desc: 'Explore our range of predefined packages designed for various levels of employee development, workplace support, and HR solutions. Each package offers maximum value and provides the right support to meet your business’s unique HR needs.',
   },
   {
     title: 'Subscription-Based Packages',
-    desc: 'We offer subscription-based services for ongoing support and flexibility. Choose from monthly packages that give you regular access to the HR services you need, making it easier to stay supported as you progress.',
+    desc: 'Our subscription-based services provide businesses with ongoing, flexible support. Choose from monthly packages that grant regular access to essential HR services, helping your company stay supported while you grow and evolve.',
   },
 ];
 
@@ -32,9 +32,9 @@ export function PackagesAndPricing() {
           Ready to Talk Packages <br /> and Pricing?
         </Title>
         <Text className={st.text} color="gray600">
-          We understand that every individual’s HR needs and career goals are
-          unique. That’s why we offer transparent and flexible pricing options
-          tailored to your requirements.
+          We understand that every business has unique HR needs and goals.
+          That’s why we offer transparent and flexible pricing options tailored
+          to your company’s requirements.
         </Text>
       </section>
       <section className={st.cards}>

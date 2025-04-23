@@ -16,20 +16,20 @@ const benefits = [
   {
     icon: <HandshakeIcon />,
     tag: 'Support',
-    title: 'Customized Support for Your Personal Goals',
-    desc: 'We customize every service to fit your career aspirations, ensuring the best possible outcome.',
+    title: 'Customized HR Solutions for Your Business Needs',
+    desc: 'We tailor each service to meet your company’s specific HR objectives, ensuring the most effective and efficient support for your workforce. We are committed to helping your business thrive, from talent acquisition to employee development.',
   },
   {
     icon: <CaseIcon />,
     tag: 'Growth',
     title: 'Expert HR Guidance Every Step of the Way',
-    desc: 'Our experienced HR professionals provide ongoing support to help you succeed, from job coaching to career development.',
+    desc: 'Our team of experienced HR professionals provides ongoing support for your business. We help you navigate complex HR challenges, from optimizing employee benefits to resolving workplace conflicts. We ensure your business has the HR expertise it needs to succeed.',
   },
   {
     icon: <ChartIcon />,
     tag: 'Impact',
     title: 'Proven Track Record of Success',
-    desc: 'Thanks to our strategic HR services, our clients consistently report positive career transitions and growth.',
+    desc: 'Thanks to our strategic HR solutions, our clients consistently report positive outcomes. Whether it’s smoother recruitment, improved employee retention, or better workplace dynamics, ProWorkforceX helps businesses achieve measurable success.',
   },
 ];
 

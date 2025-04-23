@@ -2,29 +2,48 @@
 
 import Link from 'next/link';
 
+import { cn } from '@/shared/lib/styles';
 import { FacebookIcon, InstagramIcon, XIcon } from '@/shared/ui/icons/fill';
 
 import st from './social-networks.module.scss';
 
-export function SocialNetworks({ iconsSize = 20 }: { iconsSize?: number }) {
+const socialNetworks = [
+  { link: 'https://x.com/', icon: XIcon, label: 'x' },
+  {
+    link: 'https://www.instagram.com/',
+    icon: InstagramIcon,
+    label: 'instagram',
+  },
+  { link: 'https://www.facebook.com/', icon: FacebookIcon, label: 'facebook' },
+];
+
+export function SocialNetworks({
+  iconsSize = 20,
+  split = false,
+}: {
+  iconsSize?: number;
+  split?: boolean;
+}) {
   return (
     <nav aria-label="Social media links">
-      <ul className={st.socialNetworks}>
-        <li className={st.networkLayout}>
-          <Link href="https://x.com/" aria-label="x">
-            <XIcon width={iconsSize} height={iconsSize} />
-          </Link>
-        </li>
-        <li className={st.networkLayout}>
-          <Link href="https://www.instagram.com/" aria-label="instagram">
-            <InstagramIcon width={iconsSize} height={iconsSize} />
-          </Link>
-        </li>
-        <li className={st.networkLayout}>
-          <Link href="https://www.facebook.com/" aria-label="facebook">
-            <FacebookIcon width={iconsSize} height={iconsSize} />
-          </Link>
-        </li>
+      <ul
+        className={cn({
+          [st.socialNetworks]: !split,
+          [st.splitSocials]: split,
+        })}
+      >
+        {socialNetworks.map(({ link, icon: Icon, label }) => (
+          <li
+            key={link}
+            className={cn({
+              [st.networkLayout]: !split,
+            })}
+          >
+            <Link className={st.network} href={link} aria-label={label}>
+              <Icon width={iconsSize} height={iconsSize} />
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

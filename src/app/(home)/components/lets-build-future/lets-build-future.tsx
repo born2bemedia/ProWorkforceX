@@ -16,12 +16,14 @@ export function LetsBuildFuture() {
       <section className={st.content}>
         <Title level={2}>Let’s Build Your Future Together</Title>
         <Text color="primary" className={st.text}>
-          Your success is our priority. Whether you&#39;re looking for career
-          growth, HR advice, or personalized support, ProWorkforceX is here to
-          help you achieve your goals. <br />
-          <br /> We offer tailored HR solutions, career development guidance,
-          and expert advice to help you reach your full potential. Let’s work
-          together to shape your future.
+          Your business’s success is our priority. Whether you’re looking to
+          enhance your HR practices, optimize employee development, or get
+          tailored advice, ProWorkforceX is here to help you achieve your HR
+          objectives. <br />
+          <br /> We offer customized HR solutions, employee development
+          strategies, and expert guidance to ensure your business reaches its
+          full potential. Let’s work together to shape a strong workforce for
+          your future.
         </Text>
         <Link href="/resources" className={st.navBtn}>
           <Button variant="primaryInverted" size="md">

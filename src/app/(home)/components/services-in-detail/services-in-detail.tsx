@@ -9,32 +9,47 @@ import st from './services-in-detail.module.scss';
 const services = [
   {
     title: 'HR Consultations & Advice',
-    desc: 'Receive customized career, employee rights, and workplace management advice.',
-    color: 'grey',
-  },
-  {
-    title: 'Resume Writing & Interview Coaching',
-    desc: 'Boost your chances of landing your ideal job with professional resume writing and coaching services.',
-    color: 'secondary',
-  },
-  {
-    title: 'Employee Benefits Optimization',
-    desc: 'Get help understanding and maximizing your benefits package.',
-    color: 'grey',
-  },
-  {
-    title: 'Career Development Programs',
-    desc: 'Ongoing support for skill enhancement, career planning, and professional growth.',
+    desc: 'Receive expert guidance on workforce strategy, employee rights, workplace dynamics, and compliance tailored to your company’s needs.',
     color: 'grey',
   },
   {
     title: 'Workplace Conflict Resolution',
-    desc: 'Expert mediation and guidance to resolve workplace conflicts.',
+    desc: 'Our professional mediation services resolve workplace conflicts quickly and effectively, fostering a harmonious and productive work environment.',
     color: 'secondary',
   },
   {
-    title: 'Personalized Job Search Assistance',
-    desc: 'Get help understanding and maximizing your benefits package.',
+    title: 'Employee Engagement & Retention Strategies',
+    desc: 'We help businesses develop effective strategies to improve employee engagement, enhance workplace culture, and boost retention, ensuring a motivated and loyal workforce.',
+    color: 'grey',
+  },
+  {
+    title: 'Talent Acquisition & Recruitment',
+    desc: 'We assist businesses in finding the right candidates to meet your workforce needs, ensuring you hire the best talent for your organization.',
+    color: 'secondary',
+  },
+  {
+    title: 'Employee Development Programs',
+    desc: 'We support businesses with tailored career development programs to enhance your employees’ skills, boost morale and retain talent.',
+    color: 'grey',
+  },
+  {
+    title: 'Leadership & Management Training',
+    desc: 'We help businesses develop effective strategies to improve employee engagement, enhance workplace culture, and boost retention, ensuring a motivated and loyal workforce.',
+    color: 'secondary',
+  },
+  {
+    title: 'Employee Benefits Optimization',
+    desc: 'Help your business maximize the value of employee benefits, ensuring that your package is competitive and attractive to top talent.',
+    color: 'grey',
+  },
+  {
+    title: 'Onboarding & Employee Integration',
+    desc: 'We support businesses with tailored career development programs to enhance your employees’ skills, boost morale and retain talent.',
+    color: 'grey',
+  },
+  {
+    title: 'Workplace Well-being & Balance Coaching',
+    desc: 'Support employees in a healthy work-life balance, improving their well-being and productivity.',
     color: 'grey',
   },
 ];

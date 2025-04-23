@@ -23,7 +23,7 @@ export function FooterBottom() {
             <Text color="white">info@proworkforcex.com</Text>
           </Link>
         </div>
-        <SocialNetworks />
+        <SocialNetworks split />
       </section>
     </section>
   );

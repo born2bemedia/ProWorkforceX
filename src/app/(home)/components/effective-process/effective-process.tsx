@@ -23,68 +23,74 @@ export function EffectiveProcess() {
             <br /> Effective Process
           </Title>
           <Text color="gray600">
-            We believe in a simple and effective approach <br /> to help you
-            meet your career and HR needs:
+            We follow a streamlined approach to help <br /> your business
+            effectively manage its HR <br /> functions:
           </Text>
         </section>
         <section className={st.lineLayout}>
           <div className={st.card}>
             <div className={st.cardNumber}>01</div>
             <div className={st.cardContent}>
-              <Title level={3}>Book a Consultation</Title>
+              <Title level={3}>Schedule a Consultation</Title>
               <Text className={st.text}>
-                Schedule your initial consultation with one of our HR experts.
-                We’ll take time to understand your needs and aspirations.
+                Book an initial consultation with one of our HR experts. We’ll
+                take the time to understand your business’s unique HR challenges
+                and goals.
               </Text>
             </div>
           </div>
           <div className={st.card}>
             <div className={st.cardNumber}>02</div>
             <div className={st.cardContent}>
-              <Title level={3}>Optimize & Scale</Title>
+              <Title level={3}>Tailored HR Strategy</Title>
               <Text className={st.text}>
-                Continuous testing, refinement, and execution to ensure
-                long-term success.
+                We develop a customized HR strategy that aligns with your
+                company’s needs, ensuring effective recruitment, employee
+                development, and workplace management.
               </Text>
             </div>
           </div>
           <div className={st.card}>
             <div className={st.cardNumber}>03</div>
             <div className={st.cardContent}>
-              <Title level={3}>Understand Your Market</Title>
+              <Title level={3}>Implement the HR Plan</Title>
               <Text className={st.text}>
-                Every strategy starts with in-depth market research and
-                competitor analysis.
+                We help you implement the HR strategy and provide ongoing
+                support for talent acquisition, employee benefits management,
+                and conflict resolution.
               </Text>
             </div>
           </div>
           <div className={st.card}>
             <div className={st.cardNumber}>04</div>
             <div className={st.cardContent}>
-              <Title level={3}>Define Your Strategy</Title>
+              <Title level={3}>Continuous Support & Development</Title>
               <Text className={st.text}>
-                We craft a clear, customized plan based on your goals and
-                audience.
+                Our partnership doesn’t end with the initial implementation. We
+                offer continuous support to help your business evolve and adapt
+                to new HR needs.
               </Text>
             </div>
           </div>
           <div className={st.card}>
             <div className={st.cardNumber}>05</div>
             <div className={st.cardContent}>
-              <Title level={3}>Define Your Strategy</Title>
+              <Title level={3}>Regular Follow-ups & Adjustments</Title>
               <Text className={st.text}>
-                We craft a clear, customized plan based on your goals and
-                audience.
+                We track your progress and provide feedback, adapting our
+                strategy to ensure your business stays on track toward achieving
+                its long-term HR goals.
               </Text>
             </div>
           </div>
           <div className={st.card}>
             <div className={st.cardNumber}>06</div>
             <div className={st.cardContent}>
-              <Title level={3}>Define Your Strategy</Title>
+              <Title level={3}>Professional Growth & Networking</Title>
               <Text className={st.text}>
-                We craft a clear, customized plan based on your goals and
-                audience.
+                We help connect your business with valuable professional
+                networks, development programs, and new opportunities to ensure
+                sustained growth for your workforce.
               </Text>
             </div>
           </div>
