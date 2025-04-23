@@ -7,6 +7,7 @@ import {
   PackagesAndPricing,
   ServicesInDetail,
   Solution,
+  WhatClientsSay,
   WhyChoose,
 } from './components';
 
@@ -19,6 +20,7 @@ export default function Home() {
       <WhyChoose />
       <EffectiveProcess />
       <ServicesInDetail />
+      <WhatClientsSay />
       <PackagesAndPricing />
       <CareerJourney />
       <LetsBuildFuture />

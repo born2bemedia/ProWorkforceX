@@ -4,7 +4,6 @@
   padding: 8px;
   gap: 8px;
   border-radius: 100px;
-  background-color: var(--yellow);
   width: max-content;
 
   li {
@@ -18,8 +17,23 @@
   }
 }
 
+.network {
+  display: flex;
+  height: max-content;
+}
+
 .networkLayout {
   background-color: var(--secondary);
   padding: 6px 16px;
+  border-radius: 100px;
+}
+
+.splitSocials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  background-color: var(--secondary);
+  padding: 8px;
   border-radius: 100px;
 }

@@ -6,4 +6,5 @@ export * from './lets-build-future';
 export * from './packages-and-pricing';
 export * from './services-in-detail';
 export * from './solution';
+export * from './what-clients-say';
 export * from './why-choose';
