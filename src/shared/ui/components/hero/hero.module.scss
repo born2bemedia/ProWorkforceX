@@ -1,0 +1,55 @@
+.layout {
+  background: linear-gradient(180deg, rgba(31, 36, 32, 0.00) 0%, rgba(31, 36, 32, 0.80) 100%), url('./hero.jpg') lightgray 50% / cover no-repeat;
+  margin: 20px 60px 0 60px;
+  border-radius: 32px;
+  height: 500px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topHero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.topBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .title {
+    width: 48%;
+  }
+}
+
+.chip {
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    margin: 15px 15px 0 15px;
+    padding: 20px 10px;
+    background: linear-gradient(0deg, rgba(31, 36, 32, 0.80) 0%, rgba(31, 36, 32, 0.80) 100%), url('./hero.jpg') lightgray 50% / cover no-repeat;
+  }
+
+  .topBottom {
+    .title {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    flex-direction: column;
+    gap: 90px;
+  }
+
+  .chip {
+    margin-left: auto;
+  }
+}

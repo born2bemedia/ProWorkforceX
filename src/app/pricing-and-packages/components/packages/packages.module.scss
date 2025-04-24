@@ -1,0 +1,16 @@
+.layout {
+  margin: 90px 60px 0 60px;
+
+  @media (max-width: 768px) {
+    margin: 30px 15px 0 15px;
+  }
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

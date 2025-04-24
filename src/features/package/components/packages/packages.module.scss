@@ -1,0 +1,9 @@
+.layout {
+  margin-top: 32px;
+  display: flex;
+  gap: 24px;
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
+}
