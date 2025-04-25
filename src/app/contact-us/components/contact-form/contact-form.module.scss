@@ -1,0 +1,32 @@
+.layout {
+  margin: 120px 60px 32px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+
+  @media (max-width: 768px) {
+    margin: 120px 15px 32px 15px;
+  }
+}
+
+.titleLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.title {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./03.svg') no-repeat center top;
+    z-index: -1;
+  }
+}

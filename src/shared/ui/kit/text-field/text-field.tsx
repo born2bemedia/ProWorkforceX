@@ -12,15 +12,23 @@ export function TextField({
   label,
   hint,
   intent = 'primary',
+  color = 'gray',
+  rounded = 'full',
   ...args
 }: InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
   hint?: string;
   intent?: 'primary' | 'danger';
+  color?: 'gray' | 'white';
+  rounded?: 'full' | 'sm';
 }) {
   const inputClasses = cn(
     st.textField,
     {
+      [st.gray]: color === 'gray',
+      [st.white]: color === 'white',
+      [st.roundedSm]: rounded === 'sm',
+      [st.roundedFull]: rounded === 'full',
       [st.dangerIntent]: intent === 'danger',
     },
     className,
@@ -29,7 +37,7 @@ export function TextField({
   return (
     <label className={st.layout}>
       <div className={st.label}>
-        <Text color="black" size="lg">
+        <Text color="primary" size="lg">
           {label}
         </Text>
         {hint && (

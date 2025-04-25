@@ -6,5 +6,5 @@ export const routes = [
   { label: 'Pricing & Packages', href: '/pricing-and-packages' },
   { label: 'Testimonials', href: '/testimonials' },
   { label: 'Resources', href: '/resources' },
-  { label: 'Contacts Us', href: '/contacts-us' },
+  { label: 'Contact Us', href: '/contact-us' },
 ];

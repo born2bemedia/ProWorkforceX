@@ -8,6 +8,7 @@ import {
   RequestScrollContainer,
 } from '@/features/request-form/components';
 
+import { Toaster } from '@/shared/lib/toast';
 import { Footer } from '@/shared/ui/components/footer';
 import { Header } from '@/shared/ui/components/header';
 
@@ -49,6 +50,7 @@ export default function RootLayout({
             <RequestForm />
           </RequestScrollContainer>
         </RequestDialog>
+        <Toaster />
       </body>
     </html>
   );
