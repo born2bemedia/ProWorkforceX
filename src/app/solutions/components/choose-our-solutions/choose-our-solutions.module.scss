@@ -1,0 +1,91 @@
+.layout {
+  margin: 220px 60px 0 60px;
+
+  @media (max-width: 768px) {
+    margin: 160px 15px 0 15px;
+  }
+}
+
+.br {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.cards {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @media (max-width: 1040px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.cardLayout {
+  border-radius: 24px;
+  border: 1px solid var(--gray-200);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  height: 421px;
+  position: relative;
+}
+
+.cardInner {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.over {
+  margin-bottom: 22px;
+}
+
+.greyBg {
+  background-color: var(--gray-100);
+}
+
+.secondaryBg {
+  background-color: var(--secondary);
+}
+
+.cardValue {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 112px */
+}
+
+.cardValueLayout {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.cardValueWhite {
+  color: var(--white);
+}
+
+.cardValuePrimary {
+  color: var(--primary);
+}
+
+.mask {
+  &:before {
+    content: '';
+    position: absolute;
+    top: -160px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./mask.svg') no-repeat right center;
+    opacity: 0.2;
+  }
+}

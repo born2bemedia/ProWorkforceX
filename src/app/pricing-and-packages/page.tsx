@@ -21,6 +21,7 @@ export default function PackagesAndPricing() {
         chipText="Packages & Pricing"
         title="Discover Our Premium HR Packages & Pricing"
         text="ProWorkforceX offers comprehensive and customizable HR solutions to meet your business’s unique needs. Whether you’re looking for one-time expert services or ongoing HR support, our pricing models are transparent and tailored to ensure maximum value."
+        imageUrl="/images/packages-and-pricing/hero.jpg"
       />
       <Packages />
       <PricingTitle />

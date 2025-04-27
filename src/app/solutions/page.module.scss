@@ -1,0 +1,13 @@
+.heroMobile {
+  @media (max-width: 768px) {
+    height: 786px !important;
+  }
+}
+
+.brMobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}

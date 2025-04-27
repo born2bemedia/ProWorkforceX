@@ -1,0 +1,16 @@
+.layout {
+  margin: 220px 60px 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (max-width: 768px) {
+    margin: 150px 15px 0 15px;
+  }
+}
+
+.br {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

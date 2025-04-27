@@ -43,7 +43,6 @@ export function OurValues() {
           </>
         }
         number={1}
-        alignLeft
       />
       <section className={st.cards}>
         {values.map(value => (

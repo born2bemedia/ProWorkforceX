@@ -12,31 +12,26 @@ export function Headline({
   title,
   description,
   number,
-  alignLeft = false,
+  align = 'top',
 }: {
   title: ReactNode;
   description: ReactNode;
-  number: 1 | 2 | 3 | 4 | 5;
-  alignLeft?: boolean;
+  number: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+  align?: 'top' | 'bottom' | 'center';
 }) {
   return (
     <section className={st.title}>
-      <Title
-        level={2}
-        className={cn(st.titleEl, {
-          [st.num1]: number === 1,
-          [st.num2]: number === 2,
-          [st.num3]: number === 3,
-          [st.num4]: number === 4,
-          [st.num5]: number === 5,
-        })}
-      >
+      <Title level={2} className={cn(st.titleEl, st[`num${number}`])}>
         {title}
       </Title>
       <Text
         color="primary"
         size="lg"
-        className={cn(st.textEl, { [st.alignLeft]: alignLeft })}
+        className={cn(st.textEl, {
+          [st.alignB]: align === 'bottom',
+          [st.alignT]: align === 'top',
+          [st.alignC]: align === 'center',
+        })}
       >
         {description}
       </Text>

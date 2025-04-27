@@ -16,7 +16,7 @@ export function Text({
 }: HTMLAttributes<HTMLParagraphElement> & {
   color?: 'gray600' | 'black' | 'white' | 'primary' | 'danger' | 'neutral';
   uppercase?: boolean;
-  weight?: 300 | 400 | 500;
+  weight?: 300 | 400 | 500 | 600;
   size?: 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl';
 }) {
   const textClasses = cn(
@@ -32,6 +32,7 @@ export function Text({
       [st.weight300]: weight === 300,
       [st.weight400]: weight === 400,
       [st.weight500]: weight === 500,
+      [st.weight600]: weight === 600,
       [st.sizeSm]: size === 'sm',
       [st.sizeBase]: size === 'base',
       [st.sizeLg]: size === 'lg',
