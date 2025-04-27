@@ -1,0 +1,37 @@
+.layout {
+  margin: 60px;
+  padding: 63px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  position: relative;
+  border-radius: 22px;
+  background: #DFF56B;
+
+  @media (max-width: 768px) {
+    margin: 80px 0 40px 0;
+    padding: 63px 15px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./mask.svg') no-repeat right center;
+    opacity: 0.2;
+  }
+}
+
+.textLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 500px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}

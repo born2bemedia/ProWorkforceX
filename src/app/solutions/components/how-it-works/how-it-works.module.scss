@@ -1,0 +1,105 @@
+.layout {
+  margin: 162px 60px 0 60px;
+
+  @media (max-width: 768px) {
+    margin: 142px 15px 0 15px;
+  }
+}
+
+.workflowTextLayout {
+  padding: 42px;
+  border-radius: 12px;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.workflowLayout {
+  border-radius: 22px;
+  background: #F6F6F4;
+  padding: 30px;
+  display: flex;
+  gap: 16px;
+
+  @media (max-width: 1020px) {
+    background-color: #FFFFFF;
+    padding: 0;
+  }
+}
+
+.workflowText {
+  width: 251px;
+
+  @media (max-width: 1020px) {
+    width: 100%;
+  }
+}
+
+.workflow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -45%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./mask.svg') no-repeat right center;
+    opacity: 0.2;
+
+    @media (max-width: 1020px) {
+      top: 0;
+    }
+  }
+}
+
+.contentLayout {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.workflowImg {
+  @media (max-width: 1020px) {
+    display: none;
+  }
+}
+
+.approaches {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.benefit {
+  border-radius: 100px;
+  background: #F7F7F7;
+  padding: 6px 15px;
+  display: flex;
+  gap: 6px;
+}
+
+.br {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

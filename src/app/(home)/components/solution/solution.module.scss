@@ -53,38 +53,6 @@
   border-radius: 24px;
 }
 
-.card {
-  transition: all 300ms ease-in-out;
-  border-radius: 24px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  &:hover {
-    background: rgba(223, 245, 107, 0.40);
-
-    .divider {
-      background-color: var(--secondary) !important;
-    }
-  }
-}
-
-.cardTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.cardTitle {
-  display: flex;
-  gap: 8px;
-}
-
-.cardNum {
-  margin-top: 6px;
-}
-
 @media (max-width: 1024px) {
   .title {
     flex-direction: column;

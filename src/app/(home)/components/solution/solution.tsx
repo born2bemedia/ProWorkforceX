@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { SolutionCard } from '@/features/solutions/components';
+
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
-import { Divider } from '@/shared/ui/kit/divider';
 import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
 
@@ -53,7 +54,7 @@ export function Solution() {
       <section className={st.solutions}>
         <section className={st.cards}>
           {solutions.map((solution, i) => (
-            <Card key={solution.title} number={i++} {...solution} />
+            <SolutionCard key={solution.title} number={++i} {...solution} />
           ))}
         </section>
         <Image
@@ -70,33 +71,5 @@ export function Solution() {
         </Button>
       </Link>
     </section>
-  );
-}
-
-function Card({
-  number,
-  desc,
-  title,
-}: {
-  title: string;
-  desc: string;
-  number: number;
-}) {
-  return (
-    <article className={st.card}>
-      <section className={st.cardTop}>
-        <div className={st.cardTitle}>
-          <Text className={st.cardNum} size="sm">
-            {number}
-          </Text>
-          <Title level={3}>{title}</Title>
-        </div>
-        <ArrowTopRight />
-      </section>
-      <Divider className={st.divider} />
-      <Text size="xl" color="primary">
-        {desc}
-      </Text>
-    </article>
   );
 }
