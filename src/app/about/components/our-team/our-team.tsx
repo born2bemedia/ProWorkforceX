@@ -1,15 +1,12 @@
 'use client';
 
-import type { JSX } from 'react';
-
-import { cn } from '@/shared/lib/styles';
+import { FloatingCards } from '@/shared/ui/components/floating-cards';
 import {
   GiftIcon,
   GraphUp,
   HarmonyIcon,
   PersonsIcon,
 } from '@/shared/ui/icons/yellow';
-import { Divider } from '@/shared/ui/kit/divider';
 import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
 
@@ -55,50 +52,7 @@ export function OurTeam() {
           business goals.
         </Text>
       </section>
-      <section className={st.cards}>
-        {items.map((item, i) => (
-          <Card key={item.title} index={i} {...item} />
-        ))}
-      </section>
+      <FloatingCards items={items} />
     </section>
-  );
-}
-
-function Card({
-  icon,
-  desc,
-  category,
-  title,
-  index,
-}: {
-  category: string;
-  icon: JSX.Element;
-  title: string;
-  desc: string;
-  index: number;
-}) {
-  return (
-    <article
-      className={cn(st.card, {
-        [st.marginB]: index === 1,
-        [st.marginT]: index === 3,
-      })}
-    >
-      <section className={st.cardTitle}>
-        <Text color="primary" size="lg">
-          {category}
-        </Text>
-        {icon}
-      </section>
-      <Divider className={st.divider} />
-      <section className={st.cardContent}>
-        <Text color="primary" size="3xl" weight={500}>
-          {title}
-        </Text>
-        <Text color="primary" size="lg">
-          {desc}
-        </Text>
-      </section>
-    </article>
   );
 }

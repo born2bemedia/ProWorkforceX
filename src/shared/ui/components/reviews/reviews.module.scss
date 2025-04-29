@@ -1,0 +1,33 @@
+.cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.card {
+  border-radius: 22px;
+  border: 1px solid #E6E6E4;
+  background: var(--white-10);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cardReviewer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cardCompany {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

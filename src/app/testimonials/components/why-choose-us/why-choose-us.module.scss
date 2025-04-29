@@ -1,0 +1,17 @@
+.layout {
+  margin: 120px 60px 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (max-width: 768px) {
+    margin: 120px 15px 0 15px;
+    gap: 0;
+  }
+}
+
+.br {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
