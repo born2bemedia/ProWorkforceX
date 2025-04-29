@@ -3,9 +3,8 @@
 import Link from 'next/link';
 
 import { Reviews } from '@/shared/ui/components/reviews';
-import { ArrowTopRight, Stars } from '@/shared/ui/icons/yellow';
+import { ArrowTopRight } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
-import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
 
 import st from './what-clients-say.module.scss';
