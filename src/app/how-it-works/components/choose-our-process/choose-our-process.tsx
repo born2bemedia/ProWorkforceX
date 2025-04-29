@@ -1,7 +1,5 @@
 'use client';
 
-import type { JSX } from 'react';
-
 import { useRequestDialogStore } from '@/features/request-form/services';
 
 import { cn } from '@/shared/lib/styles';
