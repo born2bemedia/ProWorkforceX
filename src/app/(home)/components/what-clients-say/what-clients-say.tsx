@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 
-import { ArrowTopRight, Stars } from '@/shared/ui/icons/yellow';
+import { Reviews } from '@/shared/ui/components/reviews';
+import { ArrowTopRight } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
-import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
 
 import st from './what-clients-say.module.scss';
@@ -50,43 +50,12 @@ export function WhatClientsSay() {
           What Clients Say About <br /> ProWorkforceX
         </Title>
       </section>
-      <section className={st.cards}>
-        {reviews.map(review => (
-          <Card key={review.name} {...review} />
-        ))}
-      </section>
+      <Reviews reviews={reviews} />
       <Link href="/testimonials" className={st.navBtn}>
         <Button variant="primaryInverted">
           Read More Testimonials <ArrowTopRight />
         </Button>
       </Link>
     </section>
-  );
-}
-
-function Card({
-  name,
-  position,
-  text,
-}: {
-  text: string;
-  name: string;
-  position: string;
-}) {
-  return (
-    <article className={st.card}>
-      <Stars />
-      <Text color="primary" size="lg">
-        {text}
-      </Text>
-      <section className={st.cardReviewer}>
-        <Text color="primary" size="3xl" weight={500}>
-          {name}
-        </Text>
-        <Text color="primary" size="lg">
-          {position}
-        </Text>
-      </section>
-    </article>
   );
 }
