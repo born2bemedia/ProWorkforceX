@@ -1,0 +1,19 @@
+.layout {
+  margin: 200px 60px 0 60px;
+
+  @media (max-width: 768px) {
+    margin: 137px 15px 0 15px;
+  }
+}
+
+.br {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.link {
+  display: flex;
+  width: max-content;
+  margin: 40px auto 0 auto;
+}

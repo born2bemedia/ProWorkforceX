@@ -1,0 +1,99 @@
+.steps-slider {
+  margin-top: 32px;
+  height: 100%;
+  width: 99%;
+  position: relative;
+}
+
+.swiper-slide {
+  height: auto; // пусть подстраивается под контент
+  display: flex;
+}
+
+.top-step-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.steps-mobile-btns {
+  display: none;
+  align-items: center;
+  gap: 24px;
+  margin: 16px auto 0 auto;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.step-more {
+  display: none;
+  border-radius: 12px;
+  background: #093224;
+  width: max-content;
+  padding: 0 12px;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.steps-slide {
+  display: flex;
+  gap: 24px;
+  background-color: #FFFFFF;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.steps-next-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.step-card {
+  border-radius: 24px;
+  background: #F2FBC4;
+  border: 1px solid #F2FBC4;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+}
+
+.step-number {
+  border-radius: 12px;
+  background: #DFF56B;
+  padding: 0 12px;
+  display: flex;
+  width: max-content;
+}
+
+.details-card {
+  flex: 1;
+  border-radius: 24px;
+  border: 1px solid #E6E6E4;
+  background: #F6F6F4;
+  padding: 28px;
+}

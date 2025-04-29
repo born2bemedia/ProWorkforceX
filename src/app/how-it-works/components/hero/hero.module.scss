@@ -1,0 +1,25 @@
+.layout {
+  margin: 30px 60px 0 60px;
+  padding: 28px;
+  height: 343px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    height: 182px;
+    margin: 15px 15px 0 15px;
+    padding: 10px;
+  }
+}
+
+.img {
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;
+}

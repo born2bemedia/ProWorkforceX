@@ -1,0 +1,22 @@
+.layout {
+  margin: 44px 60px 0 60px;
+  display: flex;
+  gap: 100px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    margin: 32px 15px 0 15px;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
+}
