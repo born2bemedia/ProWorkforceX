@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 import { Hero } from '@/shared/ui/components/hero';
 
 import {
@@ -14,6 +16,18 @@ import {
   WorkplaceConflictResolution,
 } from './components';
 import st from './page.module.scss';
+
+export const metadata: Metadata = {
+  title: 'ProWorkforceX HR Solutions - Customized Strategies for Your Business',
+  description:
+    'Explore various HR solutions tailored to your business needs. ProWorkforceX has the expertise to optimize your workforce from recruitment to leadership training.',
+  openGraph: {
+    title:
+      'ProWorkforceX HR Solutions - Customized Strategies for Your Business',
+    description:
+      'Explore various HR solutions tailored to your business needs. ProWorkforceX has the expertise to optimize your workforce from recruitment to leadership training.',
+  },
+};
 
 export default function Solutions() {
   return (
