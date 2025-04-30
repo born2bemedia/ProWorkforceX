@@ -1,0 +1,31 @@
+.layout {
+  width: 856px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media (max-width: 885px) {
+    width: 100%;
+    margin: 0;
+    padding: 0 15px;
+  }
+
+  section {
+    margin-top: 32px;
+    border-radius: 20px;
+    background: #FCFCFA;
+    padding: 20px;
+  }
+
+  footer {
+    border-radius: 20px;
+    background: #F2FBC4;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+
+  strong {
+    font-weight: 400;
+  }
+}
