@@ -1,0 +1,32 @@
+.imgLayout {
+  margin-top: 32px;
+}
+
+.twoImgLayout {
+  margin-top: 32px;
+  display: flex;
+  gap: 24px;
+
+  > * {
+    flex: 1 1 0;
+    max-width: 49%;
+  }
+
+  @media (max-width: 768px) {
+    > *:first-child {
+      display: none;
+    }
+
+    > *:last-child {
+      margin: 0 auto;
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.img {
+  border-radius: 16px;
+  width: 100%;
+  object-fit: cover;
+}

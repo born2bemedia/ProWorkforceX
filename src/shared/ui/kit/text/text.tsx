@@ -11,8 +11,10 @@ export function Text({
   children,
   color = 'black',
   uppercase = false,
+  underline = false,
   weight = 400,
   size = 'base',
+  ...args
 }: HTMLAttributes<HTMLParagraphElement> & {
   color?:
     | 'gray600'
@@ -23,6 +25,7 @@ export function Text({
     | 'neutral'
     | 'secondary';
   uppercase?: boolean;
+  underline?: boolean;
   weight?: 300 | 400 | 500 | 600;
   size?: 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl';
 }) {
@@ -37,6 +40,7 @@ export function Text({
       [st.colorNeutral]: color === 'neutral',
       [st.colorSecondary]: color === 'secondary',
       [st.uppercase]: uppercase,
+      [st.underline]: underline,
       [st.weight300]: weight === 300,
       [st.weight400]: weight === 400,
       [st.weight500]: weight === 500,
@@ -51,5 +55,9 @@ export function Text({
     className,
   );
 
-  return <p className={textClasses}>{children}</p>;
+  return (
+    <p className={textClasses} {...args}>
+      {children}
+    </p>
+  );
 }

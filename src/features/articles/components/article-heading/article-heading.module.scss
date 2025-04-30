@@ -1,0 +1,65 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+}
+
+.num1 {
+  &:before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./01.png') no-repeat center top;
+    z-index: -1;
+  }
+}
+
+.num2 {
+  &:before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./02.png') no-repeat center top;
+    z-index: -1;
+  }
+}
+
+.num3 {
+  &:before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./03.png') no-repeat center top;
+    z-index: -1;
+  }
+}
+
+.num4 {
+  &:before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./04.png') no-repeat center top;
+    z-index: -1;
+  }
+}

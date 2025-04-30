@@ -28,8 +28,10 @@ const navigation = [
     title: 'Insights',
     list: [
       { label: 'Testimonials', link: '/testimonials' },
-      { label: 'Resources', link: '/resources' },
-      { label: 'Contacts', link: '/contacts' },
+      {
+        label: 'Resources',
+        link: '/resources/the-future-of-career-development',
+      },
     ],
   },
   {
