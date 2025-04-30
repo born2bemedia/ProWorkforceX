@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 import { Hero } from '@/shared/ui/components/hero';
 
 import {
@@ -13,6 +15,19 @@ import {
   TalentAcquisitionRecruitment,
   WorkplaceConflictResolution,
 } from '@/app/pricing-and-packages/components';
+
+export const metadata: Metadata = {
+  title:
+    'ProWorkforceX Pricing & Packages - Flexible Solutions for Your Business',
+  description:
+    'Discover our transparent and flexible pricing models. Whether you’re looking for one-time consultations or ongoing HR support, ProWorkforceX offers the right package for your needs.',
+  openGraph: {
+    title:
+      'ProWorkforceX Pricing & Packages - Flexible Solutions for Your Business',
+    description:
+      'Discover our transparent and flexible pricing models. Whether you’re looking for one-time consultations or ongoing HR support, ProWorkforceX offers the right package for your needs.',
+  },
+};
 
 export default function PackagesAndPricing() {
   return (

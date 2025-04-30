@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 import { Hero } from '@/shared/ui/components/hero';
 
 import {
@@ -8,6 +10,18 @@ import {
   WhatSets,
   WhyChooseUs,
 } from './components';
+
+export const metadata: Metadata = {
+  title: 'ProWorkforceX Client Testimonials - Success Stories from Our Clients',
+  description:
+    'Read real stories from our clients about how ProWorkforceX has transformed their HR strategies, optimized their workforce, and helped achieve business success. Discover the impact of our solutions.',
+  openGraph: {
+    title:
+      'ProWorkforceX Client Testimonials - Success Stories from Our Clients',
+    description:
+      'Read real stories from our clients about how ProWorkforceX has transformed their HR strategies, optimized their workforce, and helped achieve business success. Discover the impact of our solutions.',
+  },
+};
 
 export default function Testimonials() {
   return (

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import {
@@ -8,6 +9,24 @@ import {
 } from '@/features/articles/lib';
 
 import { ArticleList, Banner, Heading, SwitchArticles } from './components';
+import { articlesMeta } from './meta';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const awaitedParams = await params;
+
+  return {
+    title: articlesMeta[awaitedParams.slug].title,
+    description: articlesMeta[awaitedParams.slug].description,
+    openGraph: {
+      title: articlesMeta[awaitedParams.slug].title,
+      description: articlesMeta[awaitedParams.slug].description,
+    },
+  };
+}
 
 export default async function Resources({
   params,
