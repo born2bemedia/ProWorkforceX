@@ -3,6 +3,8 @@
 import type { JSX } from 'react';
 import Link from 'next/link';
 
+import { sendRequestForm } from '@/features/request-form/services';
+
 import { CaseIcon, ChartIcon, HandshakeIcon } from '@/shared/ui/icons/green';
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
@@ -36,6 +38,28 @@ const benefits = [
 export function Benefits() {
   return (
     <section className={st.layout}>
+      <button
+        onClick={() =>
+          sendRequestForm({
+            email: 'daniil.metelia@gmail.com',
+            fullName: 'Daniil',
+            website: '',
+            phone: '',
+            budget: '',
+            companyName: '',
+            projectTimeline: '',
+            contactMethod: '',
+            services: [],
+            careerInterests: '',
+            industry: '',
+            skills: '',
+            jobRoles: '',
+            goals: '',
+          })
+        }
+      >
+        COntact
+      </button>
       <section className={st.cards}>
         {benefits.map(benefit => (
           <Card key={benefit.tag} {...benefit} />

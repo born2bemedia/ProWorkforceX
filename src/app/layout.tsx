@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 import Script from 'next/script';
 
+import { OrderDialog, OrderForm } from '@/features/order-form/components';
 import {
   RequestDialog,
   RequestForm,
@@ -44,13 +45,18 @@ export default function RootLayout({
       </head>
       <body className={outfit.variable}>
         <Header />
-        <main className="main-layout">{children}</main>
-        <Footer />
         <RequestDialog>
           <RequestScrollContainer>
             <RequestForm />
           </RequestScrollContainer>
         </RequestDialog>
+        <OrderDialog>
+          <RequestScrollContainer>
+            <OrderForm />
+          </RequestScrollContainer>
+        </OrderDialog>
+        <main className="main-layout">{children}</main>
+        <Footer />
         <Toaster />
         <Preloader />
       </body>

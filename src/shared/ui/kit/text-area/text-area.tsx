@@ -14,18 +14,22 @@ export function TextArea({
   hint,
   height,
   intent = 'primary',
+  rounded = 'full',
   ...args
 }: InputHTMLAttributes<HTMLTextAreaElement> & {
   label?: string;
   hint?: string;
   intent?: 'primary' | 'danger';
   height?: number;
+  rounded?: 'full' | 'sm';
 }) {
   const textareaClasses = cn(
     st.textField,
     textareaSt.textArea,
     {
       [st.dangerIntent]: intent === 'danger',
+      [st.roundedSm]: rounded === 'sm',
+      [st.roundedFull]: rounded === 'full',
     },
     className,
   );

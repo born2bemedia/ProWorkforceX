@@ -8,7 +8,13 @@ import { Title } from '@/shared/ui/kit/title';
 import type { ProductDef } from '../../lib';
 import st from './product-card.module.scss';
 
-export function ProductCard({ cost, description, title, type }: ProductDef) {
+export function ProductCard({
+  cost,
+  description,
+  title,
+  type,
+  onOrder,
+}: ProductDef & { onOrder: (product: ProductDef) => void }) {
   return (
     <article className={st.cardLayout}>
       <Title level={3}>{title}</Title>
@@ -22,7 +28,12 @@ export function ProductCard({ cost, description, title, type }: ProductDef) {
         </div>
         <Text color="primary">{cost.unit}</Text>
       </section>
-      <Button className={st.buyBtn} variant="primaryInverted" size="md">
+      <Button
+        className={st.buyBtn}
+        variant="primaryInverted"
+        size="md"
+        onClick={() => onOrder?.({ title, description, type, cost })}
+      >
         {type} <ArrowTopRight />
       </Button>
     </article>

@@ -1,5 +1,7 @@
 'use client';
 
+import type { ProductDef } from '@/features/product/lib';
+
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
 import { Divider } from '@/shared/ui/kit/divider';
@@ -15,7 +17,8 @@ export function PackageCard({
   title,
   price,
   description,
-}: PackageDef) {
+  onOrder,
+}: PackageDef & { onOrder: (product: ProductDef) => void }) {
   return (
     <article className={st.layout}>
       <Title level={3}>{title}</Title>
@@ -32,7 +35,22 @@ export function PackageCard({
           <li key={item}>{item}</li>
         ))}
       </ul>
-      <Button className={st.buyBtn} variant="primaryInverted" size="md">
+      <Button
+        className={st.buyBtn}
+        variant="primaryInverted"
+        size="md"
+        onClick={() =>
+          onOrder({
+            type: 'buy',
+            cost: {
+              price,
+              unit: type,
+            },
+            description,
+            title,
+          })
+        }
+      >
         Buy
         <ArrowTopRight />
       </Button>

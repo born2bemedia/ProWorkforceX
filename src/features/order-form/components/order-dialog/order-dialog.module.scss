@@ -1,0 +1,58 @@
+.dialogOverlay {
+  background: rgba(31, 36, 32, 0.80);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 998;
+}
+
+.dialogContent {
+  background-color: var(--white);
+  border-radius: 32px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: max-content;
+  width: 600px;
+  padding: 24px;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 999;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.closeIcon {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .dialogContent {
+    width: 90%;
+  }
+}
