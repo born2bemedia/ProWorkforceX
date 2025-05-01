@@ -2,11 +2,14 @@
 
 import { google } from 'googleapis';
 
+import { contactFormLetter } from '@/features/letters/components';
+
 import {
   EMAIL_CLIENT_ID,
   EMAIL_CLIENT_SECRET,
   EMAIL_USER,
 } from '@/shared/config/env';
+import { makeBody } from '@/shared/lib/email';
 
 import type { RequestFormSchema } from '../lib';
 
@@ -96,11 +99,23 @@ export async function sendRequestForm({
       `--${boundary}--`,
     ].join('\n');
 
+    const userBody = makeBody({
+      to: email,
+      from: EMAIL_USER,
+      subject: 'Thank You for Contacting ProWorkforceX!',
+      message: contactFormLetter({ username: fullName }),
+    });
+
     const res = await gmail.users.messages.send({
       userId: 'me',
       requestBody: {
         raw: Buffer.from(mimeMessage).toString('base64'),
       },
+    });
+
+    await gmail.users.messages.send({
+      userId: 'me',
+      requestBody: { raw: userBody },
     });
 
     if (res.status !== 200) {

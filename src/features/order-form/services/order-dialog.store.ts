@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 import type { ProductDef } from '@/features/product/lib';
 
-export const useRequestDialogStore = create<{
+export const useOrderDialogStore = create<{
   open: boolean;
   setOpen: (value: boolean) => void;
   sent: boolean;

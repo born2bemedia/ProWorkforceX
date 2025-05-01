@@ -12,24 +12,18 @@ import {
   Trigger,
 } from '@radix-ui/react-dialog';
 
+import { ThankYouOrderView } from '@/features/order-form/components/thank-you-view';
+import { useOrderDialogStore } from '@/features/order-form/services/order-dialog.store';
+
 import { CloseIcon } from '@/shared/ui/icons/fill';
 
-import { useRequestDialogStore } from '../../services';
-import { ThankYouView } from '../thank-you-view';
-import st from './request-dialog.module.scss';
+import st from './order-dialog.module.scss';
 
-export function RequestDialog({ children }: { children: ReactNode }) {
-  const { open, setOpen, setProduct, sent } = useRequestDialogStore();
-
-  const handleOpenChange = (isOpen: boolean) => {
-    setOpen(isOpen);
-    if (!isOpen) {
-      setProduct(undefined);
-    }
-  };
+export function OrderDialog({ children }: { children: ReactNode }) {
+  const { open, setOpen, sent } = useOrderDialogStore();
 
   return (
-    <Root open={open} onOpenChange={handleOpenChange}>
+    <Root open={open} onOpenChange={setOpen}>
       <Trigger />
       <Portal>
         <Overlay className={st.dialogOverlay} />
@@ -39,7 +33,7 @@ export function RequestDialog({ children }: { children: ReactNode }) {
         >
           <DTitle />
           <Description asChild>
-            {sent ? <ThankYouView /> : children}
+            {sent ? <ThankYouOrderView /> : children}
           </Description>
           <Close className={st.closeIcon}>
             <CloseIcon />
