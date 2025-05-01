@@ -11,6 +11,7 @@ import {
 import { Toaster } from '@/shared/lib/toast';
 import { Footer } from '@/shared/ui/components/footer';
 import { Header } from '@/shared/ui/components/header';
+import { Preloader } from '@/shared/ui/components/preloader';
 
 import './globals.css';
 import './reset.css';
@@ -51,6 +52,7 @@ export default function RootLayout({
           </RequestScrollContainer>
         </RequestDialog>
         <Toaster />
+        <Preloader />
       </body>
     </html>
   );

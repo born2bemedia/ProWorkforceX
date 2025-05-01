@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -17,7 +18,6 @@ import { routes } from '@/shared/lib/routes';
 import { ShortAddress } from '@/shared/ui/components/short-address';
 import { SocialNetworks } from '@/shared/ui/components/social-networks';
 import { MenuIcon } from '@/shared/ui/icons/outline';
-import { Text } from '@/shared/ui/kit/text';
 
 import st from './burger-menu.module.scss';
 
@@ -25,7 +25,7 @@ export function BurgerMenu() {
   return (
     <section className={st.layout}>
       <Link href="/">
-        <Text size="2xl">ProWorkforceX</Text>
+        <Image src="/logo-black.svg" alt="Logo" width={200} height={50} />
       </Link>
       <Menu />
     </section>
@@ -66,7 +66,12 @@ function Menu() {
             <section className={st.content}>
               <section className={st.top}>
                 <Link href="/">
-                  <Text size="2xl">ProWorkforceX</Text>
+                  <Image
+                    src="/logo-black.svg"
+                    alt="Logo"
+                    width={200}
+                    height={50}
+                  />
                 </Link>
                 <Close className={st.closeLayout}>
                   <MenuIcon />
