@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Text } from '@/shared/ui/kit/text';
@@ -50,7 +51,7 @@ export function FooterTop() {
     <section className={st.footerTopLayout}>
       <section className={st.logoLayout}>
         <Link href="/">
-          <Text size="2xl">ProWorkforceX</Text>
+          <Image src="/logo-black.svg" alt="Logo" width={250} height={50} />
         </Link>
         <address className={st.addressLayout}>
           <Text color="primary" weight={300}>

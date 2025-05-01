@@ -1,12 +1,12 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { LangSwitcher } from '@/features/lang-switcher/components';
 
 import { ShortAddress } from '@/shared/ui/components/short-address';
 import { SocialNetworks } from '@/shared/ui/components/social-networks';
-import { Text } from '@/shared/ui/kit/text';
 
 import st from './header.module.scss';
 
@@ -16,7 +16,7 @@ export function HeaderTop() {
       <section className={st.headerTopLayout}>
         <div className={st.headerRow}>
           <Link href="/">
-            <Text size="2xl">ProWorkforceX</Text>
+            <Image src="/logo-black.svg" alt="Logo" width={200} height={50} />
           </Link>
           <ShortAddress />
           <div style={{ display: 'flex', gap: '10px' }}>
