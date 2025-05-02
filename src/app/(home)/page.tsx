@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     title: 'ProWorkforceX - HR Solutions for Business Success',
     description:
       'Discover tailored HR solutions that empower your business with ProWorkforceX. From talent acquisition to employee development, we help optimize your workforce for success.',
+    images: 'https://i.ibb.co/1t2ZCF6J/1024-518.png',
   },
 };
 

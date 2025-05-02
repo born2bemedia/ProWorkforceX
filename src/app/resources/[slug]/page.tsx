@@ -24,6 +24,7 @@ export async function generateMetadata({
     openGraph: {
       title: articlesMeta[awaitedParams.slug].title,
       description: articlesMeta[awaitedParams.slug].description,
+      images: 'https://i.ibb.co/1t2ZCF6J/1024-518.png',
     },
   };
 }

@@ -26,6 +26,7 @@ export const metadata: Metadata = {
       'ProWorkforceX HR Solutions - Customized Strategies for Your Business',
     description:
       'Explore various HR solutions tailored to your business needs. ProWorkforceX has the expertise to optimize your workforce from recruitment to leadership training.',
+    images: 'https://i.ibb.co/1t2ZCF6J/1024-518.png',
   },
 };
 
