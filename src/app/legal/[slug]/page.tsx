@@ -27,7 +27,7 @@ export async function generateMetadata({
     title: pageTitle,
     openGraph: {
       title: pageTitle,
-      images: '',
+      images: 'https://i.ibb.co/1t2ZCF6J/1024-518.png',
     },
   };
 }

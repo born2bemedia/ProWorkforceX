@@ -26,6 +26,7 @@ export const metadata: Metadata = {
       'ProWorkforceX Pricing & Packages - Flexible Solutions for Your Business',
     description:
       'Discover our transparent and flexible pricing models. Whether you’re looking for one-time consultations or ongoing HR support, ProWorkforceX offers the right package for your needs.',
+    images: 'https://i.ibb.co/1t2ZCF6J/1024-518.png',
   },
 };
 

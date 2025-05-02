@@ -20,6 +20,7 @@ export const metadata: Metadata = {
       'ProWorkforceX Client Testimonials - Success Stories from Our Clients',
     description:
       'Read real stories from our clients about how ProWorkforceX has transformed their HR strategies, optimized their workforce, and helped achieve business success. Discover the impact of our solutions.',
+    images: 'https://i.ibb.co/1t2ZCF6J/1024-518.png',
   },
 };
 
