@@ -36,6 +36,18 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script src="/scripts/translation.js" strategy="beforeInteractive" />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-0RY6VYMMYY"
+        ></Script>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0RY6VYMMYY');
+          `}
+        </Script>
         {process.env.GOOGLE_TRANSLATION_CONFIG && (
           <Script
             src="//translate.google.com/translate_a/element.js?cb=TranslateInit"
