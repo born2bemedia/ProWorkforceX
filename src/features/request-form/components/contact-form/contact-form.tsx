@@ -27,7 +27,7 @@ import { services } from '../../lib';
 import st from './contact-form.module.scss';
 
 export function ContactForm() {
-  const [isSuccess, setIsSuccess] = useState(true);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const {
     handleSubmit,
