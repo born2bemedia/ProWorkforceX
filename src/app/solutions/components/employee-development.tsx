@@ -60,13 +60,7 @@ export function EmployeeDevelopment() {
           Employee Development & <br className={st.br} /> Career Advancement
         </>
       }
-      desc={
-        <>
-          Investing in your employees’ growth drives long-term business success.
-          Our <br className={st.br} /> services help foster a culture of
-          learning and development.
-        </>
-      }
+      desc="Investing in your employees’ growth drives long-term business success. Our services help foster a culture of learning and development."
       number={3}
       advantages={advantages}
       imageUrls={images}

@@ -60,13 +60,7 @@ export function EmployeeBenefits() {
           Employee Benefits <br className={st.br} /> Optimization
         </>
       }
-      desc={
-        <>
-          Optimizing your employee benefits packages to attract and retain top{' '}
-          <br className={st.br} />
-          talent while maintaining cost-effectiveness.
-        </>
-      }
+      desc="Optimizing your employee benefits packages to attract and retain top talent while maintaining cost-effectiveness."
       number={2}
       advantages={advantages}
       imageUrls={images}

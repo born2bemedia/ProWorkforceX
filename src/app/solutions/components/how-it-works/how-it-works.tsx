@@ -31,16 +31,11 @@ export function HowItWorks() {
             <br className={st.br} /> Your HR Strategy
           </>
         }
-        description={
-          <>
-            At ProWorkforceX, we follow a streamlined, client-focused process to
-            <br className={st.br} />
+        description="At ProWorkforceX, we follow a streamlined, client-focused process to
             ensure your HR functions are optimized efficiently. We collaborate
-            with your team to understand your <br className={st.br} /> unique
-            challenges, offering solutions that <br className={st.br} /> foster
-            growth and improve overall performance.
-          </>
-        }
+            with your team to understand your unique
+            challenges, offering solutions that foster
+            growth and improve overall performance."
         number={10}
         align="center"
       />
@@ -102,7 +97,7 @@ function Benefit({ children }: { children: ReactNode }) {
   return (
     <article className={st.benefit}>
       <PlusIcon />
-      {children}
+      <span>{children}</span>
     </article>
   );
 }

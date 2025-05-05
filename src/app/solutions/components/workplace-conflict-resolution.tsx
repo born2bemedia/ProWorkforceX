@@ -60,13 +60,7 @@ export function WorkplaceConflictResolution() {
           Workplace <br className={st.br} /> Conflict Resolution
         </>
       }
-      desc={
-        <>
-          Ensuring a harmonious work environment with our conflict resolution
-          <br className={st.br} /> services designed to address and resolve
-          disputes effectively.
-        </>
-      }
+      desc="Ensuring a harmonious work environment with our conflict resolution services designed to address and resolve disputes effectively."
       number={4}
       advantages={advantages}
       imageUrls={images}

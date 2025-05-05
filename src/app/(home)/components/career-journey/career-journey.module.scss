@@ -2,6 +2,30 @@
   margin: 220px 60px 0 60px;
 }
 
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #093224;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  svg, span {
+    transition: all 300ms ease-in-out;
+  }
+
+  &:hover svg {
+    transform: rotate(45deg);
+  }
+
+  &:hover span {
+    opacity: 0.7;
+  }
+}
+
 .titleLayout {
   position: relative;
   display: flex;
@@ -21,7 +45,8 @@
 }
 
 .text {
-  width: 424px;
+  width: 32%;
+  opacity: 0.7;
 }
 
 .card {

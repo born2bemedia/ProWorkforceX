@@ -60,12 +60,7 @@ export function EmployeeEngagement() {
           Employee Engagement & <br className={st.br} /> Retention
         </>
       }
-      desc={
-        <>
-          Keeping your workforce motivated, engaged, and committed to your
-          <br className={st.br} /> company’s success.
-        </>
-      }
+      desc="Keeping your workforce motivated, engaged, and committed to your company’s success."
       number={6}
       advantages={advantages}
       imageUrls={images}

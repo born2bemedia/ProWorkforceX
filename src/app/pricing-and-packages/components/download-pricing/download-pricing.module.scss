@@ -14,12 +14,12 @@
   &:after {
     content: '';
     position: absolute;
-    top: -50px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: url('./mask-left.svg') no-repeat left center;
-    opacity: 0.2;
+    opacity: 0.6;
 
     @media (max-width: 768px) {
       left: 70%;
@@ -29,12 +29,12 @@
   &:before {
     content: '';
     position: absolute;
-    top: -50px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: url('./mask-right.svg') no-repeat right center;
-    opacity: 0.2;
+    opacity: 0.6;
 
     @media (max-width: 768px) {
       right: 70%;

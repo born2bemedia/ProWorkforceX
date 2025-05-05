@@ -11,12 +11,16 @@
   border-radius: 12px;
   background: var(--white);
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 100%;
+
+  @media (max-width: 768px) {
+    height: 372px;
+  }
 }
 
 .workflowLayout {
+  width: 50%;
   border-radius: 22px;
   background: #F6F6F4;
   padding: 30px;
@@ -26,6 +30,10 @@
   @media (max-width: 1020px) {
     background-color: #FFFFFF;
     padding: 0;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }
 
@@ -52,10 +60,14 @@
     right: 0;
     bottom: 0;
     background: url('./mask.svg') no-repeat right center;
-    opacity: 0.2;
+    opacity: 0.5;
 
     @media (max-width: 1020px) {
       top: 0;
+    }
+
+    @media (max-width: 768px) {
+      background: url('./mask.svg') no-repeat right top;
     }
   }
 }
@@ -65,10 +77,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 32px;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -96,6 +109,17 @@
   padding: 6px 15px;
   display: flex;
   gap: 6px;
+  width: max-content;
+  word-break: break-word;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .br {

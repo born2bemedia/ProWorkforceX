@@ -11,7 +11,7 @@
 }
 
 .imgLayout {
-  width: 60%;
+  width: 100%;
   height: 645px;
   position: relative;
 
@@ -21,6 +21,7 @@
 }
 
 .titleLayout {
+  width: 100%;
   position: relative;
 
   &:before {

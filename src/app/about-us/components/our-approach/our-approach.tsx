@@ -15,6 +15,7 @@ export function OurApproach() {
           className={st.img}
           src="/images/about-us/our-approach.png"
           alt="our-approach"
+          unoptimized
           fill
         />
       </section>

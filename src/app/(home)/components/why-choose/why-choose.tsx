@@ -93,11 +93,13 @@ function Card({
   return (
     <article className={st.card}>
       {icon}
-      <Title level={3}>{title}</Title>
-      <Text className={st.text}>{desc}</Text>
-      <div className={st.imgLayout}>
-        <Image className={st.img} src={imgPath} alt="img" fill />
-      </div>
+      <section className={st.cardContent}>
+        <Title level={3}>{title}</Title>
+        <Text className={st.text}>{desc}</Text>
+        <div className={st.imgLayout}>
+          <Image className={st.img} src={imgPath} alt="img" fill />
+        </div>
+      </section>
     </article>
   );
 }

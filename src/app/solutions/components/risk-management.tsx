@@ -60,12 +60,7 @@ export function RiskManagement() {
           HR Compliance & Risk <br className={st.br} /> Management
         </>
       }
-      desc={
-        <>
-          Helping businesses navigate complex labor laws, minimize risks, and{' '}
-          <br className={st.br} /> implement compliant HR policies.
-        </>
-      }
+      desc="Helping businesses navigate complex labor laws, minimize risks, and implement compliant HR policies."
       number={8}
       advantages={advantages}
       imageUrls={images}

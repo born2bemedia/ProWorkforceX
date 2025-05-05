@@ -17,6 +17,7 @@
 .title {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 .titleEl {
@@ -26,6 +27,7 @@
   &:before {
     content: '';
     position: absolute;
+    background: url('./01.png') no-repeat left top;
     top: -40px;
     left: 0;
     right: 0;

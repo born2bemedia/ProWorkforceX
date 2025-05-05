@@ -42,8 +42,8 @@ export function CaseStudy({
         </Title>
         <section className={st.cards}>
           <BackgroundCard {...meta.background} />
-          <ResultsCard {...meta.results} />
           <SolutionCard {...meta.solution} />
+          <ResultsCard {...meta.results} />
           <TestimonialCard {...meta.testimonial} />
         </section>
       </section>
@@ -68,7 +68,7 @@ function ResultsCard({ list }: { list: string[] }) {
   return (
     <article className={st.grayCard}>
       <Text color="primary" weight={500} size="3xl">
-        Background
+        Results
       </Text>
       <List values={list} />
     </article>
@@ -108,7 +108,7 @@ function TestimonialCard({
     <article className={st.secondaryCard}>
       <section className={st.solutionTitle}>
         <Text color="primary" weight={500} size="3xl">
-          Solution
+          Testimonial
         </Text>
         <Text color="primary" size="lg">
           {desc}

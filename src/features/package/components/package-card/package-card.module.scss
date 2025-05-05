@@ -11,12 +11,16 @@
   transition: all 300ms ease-in-out;
   flex: 1;
 
+  :global(.bullet) circle {
+    transition: all 300ms ease-in-out;
+  }
+
   &:hover {
     border: 1px solid #093224;
     background: #DFF56B;
 
-    .list li::marker {
-      color: #093224;
+    &:hover :global(.bullet) circle {
+      fill: #093224;
     }
   }
 }
@@ -31,27 +35,27 @@
 }
 
 .list {
-  list-style-type: disc;
-  margin-left: 20px;
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
 
   li {
+    position: relative;
     color: var(--primary);
     font-feature-settings: 'liga' off, 'clig' off;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
-    &::marker {
-      color: #DFF56B;
-      transition: color 300ms ease-in-out;
-    }
+    display: flex;
+    gap: 8px;
+    align-items: center;
   }
 }
 
 .buyBtn {
   margin-top: auto;
+  justify-content: space-between;
+  gap: 0;
 }

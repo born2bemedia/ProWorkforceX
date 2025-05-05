@@ -36,12 +36,7 @@ export function OurValues() {
     <section className={st.layout}>
       <Headline
         title="Our Values"
-        description={
-          <>
-            Our team is committed to helping businesses succeed through a <br />
-            customized and strategic approach to HR. Here’s what drives us:
-          </>
-        }
+        description="Our team is committed to helping businesses succeed through a customized and strategic approach to HR. Here’s what drives us:"
         number={1}
       />
       <section className={st.cards}>
@@ -67,13 +62,15 @@ function Card({
   return (
     <article className={st.cardLayout}>
       {icon}
-      <Title level={3}>{title}</Title>
-      <Text color="primary" size="lg" className={st.textEl}>
-        {desc}
-      </Text>
-      <div className={st.cardImg}>
-        <Image className={st.imgEl} src={imgUrl} alt="img" fill />
-      </div>
+      <section className={st.cardContent}>
+        <Title level={3}>{title}</Title>
+        <Text color="primary" size="lg" className={st.textEl}>
+          {desc}
+        </Text>
+        <div className={st.cardImg}>
+          <Image className={st.imgEl} src={imgUrl} alt="img" fill />
+        </div>
+      </section>
     </article>
   );
 }

@@ -63,6 +63,7 @@ export function Solution() {
           alt="solutions"
           width={648}
           height={829}
+          unoptimized
         />
       </section>
       <Link href="/solutions" className={st.navBtn}>

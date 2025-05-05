@@ -22,13 +22,17 @@
   margin-top: 42px;
 }
 
-.imgLayout {
-  width: 551px !important;
-  opacity: 0.2;
-  left: auto !important;
-  right: -60px !important;
+.img {
+  position: relative;
+  width: 50%;
 }
 
+.imgLayout {
+  width: initial !important;
+  opacity: 0.2;
+  left: auto !important;
+  right: 0 !important;
+}
 
 @media (max-width: 768px) {
   .layout {

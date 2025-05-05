@@ -21,13 +21,9 @@ export function StepsOfTheWay() {
     <section className={st.layout}>
       <Headline
         title="Steps of the way"
-        description={
-          <>
-            Explore how we work with you every step of the way
-            <br className={st.br} /> to elevate your business and employee
-            experience.
-          </>
-        }
+        description="Explore how we work with you every step of the way
+            to elevate your business and employee
+            experience."
         number={1}
       />
       <StepsSlider />
