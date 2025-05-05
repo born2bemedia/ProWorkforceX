@@ -1,13 +1,20 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 import { Headline } from '@/shared/ui/components/headline';
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
 
-import { StepsSlider } from '../steps-slider';
 import st from './steps-of-the-way.module.scss';
+
+const StepsSlider = dynamic(
+  () => import('../steps-slider').then(m => m.StepsSlider),
+  {
+    ssr: false,
+  },
+);
 
 export function StepsOfTheWay() {
   return (

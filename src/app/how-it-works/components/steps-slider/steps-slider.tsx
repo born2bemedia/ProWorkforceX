@@ -191,7 +191,7 @@ function Slide({
 }) {
   const { width } = useWindow();
 
-  const [isShowDetails, setIsShowDetails] = useState(width > 768);
+  const [isShowDetails, setIsShowDetails] = useState(false);
 
   return (
     <section className="steps-slide">
@@ -201,7 +201,7 @@ function Slide({
         desc={desc}
         onMore={() => setIsShowDetails(!isShowDetails)}
       />
-      {isShowDetails && <DetailsCard list={list} />}
+      {width >= 768 || isShowDetails ? <DetailsCard list={list} /> : null}
     </section>
   );
 }
