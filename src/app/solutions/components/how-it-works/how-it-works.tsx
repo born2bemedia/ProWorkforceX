@@ -76,7 +76,7 @@ function DetailedWorkflow() {
             business, click the button below:
           </Text>
         </section>
-        <Link href="/how-it-works" style={{ width: '100%' }}>
+        <Link href="/how-it-works" style={{ width: '100%', zIndex: 5 }}>
           <Button variant="primaryInverted" fullWidth>
             Dive Into Detailed HR Workflow <ArrowTopRight />
           </Button>

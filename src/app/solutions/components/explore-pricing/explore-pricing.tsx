@@ -26,8 +26,8 @@ export function ExplorePricing() {
           compromising quality or budget.
         </Text>
       </div>
-      <Link href="/pricing-and-packages">
-        <Button>
+      <Link href="/pricing-and-packages" style={{ zIndex: 5 }}>
+        <Button variant="primaryInverted" size="md">
           Explore Our Pricing & Packages
           <ArrowTopRight />
         </Button>
