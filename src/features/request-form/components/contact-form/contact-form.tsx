@@ -33,6 +33,7 @@ export function ContactForm() {
     handleSubmit,
     control,
     formState: { isSubmitting },
+    reset,
   } = useForm<RequestFormSchema>({
     resolver: zodResolver(requestFormSchema),
     reValidateMode: 'onChange',
@@ -60,6 +61,7 @@ export function ContactForm() {
     try {
       await sendRequestForm(data);
       setIsSuccess(true);
+      reset();
     } catch (e) {
       console.error('Error sending form:', e);
       notifyError('Failed to send the form. Please try again later.');

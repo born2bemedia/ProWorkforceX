@@ -3,7 +3,7 @@ import { isPhoneValid } from '@/shared/lib/phone';
 
 export const requestFormSchema = z.object({
   fullName: z.string().min(1, { message: 'Please enter a full name' }),
-  email: z.string().min(1, { message: 'Please enter a email address' }),
+  email: z.string().email({ message: 'Please enter a email address' }),
   phone: z
     .string()
     .nonempty('Phone is required')
