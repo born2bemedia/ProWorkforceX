@@ -16,4 +16,10 @@
   display: flex;
   width: max-content;
   margin: 40px auto 0 auto;
+
+  @media (max-width: 768px) {
+    button {
+      width: 100%;
+    }
+  }
 }
