@@ -22,7 +22,7 @@ export function DownloadPricing() {
       <Button
         className={st.downloadBtn}
         onClick={() =>
-          downloadFile({ url: '/files/pricing.pdf', name: 'pricing.pdf' })
+          downloadFile({ url: '/files/price-list.pdf', name: 'price-list.pdf' })
         }
         variant="primaryInverted"
       >
