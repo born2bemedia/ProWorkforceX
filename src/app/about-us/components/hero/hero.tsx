@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <section className={st.layout}>
       <section className={st.topHero}>
-        <Chip>BUILD YOUR CAREER</Chip>
+        <Chip>ABOUT US</Chip>
         <Link href="/contact-us">
           <Button>
             Contact Us <ArrowTopRight />
@@ -23,7 +23,7 @@ export function Hero() {
       </section>
       <section className={st.topBottom}>
         <div className={st.title}>
-          <Title color="white">Crafting the Future of Your Career</Title>
+          <Title color="white">Crafting the Future of Your Workforce</Title>
           <Text color="white" size="xl">
             At ProWorkforceX, we specialize in providing businesses with
             personalized human resources services designed to optimize workforce

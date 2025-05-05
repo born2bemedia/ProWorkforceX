@@ -1,6 +1,6 @@
 export const routes = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about' },
+  { label: 'About Us', href: '/about-us' },
   { label: 'Solutions', href: '/solutions' },
   { label: 'How it Works', href: '/how-it-works' },
   { label: 'Pricing & Packages', href: '/pricing-and-packages' },

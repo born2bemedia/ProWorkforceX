@@ -69,7 +69,7 @@ export function WhyChoose() {
           <Card key={reason.title} {...reason} />
         ))}
       </section>
-      <Link href="/about" className={st.navBtn}>
+      <Link href="/about-us" className={st.navBtn}>
         <Button variant="primaryInverted" size="md">
           Uncover What Drives Us
           <ArrowTopRight />
