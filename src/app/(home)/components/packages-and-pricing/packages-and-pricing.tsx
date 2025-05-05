@@ -42,7 +42,7 @@ export function PackagesAndPricing() {
           <Card key={pckg.title} {...pckg} />
         ))}
       </section>
-      <Link href="/packages-and-pricing" className={st.navBtn}>
+      <Link href="/pricing-and-packages" className={st.navBtn}>
         <Button variant="primaryInverted" size="md">
           Browse Our Packages & Pricing
           <ArrowTopRight />
