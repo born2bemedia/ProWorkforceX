@@ -44,7 +44,7 @@ export function SubscriptionPurchase() {
       <Packages type="subscription" />
       <WhyChoose
         title="Why Choose Our Subscription-Based HR Services?"
-        desc="These high-value packages are designed for businesses that need specific, one-time HR support, whether for strategic HR overhauls, compliance checks, or leadership training. Each package provides a comprehensive solution to meet your business’s needs."
+        desc="For businesses that want ongoing, comprehensive HR support, our subscription services provide expert guidance and tailored solutions to optimize workforce management at all times."
         values={whyChoose}
       />
     </section>
