@@ -34,7 +34,7 @@ const services = [
   },
   {
     title: 'Leadership & Management Training',
-    desc: 'We help businesses develop effective strategies to improve employee engagement, enhance workplace culture, and boost retention, ensuring a motivated and loyal workforce.',
+    desc: 'Develop strong leaders with customized training programs that empower managers to lead high-performing teams.',
     color: 'secondary',
   },
   {
@@ -44,7 +44,7 @@ const services = [
   },
   {
     title: 'Onboarding & Employee Integration',
-    desc: 'We support businesses with tailored career development programs to enhance your employees’ skills, boost morale and retain talent.',
+    desc: 'Streamline the onboarding process for new hires, ensuring smooth transitions and helping them integrate seamlessly into your company culture.',
     color: 'grey',
   },
   {
