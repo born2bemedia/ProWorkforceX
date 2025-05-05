@@ -23,7 +23,12 @@ export function GetInTouch() {
           business success.
         </Text>
       </section>
-      <Button variant="primaryInverted" size="md" onClick={() => setOpen(true)}>
+      <Button
+        variant="primaryInverted"
+        size="md"
+        style={{ zIndex: 5 }}
+        onClick={() => setOpen(true)}
+      >
         Request a Consultation <ArrowTopRight />
       </Button>
     </section>
