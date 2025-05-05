@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+
+import { useRequestDialogStore } from '@/features/request-form/services';
 
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
@@ -11,6 +12,8 @@ import { Title } from '@/shared/ui/kit/title';
 import st from './lets-build-future.module.scss';
 
 export function LetsBuildFuture() {
+  const { setOpen } = useRequestDialogStore();
+
   return (
     <section className={st.layout}>
       <section className={st.content}>
@@ -25,11 +28,13 @@ export function LetsBuildFuture() {
           full potential. Let’s work together to shape a strong workforce for
           your future.
         </Text>
-        <Link href="/resources" className={st.navBtn}>
-          <Button variant="primaryInverted" size="md">
-            Dive Into Resources <ArrowTopRight />
-          </Button>
-        </Link>
+        <Button
+          variant="primaryInverted"
+          size="md"
+          onClick={() => setOpen(true)}
+        >
+          Request a Custom Quote <ArrowTopRight />
+        </Button>
       </section>
       <Image
         className={st.imgLayout}

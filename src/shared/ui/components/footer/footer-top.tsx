@@ -10,7 +10,7 @@ import st from './footer.module.scss';
 
 const navigation = [
   {
-    title: 'Quick Navigation',
+    title: 'Company',
     list: [
       { label: 'Home', link: '/' },
       { label: 'About Us', link: '/about' },

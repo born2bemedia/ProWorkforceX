@@ -40,17 +40,6 @@ export function EffectiveProcess() {
             </div>
           </div>
           <div className={st.card}>
-            <div className={st.cardNumber}>02</div>
-            <div className={st.cardContent}>
-              <Title level={3}>Tailored HR Strategy</Title>
-              <Text className={st.text}>
-                We develop a customized HR strategy that aligns with your
-                company’s needs, ensuring effective recruitment, employee
-                development, and workplace management.
-              </Text>
-            </div>
-          </div>
-          <div className={st.card}>
             <div className={st.cardNumber}>03</div>
             <div className={st.cardContent}>
               <Title level={3}>Implement the HR Plan</Title>
@@ -58,17 +47,6 @@ export function EffectiveProcess() {
                 We help you implement the HR strategy and provide ongoing
                 support for talent acquisition, employee benefits management,
                 and conflict resolution.
-              </Text>
-            </div>
-          </div>
-          <div className={st.card}>
-            <div className={st.cardNumber}>04</div>
-            <div className={st.cardContent}>
-              <Title level={3}>Continuous Support & Development</Title>
-              <Text className={st.text}>
-                Our partnership doesn’t end with the initial implementation. We
-                offer continuous support to help your business evolve and adapt
-                to new HR needs.
               </Text>
             </div>
           </div>
@@ -91,6 +69,28 @@ export function EffectiveProcess() {
                 We help connect your business with valuable professional
                 networks, development programs, and new opportunities to ensure
                 sustained growth for your workforce.
+              </Text>
+            </div>
+          </div>
+          <div className={st.card}>
+            <div className={st.cardNumber}>04</div>
+            <div className={st.cardContent}>
+              <Title level={3}>Continuous Support & Development</Title>
+              <Text className={st.text}>
+                Our partnership doesn’t end with the initial implementation. We
+                offer continuous support to help your business evolve and adapt
+                to new HR needs.
+              </Text>
+            </div>
+          </div>
+          <div className={st.card}>
+            <div className={st.cardNumber}>02</div>
+            <div className={st.cardContent}>
+              <Title level={3}>Tailored HR Strategy</Title>
+              <Text className={st.text}>
+                We develop a customized HR strategy that aligns with your
+                company’s needs, ensuring effective recruitment, employee
+                development, and workplace management.
               </Text>
             </div>
           </div>
