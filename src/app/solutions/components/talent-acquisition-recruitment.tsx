@@ -13,8 +13,7 @@ const advantages = [
     desc: 'We assist with sourcing top candidates and screening resumes to deliver high-quality candidates.',
   },
   {
-    title:
-      'We assist with sourcing top candidates and screening resumes to deliver high-quality candidates.',
+    title: 'Candidate Interviews & Assessments',
     desc: 'Our experts conduct interviews and use assessments to evaluate candidates based on skills, experience, and cultural fit.',
   },
   {
