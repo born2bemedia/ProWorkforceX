@@ -61,14 +61,10 @@ export function TalentAcquisitionRecruitment() {
           Recruitment
         </>
       }
-      desc={
-        <>
-          Finding the right talent is crucial to your business success. We
-          provide <br className={st.br} /> comprehensive services to help your
-          business attract, hire, and retain the <br className={st.br} /> best
-          candidates.
-        </>
-      }
+      desc="Finding the right talent is crucial to your business success. We
+          provide comprehensive services to help your
+          business attract, hire, and retain the best
+          candidates."
       number={1}
       advantages={advantages}
       imageUrls={images}

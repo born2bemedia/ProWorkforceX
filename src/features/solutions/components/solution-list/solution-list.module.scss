@@ -9,7 +9,11 @@
 }
 
 .imgLayout {
+  width: 60%;
+
   @media (max-width: 768px) {
+    width: 100%;
+
     img:not(:first-child) {
       display: none;
     }

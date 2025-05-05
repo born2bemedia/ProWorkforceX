@@ -32,7 +32,19 @@ export function PackageCard({
       <Text color="primary">{description}</Text>
       <ul className={st.list}>
         {details.map(item => (
-          <li key={item}>{item}</li>
+          <li key={item}>
+            <svg
+              className="bullet"
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle id="Ellipse 1193" cx="4" cy="4" r="4" fill="#DFF56B" />
+            </svg>
+            {item}
+          </li>
         ))}
       </ul>
       <Button
@@ -51,6 +63,9 @@ export function PackageCard({
           })
         }
       >
+        <span style={{opacity: 0}}>
+          <ArrowTopRight />
+        </span>
         Buy
         <ArrowTopRight />
       </Button>

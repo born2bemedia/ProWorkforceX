@@ -28,6 +28,7 @@
 .img {
   object-fit: cover;
   border-radius: 16px;
+  width: 48%;
 
   @media (max-width: 768px) {
     width: 100%;

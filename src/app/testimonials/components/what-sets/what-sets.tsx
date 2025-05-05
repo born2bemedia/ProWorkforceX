@@ -32,16 +32,11 @@ export function WhatSets() {
     <section className={st.layout}>
       <Headline
         title="What Sets Us Apart"
-        description={
-          <>
-            At ProWorkforceX, it’s not just about providing HR services — it’s
-            about creating lasting <br className={st.br} /> partnerships. We aim
-            to help your business thrive through innovative, tailored HR
-            solutions <br className={st.br} />
+        description="At ProWorkforceX, it’s not just about providing HR services — it’s
+            about creating lasting partnerships. We aim
+            to help your business thrive through innovative, tailored HR solutions
             that align with your goals and foster long-term success. Here’s what
-            sets us apart:
-          </>
-        }
+            sets us apart:"
         number={4}
       />
       <section className={st.contentLayout}>
@@ -56,6 +51,7 @@ export function WhatSets() {
           alt="girl"
           width={644}
           height={450}
+          unoptimized
         />
       </section>
     </section>

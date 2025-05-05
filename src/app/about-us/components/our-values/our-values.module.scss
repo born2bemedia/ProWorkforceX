@@ -7,10 +7,17 @@
   border: 1px solid var(--gray-200);
   background: var(--gray-100);
   padding: 28px;
+  height: 424px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardContent {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex: 1;
+  margin-top: auto;
 }
 
 .textEl {
@@ -18,7 +25,7 @@
 }
 
 .cardImg {
-  margin-top: auto;
+  margin-top: 16px;
   width: 100%;
   height: 180px;
   position: relative;

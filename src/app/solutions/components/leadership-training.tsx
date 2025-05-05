@@ -60,12 +60,7 @@ export function LeadershipTraining() {
           Leadership & <br className={st.br} /> Management Training
         </>
       }
-      desc={
-        <>
-          Empowering your leaders is the key to cultivating high-performing
-          teams <br className={st.br} /> and driving organizational success.
-        </>
-      }
+      desc="Empowering your leaders is the key to cultivating high-performing teams and driving organizational success."
       number={7}
       advantages={advantages}
       imageUrls={images}

@@ -2,6 +2,7 @@
 
 import { useRequestDialogStore } from '@/features/request-form/services';
 
+import { cn } from '@/shared/lib/styles';
 import { ArrowTopRight, CheckIcon } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
 import { Text } from '@/shared/ui/kit/text';
@@ -33,7 +34,7 @@ export function WhyChoose({
       </section>
       <section className={st.cardsLayout} style={{ marginTop: '12px' }}>
         {values.slice(3, 5).map(v => (
-          <Card key={v.title} {...v} />
+          <Card key={v.title} bottomCard {...v} />
         ))}
       </section>
       <Button
@@ -48,9 +49,19 @@ export function WhyChoose({
   );
 }
 
-function Card({ title, text }: { title: string; text: string }) {
+function Card({
+  title,
+  text,
+  bottomCard = false,
+}: {
+  title: string;
+  text: string;
+  bottomCard?: boolean;
+}) {
   return (
-    <article className={st.cardLayout}>
+    <article
+      className={cn(st.cardLayout, bottomCard ? st.bottomCard : st.topCard)}
+    >
       <CheckIcon />
       <section className={st.cardContent}>
         <Title level={3}>{title}</Title>

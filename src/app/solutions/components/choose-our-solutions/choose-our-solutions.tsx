@@ -46,13 +46,9 @@ export function ChooseOurSolutions() {
             Why Choose Our <br className={st.br} /> Solutions?
           </>
         }
-        description={
-          <>
-            At ProWorkforceX, we focus on delivering results that speak for
-            themselves. <br className={st.br} /> Here’s how we’ve helped
-            businesses thrive:
-          </>
-        }
+        description="At ProWorkforceX, we focus on delivering results that speak for
+            themselves. Here’s how we’ve helped
+            businesses thrive:"
         number={9}
         align="center"
       />

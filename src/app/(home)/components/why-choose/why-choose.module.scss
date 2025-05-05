@@ -40,13 +40,18 @@
   border: 1px solid var(--gray-200);
   background: var(--gray-100);
   padding: 28px;
-  height: 400px;
+  height: 424px;
   display: flex;
   flex-direction: column;
 }
 
+.cardContent {
+  margin-top: auto;
+}
+
 .text {
   margin-top: 8px;
+  margin-bottom: 16px;
 }
 
 .grid {

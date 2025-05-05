@@ -34,6 +34,9 @@ export function ProductCard({
         size="md"
         onClick={() => onOrder?.({ title, description, type, cost })}
       >
+        <span style={{ opacity: 0 }}>
+          <ArrowTopRight />
+        </span>
         {type} <ArrowTopRight />
       </Button>
     </article>

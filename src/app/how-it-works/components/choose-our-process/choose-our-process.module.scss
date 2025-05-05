@@ -24,10 +24,10 @@
 
 .cards {
   margin-top: 32px;
-  margin-bottom: 12px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 24px;
 
   @media (max-width: 768px) {
     gap: 24px;

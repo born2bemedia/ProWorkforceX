@@ -36,12 +36,14 @@ export function LetsBuildFuture() {
           Request a Custom Quote <ArrowTopRight />
         </Button>
       </section>
-      <Image
-        className={st.imgLayout}
-        src="/images/home/mask.svg"
-        alt="mask"
-        fill
-      />
+      <section className={st.img}>
+        <Image
+          className={st.imgLayout}
+          src="/images/home/mask.svg"
+          alt="mask"
+          fill
+        />
+      </section>
     </section>
   );
 }

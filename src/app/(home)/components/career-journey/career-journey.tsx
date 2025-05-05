@@ -96,9 +96,9 @@ function Card({
         {desc}
       </Text>
       <Link href={url}>
-        <Button variant="outline" size="md">
-          Read More <ArrowTopRight />
-        </Button>
+        <button className={st.btn}>
+          <span>Read More</span> <ArrowTopRight />
+        </button>
       </Link>
     </article>
   );
