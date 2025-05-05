@@ -29,10 +29,7 @@ export function ContactUs() {
             We’re here to help you take the next step in optimizing your
             business’s workforce. Whether you have questions about our services
             or are ready to start, ProWorkforceX is here to help you achieve
-            your HR goals. <br />
-            <br />
-            Please complete the form below to request a consultation, and our
-            team will contact you shortly.
+            your HR goals.
           </Text>
         </div>
         <Button

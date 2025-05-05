@@ -13,7 +13,7 @@ const navigation = [
     title: 'Company',
     list: [
       { label: 'Home', link: '/' },
-      { label: 'About Us', link: '/about' },
+      { label: 'About Us', link: '/about-us' },
       { label: 'Contact Us', link: '/contact-us' },
     ],
   },
