@@ -16,7 +16,7 @@ export function HeaderTop() {
       <section className={st.headerTopLayout}>
         <div className={st.headerRow}>
           <Link href="/">
-            <Image src="/logo-black.svg" alt="Logo" width={200} height={50} />
+            <Image src="/logo-black.svg" alt="Logo" width={250} height={80} />
           </Link>
           <ShortAddress />
           <div style={{ display: 'flex', gap: '10px' }}>

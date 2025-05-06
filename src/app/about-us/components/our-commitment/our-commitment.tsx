@@ -32,13 +32,9 @@ export function OurCommitment() {
     <section className={st.layout}>
       <Headline
         title="Our Commitment to Your Business"
-        description={
-          <>
-            At ProWorkforceX, we don’t just offer advice — we are <br />
-            committed to supporting your company throughout its <br /> entire HR
-            journey.
-          </>
-        }
+        description="At ProWorkforceX, we don’t just offer advice — we are
+            committed to supporting your company throughout its entire HR
+            journey."
         number={5}
       />
       <section className={st.cardsWithImg}>
@@ -52,6 +48,7 @@ export function OurCommitment() {
             className={st.img}
             src="/images/about-us/our-commit.png"
             alt="img"
+            unoptimized
             fill
           />
         </section>

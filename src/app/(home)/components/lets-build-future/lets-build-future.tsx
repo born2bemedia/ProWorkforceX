@@ -38,10 +38,19 @@ export function LetsBuildFuture() {
       </section>
       <section className={st.img}>
         <Image
-          className={st.imgLayout}
           src="/images/home/mask.svg"
           alt="mask"
           fill
+          style={{
+            objectFit: 'cover',
+            zIndex: 0,
+            WebkitMaskImage: 'linear-gradient(to right, transparent, black)',
+            WebkitMaskSize: '100% 100%',
+            WebkitMaskRepeat: 'no-repeat',
+            maskImage: 'linear-gradient(to right, transparent, black)',
+            maskSize: '100% 100%',
+            maskRepeat: 'no-repeat',
+          }}
         />
       </section>
     </section>
