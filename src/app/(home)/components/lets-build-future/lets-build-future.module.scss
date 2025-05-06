@@ -23,15 +23,9 @@
 }
 
 .img {
-  position: relative;
   width: 50%;
-}
-
-.imgLayout {
-  width: initial !important;
-  opacity: 0.2;
-  left: auto !important;
-  right: 0 !important;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {

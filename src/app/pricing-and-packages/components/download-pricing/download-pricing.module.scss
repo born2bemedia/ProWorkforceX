@@ -11,35 +11,53 @@
   position: relative;
   overflow: hidden;
 
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('./mask-left.svg') no-repeat left center;
-    opacity: 0.6;
+  //&:after {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  right: 0;
+  //  bottom: 0;
+  //  background: url('./mask-left.svg') no-repeat left center;
+  //  opacity: 0.6;
+  //
+  //  @media (max-width: 768px) {
+  //    left: 70%;
+  //  }
+  //}
 
-    @media (max-width: 768px) {
-      left: 70%;
-    }
-  }
+  //&:before {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  right: 0;
+  //  bottom: 0;
+  //  background: url('./mask-right.svg') no-repeat right center;
+  //  opacity: 0.6;
+  //
+  //  @media (max-width: 768px) {
+  //    right: 70%;
+  //  }
+  //}
+}
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('./mask-right.svg') no-repeat right center;
-    opacity: 0.6;
+.maskR {
+  width: 38% !important;
+  right: 0 !important;
+  left: auto !important;
+}
 
-    @media (max-width: 768px) {
-      right: 70%;
-    }
-  }
+.maskL {
+  width: 38% !important;
+  right: auto !important;
+  left: 0 !important;
+}
+
+.img {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
 }
 
 .content {

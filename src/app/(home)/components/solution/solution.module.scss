@@ -49,10 +49,13 @@
 .cards {
   display: flex;
   flex-direction: column;
+  width: 55%;
 }
 
 .img {
   border-radius: 24px;
+  width: 45%;
+  object-fit: cover;
 }
 
 @media (max-width: 1024px) {

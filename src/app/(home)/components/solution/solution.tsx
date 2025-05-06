@@ -57,14 +57,16 @@ export function Solution() {
             <SolutionCard key={solution.title} number={++i} {...solution} />
           ))}
         </section>
-        <Image
-          className={st.img}
-          src="/images/home/solutions.png"
-          alt="solutions"
-          width={648}
-          height={829}
-          unoptimized
-        />
+        <section className={st.img}>
+          <Image
+            src="/images/home/solutions.png"
+            alt="solutions"
+            width={648}
+            height={760}
+            unoptimized
+            style={{ width: '100%', borderRadius: '24px', objectFit: 'cover' }}
+          />
+        </section>
       </section>
       <Link href="/solutions" className={st.navBtn}>
         <Button variant="primaryInverted" size="md">
