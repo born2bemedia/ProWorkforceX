@@ -8,13 +8,17 @@ import { FacebookIcon, InstagramIcon, XIcon } from '@/shared/ui/icons/fill';
 import st from './social-networks.module.scss';
 
 const socialNetworks = [
-  { link: 'https://x.com/', icon: XIcon, label: 'x' },
+  { link: 'https://x.com/ProWorkForceX', icon: XIcon, label: 'x' },
   {
-    link: 'https://www.instagram.com/',
+    link: 'https://www.instagram.com/proworkforcex/',
     icon: InstagramIcon,
     label: 'instagram',
   },
-  { link: 'https://www.facebook.com/', icon: FacebookIcon, label: 'facebook' },
+  {
+    link: 'https://www.facebook.com/proworkforcex/',
+    icon: FacebookIcon,
+    label: 'facebook',
+  },
 ];
 
 export function SocialNetworks({
