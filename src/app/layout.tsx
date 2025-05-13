@@ -16,6 +16,7 @@ import { Preloader } from '@/shared/ui/components/preloader';
 
 import './globals.css';
 import './reset.css';
+import { CookieConsent } from '@/shared/ui/components/cookie-consent';
 
 const outfit = Outfit({
   variable: '--font-outfit',
@@ -71,6 +72,7 @@ export default function RootLayout({
         <Footer />
         <Toaster />
         <Preloader />
+        <CookieConsent />
       </body>
     </html>
   );
