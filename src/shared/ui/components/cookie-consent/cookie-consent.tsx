@@ -1,8 +1,11 @@
 'use client';
+
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+
+import { cn } from '@/shared/lib/styles';
 
 import st from './cookie-consent.module.scss';
-import { cn } from '@/shared/lib/styles';
 
 export const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,10 +34,10 @@ export const CookieConsent = () => {
     >
       <h2>Cookie settings</h2>
       <p>
-        Cookies help us improve our website. By clicking 'Accept,' you agree to
-        our use of cookies for functionality, analytics, and personalized
-        content. Learn more in our{' '}
-        <a href="/legal/cookie-policy">Cookie Policy</a>.
+        Cookies help us improve our website. By clicking &apos;Accept,&apos; you
+        agree to our use of cookies for functionality, analytics, and
+        personalized content. Learn more in our{' '}
+        <Link href="/legal/cookie-policy">Cookie Policy</Link>.
       </p>
       <div className={st.buttons}>
         <button onClick={handleDecline} className={cn(st.decline)}>
