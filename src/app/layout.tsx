@@ -10,13 +10,13 @@ import {
 } from '@/features/request-form/components';
 
 import { Toaster } from '@/shared/lib/toast';
+import { CookieConsent } from '@/shared/ui/components/cookie-consent';
 import { Footer } from '@/shared/ui/components/footer';
 import { Header } from '@/shared/ui/components/header';
 import { Preloader } from '@/shared/ui/components/preloader';
 
 import './globals.css';
 import './reset.css';
-import { CookieConsent } from '@/shared/ui/components/cookie-consent';
 
 const outfit = Outfit({
   variable: '--font-outfit',
