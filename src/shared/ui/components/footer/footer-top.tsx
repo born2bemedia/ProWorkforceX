@@ -22,7 +22,7 @@ const navigation = [
     list: [
       { label: 'Solutions', link: '/solutions' },
       { label: 'How It Works', link: '/how-it-works' },
-      { label: 'Packages & Pricing', link: '/packages-and-pricing' },
+      { label: 'Packages & Pricing', link: '/pricing-and-packages' },
     ],
   },
   {
