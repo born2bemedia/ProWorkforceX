@@ -25,6 +25,7 @@ import { Title } from '@/shared/ui/kit/title';
 
 import { services } from '../../lib';
 import st from './contact-form.module.scss';
+import { PhoneField } from '@/shared/ui/kit/phone-field';
 
 export function ContactForm() {
   const [isSuccess, setIsSuccess] = useState(false);
@@ -112,13 +113,10 @@ export function ContactForm() {
               name="phone"
               control={control}
               render={({ field, fieldState: { error } }) => (
-                <TextField
+                <PhoneField
                   label="Phone Number"
                   placeholder="Enter your phone number"
-                  intent={error?.message ? 'danger' : 'primary'}
                   hint={error?.message}
-                  color="white"
-                  rounded="sm"
                   {...field}
                 />
               )}
