@@ -19,6 +19,7 @@ import { Dropdzone } from '@/shared/ui/components/dropzone';
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
 import { Checkbox } from '@/shared/ui/kit/checkbox';
+import { PhoneField } from '@/shared/ui/kit/phone-field';
 import { Text } from '@/shared/ui/kit/text';
 import { TextField } from '@/shared/ui/kit/text-field';
 import { Title } from '@/shared/ui/kit/title';
@@ -112,13 +113,10 @@ export function ContactForm() {
               name="phone"
               control={control}
               render={({ field, fieldState: { error } }) => (
-                <TextField
+                <PhoneField
                   label="Phone Number"
                   placeholder="Enter your phone number"
-                  intent={error?.message ? 'danger' : 'primary'}
                   hint={error?.message}
-                  color="white"
-                  rounded="sm"
                   {...field}
                 />
               )}
