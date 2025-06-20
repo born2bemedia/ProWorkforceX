@@ -1,0 +1,14 @@
+{
+  "home": {
+    "hero": {
+      "label": "BAUEN SIE IHRE KARRIERE",
+      "title": "Stärkung Ihrer Belegschaft, Optimierung des Personalwesens für Ihr Unternehmen",
+      "description": "Bei ProWorkforceX sind wir darauf spezialisiert, Unternehmen maßgeschneiderte HR-Lösungen anzubieten, um Top-Talente anzuziehen, zu managen und zu halten. Ob Sie Unterstützung bei der Personalbeschaffung, dem HR-Management, den Mitarbeiterleistungen oder der Arbeitsplatzvermittlung benötigen - wir sind für Sie da.",
+      "scrollLabel": {
+        "0": "Scrollen",
+        "1": "Nach unten"
+      },
+      "contactUs": "Kontaktieren Sie uns"
+    }
+  }
+}

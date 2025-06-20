@@ -1,16 +1,7 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
-const nextConfig: NextConfig = {
-  env: {
-    GOOGLE_TRANSLATION_CONFIG: JSON.stringify({
-      languages: [
-        { title: 'English', name: 'en' },
-        { title: 'Deutsch', name: 'de' },
-        { title: 'Italiano', name: 'it' },
-      ],
-      defaultLanguage: 'en',
-    }),
-  },
-};
+const nextConfig: NextConfig = {};
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);

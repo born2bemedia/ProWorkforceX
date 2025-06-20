@@ -1,0 +1,14 @@
+{
+  "home": {
+    "hero": {
+      "label": "COSTRUISCI LA TUA CARRIERA",
+      "title": "Potenziare la Tua Forza Lavoro, Ottimizzare le Risorse Umane per la Tua Azienda",
+      "description": "In ProWorkforceX, siamo specializzati nel fornire alle aziende soluzioni HR personalizzate per aiutarle ad attrarre, gestire e mantenere i migliori talenti. Che tu abbia bisogno di assistenza nel reclutamento, nella gestione delle risorse umane, nei benefit per i dipendenti o nella mediazione sul posto di lavoro, siamo qui per te.",
+      "scrollLabel": {
+        "0": "Scorri",
+        "1": "Giù"
+      },
+      "contactUs": "Contattaci"
+    }
+  }
+}

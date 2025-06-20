@@ -14,7 +14,7 @@ import {
   RiskManagement,
   TalentAcquisitionRecruitment,
   WorkplaceConflictResolution,
-} from '@/app/pricing-and-packages/components';
+} from '@/app/[locale]/pricing-and-packages/components';
 
 export const metadata: Metadata = {
   title:

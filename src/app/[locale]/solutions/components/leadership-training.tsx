@@ -1,7 +1,7 @@
 'use client';
 
-import { SolutionTemplate } from '@/app/solutions/components/solution-template';
-import st from '@/app/solutions/components/solution-template/solution-template.module.scss';
+import { SolutionTemplate } from './solution-template';
+import st from './solution-template/solution-template.module.scss';
 
 const advantages = [
   {
