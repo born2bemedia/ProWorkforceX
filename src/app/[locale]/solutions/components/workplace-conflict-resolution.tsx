@@ -1,50 +1,9 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { SolutionTemplate } from './solution-template';
 import st from './solution-template/solution-template.module.scss';
-
-const advantages = [
-  {
-    title: 'Conflict Diagnosis & Prevention',
-    desc: 'We help identify potential conflict areas within your organization and prevent issues before they escalate.',
-  },
-  {
-    title: 'Mediation Services',
-    desc: 'Our trained mediators facilitate productive discussions to resolve conflicts and disputes between employees.',
-  },
-  {
-    title: 'Conflict Management Training',
-    desc: 'We train managers and employees on conflict resolution techniques to address issues professionally and effectively.',
-  },
-  {
-    title: 'Employee Relations Strategy',
-    desc: 'We help you develop an employee relations strategy that fosters positive workplace dynamics and addresses grievances promptly.',
-  },
-  {
-    title: 'Disciplinary Action Procedures',
-    desc: 'We assist in developing fair and consistent disciplinary policies and ensure compliance with legal requirements.',
-  },
-  {
-    title: 'Workplace Harassment Prevention',
-    desc: 'We offer training and policy development to prevent harassment and create a respectful workplace culture.',
-  },
-  {
-    title: 'Team Building & Conflict Prevention',
-    desc: 'We organize team-building exercises and workshops to promote collaboration and reduce the likelihood of conflicts.',
-  },
-  {
-    title: 'Resolution of Workplace Grievances',
-    desc: 'We guide businesses in establishing clear channels for employees to raise concerns and grievances, resolving them efficiently.',
-  },
-  {
-    title: 'Restorative Justice Practices',
-    desc: 'We implement restorative practices to help resolve conflicts by repairing relationships and rebuilding trust.',
-  },
-  {
-    title: 'Employee Mediation Programs',
-    desc: 'We offer long-term mediation programs to support employees in resolving ongoing conflicts and building stronger working relationships.',
-  },
-];
 
 const images = [
   '/images/solutions/04-1.jpg',
@@ -53,18 +12,64 @@ const images = [
 ];
 
 export function WorkplaceConflictResolution() {
+  const t = useTranslations('solutions.workplaceConflictResolution');
+
+  const advantages = [
+    {
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+    {
+      title: t('3.title'),
+      desc: t('3.desc'),
+    },
+    {
+      title: t('4.title'),
+      desc: t('4.desc'),
+    },
+    {
+      title: t('5.title'),
+      desc: t('5.desc'),
+    },
+    {
+      title: t('6.title'),
+      desc: t('6.desc'),
+    },
+    {
+      title: t('7.title'),
+      desc: t('7.desc'),
+    },
+    {
+      title: t('8.title'),
+      desc: t('8.desc'),
+    },
+    {
+      title: t('9.title'),
+      desc: t('9.desc'),
+    },
+  ];
+
   return (
     <SolutionTemplate
       title={
         <>
-          Workplace <br className={st.br} /> Conflict Resolution
+          {t('title.0')} <br className={st.br} />
+          {t('title.1')}
         </>
       }
-      desc="Ensuring a harmonious work environment with our conflict resolution services designed to address and resolve disputes effectively."
+      desc={t('desc')}
       number={4}
       advantages={advantages}
       imageUrls={images}
-      actionBtnText="Request Conflict Service"
+      actionBtnText={t('requestConflictService')}
       reverse
     />
   );

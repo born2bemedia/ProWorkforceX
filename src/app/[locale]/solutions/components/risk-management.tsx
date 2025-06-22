@@ -1,50 +1,9 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { SolutionTemplate } from './solution-template';
 import st from './solution-template/solution-template.module.scss';
-
-const advantages = [
-  {
-    title: 'Labor Law Compliance Audits',
-    desc: 'We conduct thorough audits to ensure your company’s HR practices comply with local, state, and federal labor laws, helping you avoid costly legal issues.',
-  },
-  {
-    title: 'HR Policies & Procedure Development',
-    desc: 'We help create and implement comprehensive HR policies and procedures that align with legal standards and best practices, ensuring compliance and consistency across your organization.',
-  },
-  {
-    title: 'Workplace Safety Compliance',
-    desc: 'Our team assists businesses in meeting health and safety regulations, ensuring that their workplaces are safe and compliant with OSHA and other relevant safety standards.',
-  },
-  {
-    title: 'Employee Rights Protection',
-    desc: 'We guide businesses in implementing practices that protect employee rights, including fair treatment, non-discriminatory policies, and equal opportunities.',
-  },
-  {
-    title: 'Disciplinary & Grievance Procedures',
-    desc: 'We help businesses develop transparent, fair, and legally sound disciplinary procedures, ensuring that all actions are taken in line with legal requirements and organizational values.',
-  },
-  {
-    title: 'Data Protection & Privacy Compliance',
-    desc: 'We guide data protection laws, including GDPR compliance, helping businesses protect sensitive employee information and avoid data breaches.',
-  },
-  {
-    title: 'Anti-Discrimination & Equal Employment',
-    desc: 'Our services ensure that your organization has effective anti-discrimination policies, promoting an inclusive and equitable work environment for all employees.',
-  },
-  {
-    title: 'Employee Benefits Compliance',
-    desc: 'We assist in ensuring that your employee benefits programs comply with relevant tax, legal, and healthcare regulations, safeguarding your company and employees.',
-  },
-  {
-    title: 'Internal Investigations & Reporting',
-    desc: 'We offer expertise in conducting internal investigations of employee misconduct, harassment, or workplace disputes, ensuring fairness and compliance with laws.',
-  },
-  {
-    title: 'Legal HR Documentation',
-    desc: 'We help you draft and review essential HR documents such as employment contracts, non-disclosure agreements, and severance packages to ensure they are legally compliant.',
-  },
-];
 
 const images = [
   '/images/solutions/08-1.jpg',
@@ -53,18 +12,64 @@ const images = [
 ];
 
 export function RiskManagement() {
+  const t = useTranslations('solutions.riskManagement');
+
+  const advantages = [
+    {
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+    {
+      title: t('3.title'),
+      desc: t('3.desc'),
+    },
+    {
+      title: t('4.title'),
+      desc: t('4.desc'),
+    },
+    {
+      title: t('5.title'),
+      desc: t('5.desc'),
+    },
+    {
+      title: t('6.title'),
+      desc: t('6.desc'),
+    },
+    {
+      title: t('7.title'),
+      desc: t('7.desc'),
+    },
+    {
+      title: t('8.title'),
+      desc: t('8.desc'),
+    },
+    {
+      title: t('9.title'),
+      desc: t('9.desc'),
+    },
+  ];
+
   return (
     <SolutionTemplate
       title={
         <>
-          HR Compliance & Risk <br className={st.br} /> Management
+          {t('title.0')} <br className={st.br} />
+          {t('title.1')}
         </>
       }
-      desc="Helping businesses navigate complex labor laws, minimize risks, and implement compliant HR policies."
+      desc={t('desc')}
       number={8}
       advantages={advantages}
       imageUrls={images}
-      actionBtnText="Request Risk Management Service"
+      actionBtnText={t('requestRiskManagementService')}
     />
   );
 }

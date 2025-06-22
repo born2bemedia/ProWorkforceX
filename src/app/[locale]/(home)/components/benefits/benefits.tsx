@@ -1,7 +1,8 @@
 'use client';
 
-import type { JSX } from 'react';
+import { type JSX } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { CaseIcon, ChartIcon, HandshakeIcon } from '@/shared/ui/icons/green';
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
@@ -12,28 +13,30 @@ import { Title } from '@/shared/ui/kit/title';
 
 import st from './benefits.module.scss';
 
-const benefits = [
-  {
-    icon: <HandshakeIcon />,
-    tag: 'Support',
-    title: 'Customized HR Solutions for Your Business Needs',
-    desc: 'We tailor each service to meet your company’s specific HR objectives, ensuring the most effective and efficient support for your workforce. We are committed to helping your business thrive, from talent acquisition to employee development.',
-  },
-  {
-    icon: <CaseIcon />,
-    tag: 'Growth',
-    title: 'Expert HR Guidance Every Step of the Way',
-    desc: 'Our team of experienced HR professionals provides ongoing support for your business. We help you navigate complex HR challenges, from optimizing employee benefits to resolving workplace conflicts. We ensure your business has the HR expertise it needs to succeed.',
-  },
-  {
-    icon: <ChartIcon />,
-    tag: 'Impact',
-    title: 'Proven Track Record of Success',
-    desc: 'Thanks to our strategic HR solutions, our clients consistently report positive outcomes. Whether it’s smoother recruitment, improved employee retention, or better workplace dynamics, ProWorkforceX helps businesses achieve measurable success.',
-  },
-];
-
 export function Benefits() {
+  const t = useTranslations('home.benefits');
+
+  const benefits = [
+    {
+      icon: <HandshakeIcon />,
+      tag: t('0.tag'),
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      icon: <CaseIcon />,
+      tag: t('1.tag'),
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      icon: <ChartIcon />,
+      tag: t('2.tag'),
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+  ];
+
   return (
     <section className={st.layout}>
       <section className={st.cards}>
@@ -43,7 +46,7 @@ export function Benefits() {
       </section>
       <Link href="/contact-us" className={st.contactLink}>
         <Button variant="primaryInverted" size="md">
-          Contact Us <ArrowTopRight />
+          {t('contactUs')} <ArrowTopRight />
         </Button>
       </Link>
     </section>

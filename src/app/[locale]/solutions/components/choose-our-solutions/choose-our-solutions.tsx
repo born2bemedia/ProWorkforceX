@@ -1,54 +1,57 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { cn } from '@/shared/lib/styles';
 import { Headline } from '@/shared/ui/components/headline';
 import { Text } from '@/shared/ui/kit/text';
 
 import st from './choose-our-solutions.module.scss';
 
-const benefits = [
-  {
-    value: '75%',
-    desc: 'of organizations see a noticeable improvement in team performance within 6 months of adopting our HR solutions.',
-    imgUrl: '/images/solutions/09-2.jpg',
-  },
-  {
-    value: '180',
-    over: true,
-    desc: 'businesses have successfully streamlined their hiring processes, significantly reducing recruitment time and cost.',
-    variant: 'gray',
-  },
-  {
-    value: '85%',
-    desc: 'of clients who implemented our conflict resolution strategies reported a harmonious work environment and better team collaboration.',
-    variant: 'secondary',
-    mask: true,
-  },
-  {
-    value: '4,000+',
-    desc: 'consulting hours have empowered businesses to optimize HR functions, saving time and enhancing employee satisfaction.',
-    imgUrl: '/images/solutions/09-1.jpg',
-  },
-  {
-    value: '3x',
-    desc: 'reduction in turnover rates for businesses that adopted our career development and mentoring programs.',
-    variant: 'gray',
-    mask: true,
-  },
-];
-
 export function ChooseOurSolutions() {
+  const t = useTranslations('solutions.chooseOurSolutions');
+
+  const benefits = [
+    {
+      value: '75%',
+      desc: t('0'),
+      imgUrl: '/images/solutions/09-2.jpg',
+    },
+    {
+      value: '180',
+      over: true,
+      desc: t('1'),
+      variant: 'gray',
+    },
+    {
+      value: '85%',
+      desc: t('2'),
+      variant: 'secondary',
+      mask: true,
+    },
+    {
+      value: '4,000+',
+      desc: t('3'),
+      imgUrl: '/images/solutions/09-1.jpg',
+    },
+    {
+      value: '3x',
+      desc: t('4'),
+      variant: 'gray',
+      mask: true,
+    },
+  ];
+
   return (
     <section className={st.layout}>
       <Headline
         title={
           <>
-            Why Choose Our <br className={st.br} /> Solutions?
+            {t('title.0')} <br className={st.br} />
+            {t('title.1')}
           </>
         }
-        description="At ProWorkforceX, we focus on delivering results that speak for
-            themselves. Here’s how we’ve helped
-            businesses thrive:"
+        description={t('desc')}
         number={9}
         align="center"
       />
@@ -76,6 +79,8 @@ function Card({
   variant?: string;
   mask?: boolean;
 }) {
+  const t = useTranslations('solutions.chooseOurSolutions');
+
   return (
     <article
       className={cn(st.cardLayout, {
@@ -95,7 +100,7 @@ function Card({
         <div className={st.cardValueLayout}>
           {over && (
             <Text color="primary" size="3xl" className={st.over}>
-              Over
+              {t('over')}
             </Text>
           )}
           <span

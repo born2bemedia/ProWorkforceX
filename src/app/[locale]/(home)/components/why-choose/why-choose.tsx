@@ -3,6 +3,7 @@
 import type { JSX } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import {
   ArrowTopRight,
@@ -19,50 +20,52 @@ import { Title } from '@/shared/ui/kit/title';
 
 import st from './why-choose.module.scss';
 
-const reasons = [
-  {
-    icon: <HandshakeIcon />,
-    title: 'Expert HR Solutions for Businesses',
-    desc: 'We provide customized HR solutions that align with your company’s unique needs, helping you attract, manage, and retain top talent.',
-    imgPath: '/images/home/why-choose/1.jpeg',
-  },
-  {
-    icon: <CaseIcon />,
-    title: 'Experienced HR Guidance',
-    desc: 'Our team of seasoned HR professionals offers expert advice to navigate complex HR challenges and optimize your workforce strategies.',
-    imgPath: '/images/home/why-choose/2.jpeg',
-  },
-  {
-    icon: <RocketIcon />,
-    title: 'Talent Development & Career Advancement',
-    desc: 'From upskilling to leadership development, we offer solutions that help your employees grow, fostering a motivated and capable workforce.',
-    imgPath: '/images/home/why-choose/3.jpeg',
-  },
-  {
-    icon: <LightIcon />,
-    title: 'Comprehensive Employee Benefits Management',
-    desc: 'We assist businesses in understanding and optimizing employee benefits, ensuring you provide the best package to attract and retain talent.',
-    imgPath: '/images/home/why-choose/4.jpeg',
-  },
-  {
-    icon: <PeopleIcon />,
-    title: 'Workplace Conflict Resolution',
-    desc: 'Our mediation services help resolve workplace conflicts efficiently, improving team dynamics and ensuring a harmonious work environment.',
-    imgPath: '/images/home/why-choose/5.jpeg',
-  },
-  {
-    icon: <ChartIcon />,
-    title: 'Ongoing HR Support',
-    desc: 'We don’t stop at the initial consultation. ProWorkforceX provides continuous support to help your business adapt to changing HR needs and ensure long-term success.',
-    imgPath: '/images/home/why-choose/6.jpeg',
-  },
-];
-
 export function WhyChoose() {
+  const t = useTranslations('home.whyChoose');
+
+  const reasons = [
+    {
+      icon: <HandshakeIcon />,
+      title: t('0.title'),
+      desc: t('0.desc'),
+      imgPath: '/images/home/why-choose/1.jpeg',
+    },
+    {
+      icon: <CaseIcon />,
+      title: t('1.title'),
+      desc: t('1.desc'),
+      imgPath: '/images/home/why-choose/2.jpeg',
+    },
+    {
+      icon: <RocketIcon />,
+      title: t('2.title'),
+      desc: t('2.desc'),
+      imgPath: '/images/home/why-choose/3.jpeg',
+    },
+    {
+      icon: <LightIcon />,
+      title: t('3.title'),
+      desc: t('3.desc'),
+      imgPath: '/images/home/why-choose/4.jpeg',
+    },
+    {
+      icon: <PeopleIcon />,
+      title: t('4.title'),
+      desc: t('4.desc'),
+      imgPath: '/images/home/why-choose/5.jpeg',
+    },
+    {
+      icon: <ChartIcon />,
+      title: t('5.title'),
+      desc: t('5.desc'),
+      imgPath: '/images/home/why-choose/6.jpeg',
+    },
+  ];
+
   return (
     <section className={st.layout}>
       <Title level={2} className={st.title}>
-        Why Choose <br /> ProWorkforceX?
+        {t('title.0')} <br /> {t('title.1')}
       </Title>
       <section className={st.grid}>
         {reasons.map(reason => (
@@ -71,7 +74,7 @@ export function WhyChoose() {
       </section>
       <Link href="/about-us" className={st.navBtn}>
         <Button variant="primaryInverted" size="md">
-          Uncover What Drives Us
+          {t('uncover')}
           <ArrowTopRight />
         </Button>
       </Link>

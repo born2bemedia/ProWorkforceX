@@ -1,50 +1,9 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { SolutionTemplate } from './solution-template';
 import st from './solution-template/solution-template.module.scss';
-
-const advantages = [
-  {
-    title: 'Employee Engagement Surveys',
-    desc: 'We design and conduct surveys to gauge employee engagement and identify areas for improvement.',
-  },
-  {
-    title: 'Recognition Programs',
-    desc: 'We help create employee recognition programs that reward and acknowledge contributions, enhancing job satisfaction.',
-  },
-  {
-    title: 'Retention Strategy Development',
-    desc: 'We assist in developing strategies to retain top talent, including career development plans and competitive compensation.',
-  },
-  {
-    title: 'Workplace Culture Assessment',
-    desc: 'We assess your company culture and provide recommendations to create a positive, inclusive, and motivating environment.',
-  },
-  {
-    title: 'Employee Satisfaction Programs',
-    desc: 'We develop and implement satisfaction programs that enhance morale and improve employee retention.',
-  },
-  {
-    title: 'Professional Development Opportunities',
-    desc: 'We help you create career development initiatives that allow employees to grow within your organization.',
-  },
-  {
-    title: 'Flexible Work Environment Strategies',
-    desc: 'We assist in implementing flexible work arrangements to increase job satisfaction and work-life balance.',
-  },
-  {
-    title: 'Employee Feedback Programs',
-    desc: 'We help businesses collect and analyze employee feedback to drive improvements in the workplace environment.',
-  },
-  {
-    title: 'Workforce Engagement Initiatives',
-    desc: 'We guide you in creating engaging initiatives to enhance employee commitment and productivity.',
-  },
-  {
-    title: 'Exit Interviews & Turnover Analysis',
-    desc: 'We conduct exit interviews and analyze turnover data to help businesses understand and reduce employee attrition.',
-  },
-];
 
 const images = [
   '/images/solutions/06-1.jpg',
@@ -53,18 +12,64 @@ const images = [
 ];
 
 export function EmployeeEngagement() {
+  const t = useTranslations('solutions.employeeEngagement');
+
+  const advantages = [
+    {
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+    {
+      title: t('3.title'),
+      desc: t('3.desc'),
+    },
+    {
+      title: t('4.title'),
+      desc: t('4.desc'),
+    },
+    {
+      title: t('5.title'),
+      desc: t('5.desc'),
+    },
+    {
+      title: t('6.title'),
+      desc: t('6.desc'),
+    },
+    {
+      title: t('7.title'),
+      desc: t('7.desc'),
+    },
+    {
+      title: t('8.title'),
+      desc: t('8.desc'),
+    },
+    {
+      title: t('9.title'),
+      desc: t('9.desc'),
+    },
+  ];
+
   return (
     <SolutionTemplate
       title={
         <>
-          Employee Engagement & <br className={st.br} /> Retention
+          {t('title.0')} <br className={st.br} />
+          {t('title.1')}
         </>
       }
-      desc="Keeping your workforce motivated, engaged, and committed to your company’s success."
+      desc={t('desc')}
       number={6}
       advantages={advantages}
       imageUrls={images}
-      actionBtnText="Request Engagement Service"
+      actionBtnText={t('requestEngagementService')}
       reverse
     />
   );

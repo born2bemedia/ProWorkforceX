@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { useRequestDialogStore } from '@/features/request-form/services';
 
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
@@ -10,6 +12,7 @@ import { Title } from '@/shared/ui/kit/title';
 import st from './contact-us.module.scss';
 
 export function ContactUs() {
+  const t = useTranslations('aboutUs.contactUs');
   const { setOpen } = useRequestDialogStore();
 
   return (
@@ -17,19 +20,15 @@ export function ContactUs() {
       <section className={st.personBg}>
         <div className={st.text}>
           <Text size="lg" color="primary">
-            Please complete the service form to request personalized advice or
-            to start using our services. Our team will contact you shortly.
+            {t('title')}
           </Text>
         </div>
       </section>
       <section className={st.contactForm}>
         <div className={st.contactTitle}>
-          <Title level={2}>Contact Us</Title>
+          <Title level={2}>{t('label')}</Title>
           <Text size="lg" color="primary">
-            We’re here to help you take the next step in optimizing your
-            business’s workforce. Whether you have questions about our services
-            or are ready to start, ProWorkforceX is here to help you achieve
-            your HR goals.
+            {t('text')}
           </Text>
         </div>
         <Button
@@ -38,7 +37,7 @@ export function ContactUs() {
           size="md"
           onClick={() => setOpen(true)}
         >
-          Request a Consultation <ArrowTopRight />
+          {t('requestConsultation')} <ArrowTopRight />
         </Button>
       </section>
     </section>

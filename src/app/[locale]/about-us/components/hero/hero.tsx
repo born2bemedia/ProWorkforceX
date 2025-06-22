@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { ArrowTopRight, MouseIcon } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
@@ -11,30 +12,27 @@ import { Title } from '@/shared/ui/kit/title';
 import st from './hero.module.scss';
 
 export function Hero() {
+  const t = useTranslations('aboutUs.hero');
+
   return (
     <section className={st.layout}>
       <section className={st.topHero}>
-        <Chip>ABOUT US</Chip>
+        <Chip>{t('label')}</Chip>
         <Link href="/contact-us">
           <Button>
-            Contact Us <ArrowTopRight />
+            {t('contactUs')} <ArrowTopRight />
           </Button>
         </Link>
       </section>
       <section className={st.topBottom}>
         <div className={st.title}>
-          <Title color="white">Crafting the Future of Your Workforce</Title>
+          <Title color="white">{t('title')}</Title>
           <Text color="white" size="xl">
-            At ProWorkforceX, we specialize in providing businesses with
-            personalized human resources services designed to optimize workforce
-            management. Whether you need support with talent acquisition,
-            employee benefits, workplace conflict resolution, or leadership
-            development, we’re here to help you build and maintain a
-            high-performing workforce.
+            {t('desc')}
           </Text>
         </div>
         <Chip className={st.chip}>
-          Scroll <MouseIcon /> Down
+          {t('scrollDown.0')} <MouseIcon /> {t('scrollDown.1')}
         </Chip>
       </section>
     </section>

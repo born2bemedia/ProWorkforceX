@@ -2,6 +2,7 @@
 
 import type { JSX } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import {
   LineUpIcon,
@@ -16,46 +17,44 @@ import { Title } from '@/shared/ui/kit/title';
 
 import st from './career-journey.module.scss';
 
-const steps = [
-  {
-    icon: <LineUpIcon />,
-    title: 'The Future of Career Development: What’s Next in Employee Growth?',
-    desc: 'From skill-building to remote work opportunities, career development is evolving fast. Find out what’s next and how to stay ahead of the competition.',
-    url: '/resources/the-future-of-career-development',
-  },
-  {
-    icon: <TableIcon />,
-    title: 'Effective Conflict Resolution in the Workplace',
-    desc: 'Managing conflict is a critical skill for maintaining a positive and productive environment. Discover how to address workplace challenges with effective strategies.',
-    url: '/resources/effective-conflict-resolution',
-  },
-  {
-    icon: <LoopIcon />,
-    title: 'Navigating Employee Benefits: A Complete Guide for Employers',
-    desc: 'Maximize your business’s benefits package and understand how to offer competitive entitlements to attract and retain top talent.',
-    url: '/resources/navigating-employee-benefits',
-  },
-  {
-    icon: <SecurityIcon />,
-    title: 'Building a Work-Life Balance in the Modern Workplace',
-    desc: 'Learn how to help your employees improve productivity and overall well-being by mastering the art of balancing professional and personal life.',
-    url: '/resources/work-life-balance',
-  },
-];
-
 export function CareerJourney() {
+  const t = useTranslations('home.careerJourney');
+
+  const steps = [
+    {
+      icon: <LineUpIcon />,
+      title: t('0.title'),
+      desc: t('0.desc'),
+      url: '/resources/the-future-of-career-development',
+    },
+    {
+      icon: <TableIcon />,
+      title: t('1.title'),
+      desc: t('1.desc'),
+      url: '/resources/effective-conflict-resolution',
+    },
+    {
+      icon: <LoopIcon />,
+      title: t('2.title'),
+      desc: t('2.desc'),
+      url: '/resources/navigating-employee-benefits',
+    },
+    {
+      icon: <SecurityIcon />,
+      title: t('3.title'),
+      desc: t('3.desc'),
+      url: '/resources/work-life-balance',
+    },
+  ];
+
   return (
     <section className={st.layout}>
       <section className={st.titleLayout}>
         <Title color="primary">
-          Stay Ahead in Your HR <br /> Strategy
+          {t('title.0')} <br /> {t('title.1')}
         </Title>
         <Text className={st.text} color="primary">
-          Business success requires continuous growth — stay ahead with
-          insights, trends, and expert advice on HR strategies, employee
-          development, and workplace management. Whether seeking guidance on
-          workforce planning or looking to advance your HR practices, these
-          resources will help you stay at the forefront of business success.
+          {t('desc')}
         </Text>
       </section>
       <section className={st.grid}>
@@ -68,7 +67,7 @@ export function CareerJourney() {
         className={st.navBtn}
       >
         <Button variant="primaryInverted">
-          Dive Into Resources <ArrowTopRight />
+          {t('dive')} <ArrowTopRight />
         </Button>
       </Link>
     </section>
@@ -86,6 +85,8 @@ function Card({
   desc: string;
   url: string;
 }) {
+  const t = useTranslations('home.careerJourney');
+
   return (
     <article className={st.card}>
       <section className={st.cardTitle}>
@@ -97,7 +98,7 @@ function Card({
       </Text>
       <Link href={url}>
         <button className={st.btn}>
-          <span>Read More</span> <ArrowTopRight />
+          <span>{t('readMore')}</span> <ArrowTopRight />
         </button>
       </Link>
     </article>

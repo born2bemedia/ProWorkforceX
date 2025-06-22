@@ -1,50 +1,9 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { SolutionTemplate } from './solution-template';
 import st from './solution-template/solution-template.module.scss';
-
-const advantages = [
-  {
-    title: 'Career Coaching & Counseling',
-    desc: 'We provide career coaching services to help employees navigate their career paths and professional development.',
-  },
-  {
-    title: 'Training Needs Analysis',
-    desc: 'We assess your company’s training needs to ensure employees receive relevant and impactful learning opportunities.',
-  },
-  {
-    title: 'Leadership & Management Training',
-    desc: 'We develop leadership skills across all levels, from emerging managers to senior executives, ensuring effective team leadership.',
-  },
-  {
-    title: 'Skill Development & Certification Programs',
-    desc: 'We help implement skill development programs that lead to certifications, enhancing employee competencies.',
-  },
-  {
-    title: 'Mentorship Programs',
-    desc: 'We facilitate mentorship programs that pair experienced leaders with emerging talent to foster knowledge transfer.',
-  },
-  {
-    title: 'Succession Planning',
-    desc: 'We assist in creating a succession plan to ensure your organization has a strong pipeline of future leaders.',
-  },
-  {
-    title: 'Workplace Learning & Knowledge Sharing',
-    desc: 'We help foster a learning culture through internal knowledge-sharing initiatives and learning platforms.',
-  },
-  {
-    title: 'Personalized Employee Growth Plans',
-    desc: 'We create individualized growth plans for employees based on their goals, skills, and company needs.',
-  },
-  {
-    title: 'Cross-Training Programs',
-    desc: 'We design cross-training initiatives to enhance employee flexibility and promote collaboration across departments.',
-  },
-  {
-    title: 'Feedback & Performance Reviews',
-    desc: 'We help implement regular feedback and performance review systems to track employee progress and foster continuous improvement.',
-  },
-];
 
 const images = [
   '/images/solutions/03-1.jpg',
@@ -53,18 +12,64 @@ const images = [
 ];
 
 export function EmployeeDevelopment() {
+  const t = useTranslations('solutions.employeeDevelopment');
+
+  const advantages = [
+    {
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+    {
+      title: t('3.title'),
+      desc: t('3.desc'),
+    },
+    {
+      title: t('4.title'),
+      desc: t('4.desc'),
+    },
+    {
+      title: t('5.title'),
+      desc: t('5.desc'),
+    },
+    {
+      title: t('6.title'),
+      desc: t('6.desc'),
+    },
+    {
+      title: t('7.title'),
+      desc: t('7.desc'),
+    },
+    {
+      title: t('8.title'),
+      desc: t('8.desc'),
+    },
+    {
+      title: t('9.title'),
+      desc: t('9.desc'),
+    },
+  ];
+
   return (
     <SolutionTemplate
       title={
         <>
-          Employee Development & <br className={st.br} /> Career Advancement
+          {t('title.0')} <br className={st.br} />
+          {t('title.1')}
         </>
       }
-      desc="Investing in your employees’ growth drives long-term business success. Our services help foster a culture of learning and development."
+      desc={t('desc')}
       number={3}
       advantages={advantages}
       imageUrls={images}
-      actionBtnText="Request Development Service"
+      actionBtnText={t('requestDevelopmentService')}
     />
   );
 }

@@ -2,6 +2,7 @@
 
 import type { JSX } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { Headline } from '@/shared/ui/components/headline';
 import { CupIcon, MindIcon, SupportIcon } from '@/shared/ui/icons/yellow';
@@ -9,34 +10,30 @@ import { Text } from '@/shared/ui/kit/text';
 
 import st from './our-commitment.module.scss';
 
-const items = [
-  {
-    title: 'Continuous Support',
-    desc: 'Our team works with you at every stage of your business, adapting our services to meet your company’s evolving HR needs.',
-    icon: <SupportIcon />,
-  },
-  {
-    title: 'Personalized Guidance',
-    desc: 'Whether you’re scaling your workforce, or implementing benefits optimization, we tailor our solutions to help your business grow and succeed.',
-    icon: <MindIcon />,
-  },
-  {
-    title: 'Your Success Is Our Success',
-    desc: 'We measure our success by the positive outcomes we achieve. We are committed to helping your business maximize its HR potential.',
-    icon: <CupIcon />,
-  },
-];
-
 export function OurCommitment() {
+  const t = useTranslations('aboutUs.ourCommitment');
+
+  const items = [
+    {
+      title: t('0.title'),
+      desc: t('0.desc'),
+      icon: <SupportIcon />,
+    },
+    {
+      title: t('1.title'),
+      desc: t('1.desc'),
+      icon: <MindIcon />,
+    },
+    {
+      title: t('2.title'),
+      desc: t('2.desc'),
+      icon: <CupIcon />,
+    },
+  ];
+
   return (
     <section className={st.layout}>
-      <Headline
-        title="Our Commitment to Your Business"
-        description="At ProWorkforceX, we don’t just offer advice — we are
-            committed to supporting your company throughout its entire HR
-            journey."
-        number={5}
-      />
+      <Headline title={t('title')} description={t('desc')} number={5} />
       <section className={st.cardsWithImg}>
         <section className={st.cards}>
           {items.map(item => (

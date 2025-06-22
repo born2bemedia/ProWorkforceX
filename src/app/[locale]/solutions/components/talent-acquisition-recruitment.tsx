@@ -1,50 +1,9 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { SolutionTemplate } from './solution-template';
 import st from './solution-template/solution-template.module.scss';
-
-const advantages = [
-  {
-    title: 'Recruitment Strategy Development',
-    desc: "We work with you to create a strategy that best fits your company's needs and culture.",
-  },
-  {
-    title: 'Talent Sourcing & Screening',
-    desc: 'We assist with sourcing top candidates and screening resumes to deliver high-quality candidates.',
-  },
-  {
-    title: 'Candidate Interviews & Assessments',
-    desc: 'Our experts conduct interviews and use assessments to evaluate candidates based on skills, experience, and cultural fit.',
-  },
-  {
-    title: 'Executive Search Services',
-    desc: 'We provide high-level executive search for senior and specialized roles to ensure the right leadership for your company.',
-  },
-  {
-    title: 'Job Advertisement & Campaigns',
-    desc: 'We create and distribute targeted job ads across multiple platforms to ensure maximum reach.',
-  },
-  {
-    title: 'Recruitment Process Outsourcing (RPO)',
-    desc: 'We can manage your entire recruitment process or specific parts depending on your needs.',
-  },
-  {
-    title: 'Employee Referral Programs',
-    desc: 'Ensuring new hires seamlessly integrate into your company culture.',
-  },
-  {
-    title: 'Diversity Recruitment Strategies',
-    desc: 'We provide strategies to help you build a diverse and inclusive workforce, fostering innovation and creativity.',
-  },
-  {
-    title: 'Temporary & Contract Staffing',
-    desc: 'We provide temporary and contract staffing solutions to meet short-term workforce needs or specific project demands.',
-  },
-  {
-    title: 'Campus Recruitment',
-    desc: 'We assist in attracting fresh talent by partnering with universities and colleges for campus recruitment events and initiatives.',
-  },
-];
 
 const images = [
   '/images/solutions/01-1.jpg',
@@ -53,22 +12,64 @@ const images = [
 ];
 
 export function TalentAcquisitionRecruitment() {
+  const t = useTranslations('solutions.talentAcquisitionRecruitment');
+
+  const advantages = [
+    {
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+    {
+      title: t('3.title'),
+      desc: t('3.desc'),
+    },
+    {
+      title: t('4.title'),
+      desc: t('4.desc'),
+    },
+    {
+      title: t('5.title'),
+      desc: t('5.desc'),
+    },
+    {
+      title: t('6.title'),
+      desc: t('6.desc'),
+    },
+    {
+      title: t('7.title'),
+      desc: t('7.desc'),
+    },
+    {
+      title: t('8.title'),
+      desc: t('8.desc'),
+    },
+    {
+      title: t('9.title'),
+      desc: t('9.desc'),
+    },
+  ];
+
   return (
     <SolutionTemplate
       title={
         <>
-          Talent Acquisition & <br className={st.br} />
-          Recruitment
+          {t('title.0')} <br className={st.br} />
+          {t('title.1')}
         </>
       }
-      desc="Finding the right talent is crucial to your business success. We
-          provide comprehensive services to help your
-          business attract, hire, and retain the best
-          candidates."
+      desc={t('desc')}
       number={1}
       advantages={advantages}
       imageUrls={images}
-      actionBtnText="Request Recruitment Service"
+      actionBtnText={t('requestRecruitmentService')}
     />
   );
 }

@@ -2,6 +2,7 @@
 
 import type { JSX, ReactNode } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { Headline } from '@/shared/ui/components/headline';
 import { CapaIcon, HelpIcon, RoadIcon } from '@/shared/ui/icons/yellow';
@@ -10,35 +11,33 @@ import { Title } from '@/shared/ui/kit/title';
 
 import st from './our-values.module.scss';
 
-const values = [
-  {
-    icon: <HelpIcon />,
-    title: 'Personalized HR Support',
-    desc: 'We understand that each business is different, and we tailor our services to meet the unique workforce needs of your company.',
-    imgUrl: '/images/about-us/values/1.jpeg',
-  },
-  {
-    icon: <RoadIcon />,
-    title: 'Transparency and Flexibility',
-    desc: 'Whether you require one-time guidance or ongoing support, we offer flexible pricing and service options to suit your business’s evolving HR needs.',
-    imgUrl: '/images/about-us/values/2.jpeg',
-  },
-  {
-    icon: <CapaIcon />,
-    title: 'Continuous Development',
-    desc: 'Our clients consistently report positive changes in their workforce management, from smoother recruitment to improved employee satisfaction.',
-    imgUrl: '/images/about-us/values/3.jpeg',
-  },
-];
-
 export function OurValues() {
+  const t = useTranslations('aboutUs.ourValues');
+
+  const values = [
+    {
+      icon: <HelpIcon />,
+      title: t('0.title'),
+      desc: t('0.desc'),
+      imgUrl: '/images/about-us/values/1.jpeg',
+    },
+    {
+      icon: <RoadIcon />,
+      title: t('1.title'),
+      desc: t('1.desc'),
+      imgUrl: '/images/about-us/values/2.jpeg',
+    },
+    {
+      icon: <CapaIcon />,
+      title: t('2.title'),
+      desc: t('2.desc'),
+      imgUrl: '/images/about-us/values/3.jpeg',
+    },
+  ];
+
   return (
     <section className={st.layout}>
-      <Headline
-        title="Our Values"
-        description="Our team is committed to helping businesses succeed through a customized and strategic approach to HR. Here’s what drives us:"
-        number={1}
-      />
+      <Headline title={t('title')} description={t('desc')} number={1} />
       <section className={st.cards}>
         {values.map(value => (
           <Card key={value.title} {...value} />

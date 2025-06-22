@@ -1,60 +1,64 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { cn } from '@/shared/lib/styles';
 import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
 
 import st from './services-in-detail.module.scss';
 
-const services = [
-  {
-    title: 'HR Consultations & Advice',
-    desc: 'Receive expert guidance on workforce strategy, employee rights, workplace dynamics, and compliance tailored to your company’s needs.',
-    color: 'grey',
-  },
-  {
-    title: 'Workplace Conflict Resolution',
-    desc: 'Our professional mediation services resolve workplace conflicts quickly and effectively, fostering a harmonious and productive work environment.',
-    color: 'secondary',
-  },
-  {
-    title: 'Employee Engagement & Retention Strategies',
-    desc: 'We help businesses develop effective strategies to improve employee engagement, enhance workplace culture, and boost retention, ensuring a motivated and loyal workforce.',
-    color: 'grey',
-  },
-  {
-    title: 'Talent Acquisition & Recruitment',
-    desc: 'We assist businesses in finding the right candidates to meet your workforce needs, ensuring you hire the best talent for your organization.',
-    color: 'secondary',
-  },
-  {
-    title: 'Employee Development Programs',
-    desc: 'We support businesses with tailored career development programs to enhance your employees’ skills, boost morale and retain talent.',
-    color: 'grey',
-  },
-  {
-    title: 'Leadership & Management Training',
-    desc: 'Develop strong leaders with customized training programs that empower managers to lead high-performing teams.',
-    color: 'secondary',
-  },
-  {
-    title: 'Employee Benefits Optimization',
-    desc: 'Help your business maximize the value of employee benefits, ensuring that your package is competitive and attractive to top talent.',
-    color: 'grey',
-  },
-  {
-    title: 'Onboarding & Employee Integration',
-    desc: 'Streamline the onboarding process for new hires, ensuring smooth transitions and helping them integrate seamlessly into your company culture.',
-    color: 'grey',
-  },
-  {
-    title: 'Workplace Well-being & Balance Coaching',
-    desc: 'Support employees in a healthy work-life balance, improving their well-being and productivity.',
-    color: 'grey',
-  },
-];
-
 export function ServicesInDetail() {
+  const t = useTranslations('home.servicesInDetail');
+
+  const services = [
+    {
+      title: t('0.title'),
+      desc: t('0.desc'),
+      color: 'grey',
+    },
+    {
+      title: t('1.title'),
+      desc: t('1.desc'),
+      color: 'secondary',
+    },
+    {
+      title: t('2.title'),
+      desc: t('2.desc'),
+      color: 'grey',
+    },
+    {
+      title: t('3.title'),
+      desc: t('3.desc'),
+      color: 'secondary',
+    },
+    {
+      title: t('4.title'),
+      desc: t('4.desc'),
+      color: 'grey',
+    },
+    {
+      title: t('5.title'),
+      desc: t('5.desc'),
+      color: 'secondary',
+    },
+    {
+      title: t('6.title'),
+      desc: t('6.desc'),
+      color: 'grey',
+    },
+    {
+      title: t('7.title'),
+      desc: t('7.desc'),
+      color: 'grey',
+    },
+    {
+      title: t('8.title'),
+      desc: t('8.desc'),
+      color: 'grey',
+    },
+  ];
+
   return (
     <section className={st.layout}>
       <section className={st.titleLayout}>

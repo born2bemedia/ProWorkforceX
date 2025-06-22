@@ -3,6 +3,7 @@
 import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { Headline } from '@/shared/ui/components/headline';
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
@@ -12,37 +13,30 @@ import { Title } from '@/shared/ui/kit/title';
 
 import st from './how-it-works.module.scss';
 
-const benefits = [
-  'Consultation to understand your HR needs.',
-  'Customized HR strategy aligned with your business goals.',
-  'Efficient implementation of HR solutions.',
-  'Ongoing support to adapt and evolve.',
-  'Regular feedback to ensure continuous progress.',
-  'Networking & development opportunities for sustained growth.',
-];
-
 export function HowItWorks() {
+  const t = useTranslations('solutions.howItWorks');
+
+  const benefits = [t('0'), t('1'), t('2'), t('3'), t('4'), t('5')];
+
   return (
     <section className={st.layout}>
       <Headline
         title={
           <>
-            How It Works: Our <br className={st.br} /> Approach to Transforming{' '}
-            <br className={st.br} /> Your HR Strategy
+            {t('title.0')} <br className={st.br} />
+            {t('title.1')} <br className={st.br} />
+            {t('title.2')}
           </>
         }
-        description="At ProWorkforceX, we follow a streamlined, client-focused process to
-            ensure your HR functions are optimized efficiently. We collaborate
-            with your team to understand your unique
-            challenges, offering solutions that foster
-            growth and improve overall performance."
+        description={t('desc')}
         number={10}
         align="center"
       />
       <section className={st.contentLayout}>
         <section className={st.approaches}>
           <Title level={3}>
-            Here’s a snapshot of <br className={st.br} /> our approach:
+            {t('snapshot.0')} <br className={st.br} />
+            {t('snapshot.1')}
           </Title>
           <div className={st.list}>
             {benefits.map(benefit => (
@@ -57,6 +51,8 @@ export function HowItWorks() {
 }
 
 function DetailedWorkflow() {
+  const t = useTranslations('solutions.howItWorks');
+
   return (
     <article className={st.workflowLayout}>
       <section className={st.workflow}>
@@ -67,13 +63,12 @@ function DetailedWorkflow() {
             color="primary"
             size="3xl"
           >
-            If you’re curious to see how we fine-tune HR solutions for your
-            business, click the button below:
+            {t('condition')}
           </Text>
         </section>
         <Link href="/how-it-works" style={{ width: '100%', zIndex: 5 }}>
           <Button variant="primaryInverted" fullWidth>
-            Dive Into Detailed HR Workflow <ArrowTopRight />
+            {t('dive')} <ArrowTopRight />
           </Button>
         </Link>
       </section>

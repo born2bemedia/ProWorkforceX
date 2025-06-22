@@ -3,6 +3,7 @@ export * from './employee-benefits';
 export * from './employee-development';
 export * from './employee-engagement';
 export * from './explore-pricing';
+export * from './hero';
 export * from './how-it-works';
 export * from './hr-compliance';
 export * from './leadership-training';

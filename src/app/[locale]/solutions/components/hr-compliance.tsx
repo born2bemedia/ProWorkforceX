@@ -1,50 +1,9 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { SolutionTemplate } from './solution-template';
 import st from './solution-template/solution-template.module.scss';
-
-const advantages = [
-  {
-    title: 'Labor Law Compliance Audits',
-    desc: 'We conduct thorough audits to ensure your company complies with all local, state, and federal labor laws.',
-  },
-  {
-    title: 'Employee Rights Protection',
-    desc: 'We guide businesses in protecting employee rights and promoting fair treatment in all workplace policies and practices.',
-  },
-  {
-    title: 'Health & Safety Compliance',
-    desc: 'We ensure your company adheres to health and safety regulations, reducing workplace accidents and risks.',
-  },
-  {
-    title: 'HR Policies & Procedure Development',
-    desc: 'We help you develop clear, compliant HR policies and procedures that align with best practices and legal requirements.',
-  },
-  {
-    title: 'Data Protection & Privacy Compliance',
-    desc: 'We offer expert advice on data protection laws, ensuring your company meets GDPR and other privacy regulations.',
-  },
-  {
-    title: 'Risk Mitigation Strategies',
-    desc: 'We help businesses identify and mitigate HR-related risks, including employee disputes, compliance violations, and workforce issues.s',
-  },
-  {
-    title: 'Employee Handbook Development',
-    desc: 'We create comprehensive employee handbooks outlining workplace rules, expectations, and company policies.',
-  },
-  {
-    title: 'Contract Management & Employee Agreements',
-    desc: 'We assist in creating legally compliant contracts and employee agreements that protect your business and your employees.',
-  },
-  {
-    title: 'Workplace Investigations',
-    desc: 'We conduct workplace investigations to address potential issues such as harassment, discrimination, or misconduct.',
-  },
-  {
-    title: 'Audit & Compliance Reporting',
-    desc: 'We ensure your business fully complies with HR laws and generate necessary reports to maintain compliance standards.',
-  },
-];
 
 const images = [
   '/images/solutions/05-1.jpg',
@@ -53,18 +12,64 @@ const images = [
 ];
 
 export function HRCompliance() {
+  const t = useTranslations('solutions.hrCompliance');
+
+  const advantages = [
+    {
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+    {
+      title: t('3.title'),
+      desc: t('3.desc'),
+    },
+    {
+      title: t('4.title'),
+      desc: t('4.desc'),
+    },
+    {
+      title: t('5.title'),
+      desc: t('5.desc'),
+    },
+    {
+      title: t('6.title'),
+      desc: t('6.desc'),
+    },
+    {
+      title: t('7.title'),
+      desc: t('7.desc'),
+    },
+    {
+      title: t('8.title'),
+      desc: t('8.desc'),
+    },
+    {
+      title: t('9.title'),
+      desc: t('9.desc'),
+    },
+  ];
+
   return (
     <SolutionTemplate
       title={
         <>
-          HR Compliance & <br className={st.br} /> Risk Management
+          {t('title.0')} <br className={st.br} />
+          {t('title.1')}
         </>
       }
-      desc="Maintaining compliance with HR regulations while minimizing risks with our comprehensive support services."
+      desc={t('desc')}
       number={5}
       advantages={advantages}
       imageUrls={images}
-      actionBtnText="Request Compliance Service"
+      actionBtnText={t('requestComplianceService')}
     />
   );
 }

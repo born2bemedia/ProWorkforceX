@@ -1,50 +1,9 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { SolutionTemplate } from './solution-template';
 import st from './solution-template/solution-template.module.scss';
-
-const advantages = [
-  {
-    title: 'Comprehensive Benefits Analysis',
-    desc: 'We conduct a full analysis of your current benefits packages to identify areas for improvement.',
-  },
-  {
-    title: 'Benefits Benchmarking',
-    desc: 'We compare your benefits packages with industry standards and offer guidance on adjustments to stay competitive.',
-  },
-  {
-    title: 'Custom Benefits Design',
-    desc: 'We tailor benefits programs to your company’s goals and budget, ensuring employee satisfaction.',
-  },
-  {
-    title: 'Employee Wellness Programs',
-    desc: 'We design and implement wellness programs that improve employees’ physical and mental health.',
-  },
-  {
-    title: 'Retirement Plans & Pension Schemes',
-    desc: 'We assist in developing retirement solutions that ensure employees’ future financial security and align with your business needs.',
-  },
-  {
-    title: 'Healthcare & Insurance Plans',
-    desc: 'We provide expert advice on creating comprehensive healthcare and insurance plans for your workforce.',
-  },
-  {
-    title: 'Paid Time Off & Leave Policies',
-    desc: 'We help create fair and transparent leave policies that balance company needs with employee well-being.',
-  },
-  {
-    title: 'Flexible Working Arrangements',
-    desc: 'We help implement flexible working policies, including remote, flextime, and compressed workweeks.',
-  },
-  {
-    title: 'Performance-Based Benefits',
-    desc: 'We help design performance-based incentives and bonuses to motivate and reward employees for their contributions.',
-  },
-  {
-    title: 'Employee Recognition Programs',
-    desc: 'We assist in creating employee recognition programs to acknowledge and celebrate achievements and milestones.',
-  },
-];
 
 const images = [
   '/images/solutions/02-1.jpg',
@@ -53,18 +12,64 @@ const images = [
 ];
 
 export function EmployeeBenefits() {
+  const t = useTranslations('solutions.employeeBenefits');
+
+  const advantages = [
+    {
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+    {
+      title: t('3.title'),
+      desc: t('3.desc'),
+    },
+    {
+      title: t('4.title'),
+      desc: t('4.desc'),
+    },
+    {
+      title: t('5.title'),
+      desc: t('5.desc'),
+    },
+    {
+      title: t('6.title'),
+      desc: t('6.desc'),
+    },
+    {
+      title: t('7.title'),
+      desc: t('7.desc'),
+    },
+    {
+      title: t('8.title'),
+      desc: t('8.desc'),
+    },
+    {
+      title: t('9.title'),
+      desc: t('9.desc'),
+    },
+  ];
+
   return (
     <SolutionTemplate
       title={
         <>
-          Employee Benefits <br className={st.br} /> Optimization
+          {t('title.0')} <br className={st.br} />
+          {t('title.1')}
         </>
       }
-      desc="Optimizing your employee benefits packages to attract and retain top talent while maintaining cost-effectiveness."
+      desc={t('desc')}
       number={2}
       advantages={advantages}
       imageUrls={images}
-      actionBtnText="Request Benefits Service"
+      actionBtnText={t('requestBenefitsService')}
       reverse
     />
   );

@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { SolutionCard } from '@/features/solutions/components';
 
@@ -12,43 +13,44 @@ import { Title } from '@/shared/ui/kit/title';
 
 import st from './solution.module.scss';
 
-const solutions = [
-  {
-    title: 'HR Consultations & Advice',
-    desc: 'Tailored guidance on career decisions, employee rights, and workplace management.',
-  },
-  {
-    title: 'Talent Acquisition & Recruitment',
-    desc: 'Helping businesses find the right talent to drive success.',
-  },
-  {
-    title: 'Employee Benefits Optimization',
-    desc: 'Ensuring your business offers the best benefits package to attract and retain employees.',
-  },
-  {
-    title: 'Workplace Conflict Resolution',
-    desc: 'Offering mediation services to resolve issues efficiently and professionally.',
-  },
-  {
-    title: 'Career Development Programs',
-    desc: 'Supporting employee growth through customized career development solutions.',
-  },
-  {
-    title: 'Onboarding & Integration Support',
-    desc: 'Ensuring new hires seamlessly integrate into your company culture.',
-  },
-];
-
 export function Solution() {
+  const t = useTranslations('home.solutions');
+
+  const solutions = [
+    {
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+    {
+      title: t('3.title'),
+      desc: t('3.desc'),
+    },
+    {
+      title: t('4.title'),
+      desc: t('4.desc'),
+    },
+    {
+      title: t('5.title'),
+      desc: t('5.desc'),
+    },
+  ];
+
   return (
     <section className={st.layout}>
       <section className={st.title}>
         <Title level={2} className={st.titleEl}>
-          Your One-Stop HR Solution with ProWorkforceX
+          {t('title')}
         </Title>
         <Text color="primary" size="lg" className={st.textEl}>
-          We provide businesses with comprehensive services that support
-          workforce management and HR operations. Here’s how we can help:
+          {t('desc')}
         </Text>
       </section>
       <section className={st.solutions}>
@@ -70,7 +72,7 @@ export function Solution() {
       </section>
       <Link href="/solutions" className={st.navBtn}>
         <Button variant="primaryInverted" size="md">
-          Explore Our Solutions <ArrowTopRight />
+          {t('explore')} <ArrowTopRight />
         </Button>
       </Link>
     </section>
