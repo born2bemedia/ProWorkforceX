@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { downloadFile } from '@/shared/lib/browser';
 import { DownloadIcon } from '@/shared/ui/icons/yellow';
@@ -11,6 +12,8 @@ import { Title } from '@/shared/ui/kit/title';
 import st from './download-pricing.module.scss';
 
 export function DownloadPricing() {
+  const t = useTranslations('pricingAndPackages.downloadPricing');
+
   return (
     <section className={st.layout}>
       <Image
@@ -33,12 +36,8 @@ export function DownloadPricing() {
         }}
       />
       <div className={st.content}>
-        <Title level={1}>Download Your Comprehensive Pricing Guide</Title>
-        <Text>
-          Need a detailed view of our services and pricing? Download our
-          complete price list in PDF format, and you’ll have all the information
-          you need right at your fingertips.
-        </Text>
+        <Title level={1}>{t('title')}</Title>
+        <Text>{t('desc')}</Text>
       </div>
       <Button
         className={st.downloadBtn}
@@ -47,7 +46,7 @@ export function DownloadPricing() {
         }
         variant="primaryInverted"
       >
-        Download Price List <DownloadIcon />
+        {t('btn')} <DownloadIcon />
       </Button>
       <Image
         src="/images/packages-and-pricing/mask-r.svg"

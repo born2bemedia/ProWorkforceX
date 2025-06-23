@@ -1,122 +1,110 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import type { ProductDef } from '@/features/product/lib';
 
 import { ProductTemplate } from './product-template';
 
-const products: ProductDef[] = [
-  {
-    title: 'Career Coaching & Counseling',
-    description:
-      'We provide career coaching services to help employees navigate their career paths and professional development.',
-    cost: {
-      price: '€600',
-      unit: 'per session',
-    },
-    type: 'buy',
-  },
-  {
-    title: 'Skill Development & Certification Programs',
-    description:
-      'We help implement skill development programs that lead to certifications, enhancing employee competencies.',
-    cost: {
-      from: true,
-      price: '€1,500',
-      unit: 'per program',
-    },
-    type: 'buy',
-  },
-  {
-    title: 'Workplace Learning & Knowledge Sharing',
-    description:
-      'We help foster a learning culture through internal knowledge-sharing initiatives and learning platforms.',
-    cost: {
-      price: '€1,000',
-      unit: 'per program',
-    },
-    type: 'buy',
-  },
-  {
-    title: 'Feedback & Performance Reviews',
-    description:
-      'We help implement regular feedback and performance review systems to track employee progress and foster continuous improvement.',
-    cost: {
-      price: '€750',
-      unit: 'per review system',
-    },
-    type: 'buy',
-  },
-  {
-    title: 'Training Needs Analysis',
-    description:
-      'We assess your company’s training needs to ensure employees receive relevant and impactful learning opportunities.',
-    cost: {
-      price: '€800',
-      unit: 'per analysis',
-    },
-    type: 'buy',
-  },
-  {
-    title: 'Mentorship Programs',
-    description:
-      'We facilitate mentorship programs that pair experienced leaders with emerging talent to foster knowledge transfer.',
-    cost: {
-      from: true,
-      price: '€1,000',
-      unit: 'per program',
-    },
-    type: 'order',
-  },
-  {
-    title: 'Personalized Employee Growth Plans',
-    description:
-      'We create individualized growth plans for employees based on their goals, skills, and company needs.',
-    cost: {
-      price: '€600',
-      unit: 'per plan',
-    },
-    type: 'buy',
-  },
-  {
-    title: 'Leadership & Management Training',
-    description:
-      'We develop leadership skills across all levels, from emerging managers to senior executives, ensuring effective team leadership.',
-    cost: {
-      from: true,
-      price: '€1,500',
-      unit: 'per program',
-    },
-    type: 'order',
-  },
-  {
-    title: 'Succession Planning',
-    description:
-      'We assist in creating a succession plan to ensure your organization has a strong pipeline of future leaders.',
-    cost: {
-      from: true,
-      price: '€1,000',
-      unit: 'per program',
-    },
-    type: 'buy',
-  },
-  {
-    title: 'Cross-Training Programs',
-    description:
-      'We design cross-training initiatives to enhance employee flexibility and promote collaboration across departments.',
-    cost: {
-      price: '€1,000',
-      unit: 'per program',
-    },
-    type: 'buy',
-  },
-];
-
 export function EmployeeDevelopment() {
-  return (
-    <ProductTemplate
-      title="Employee Development & Career Advancement"
-      products={products}
-      number={3}
-    />
-  );
+  const t = useTranslations('pricingAndPackages.employeeDevelopment');
+
+  const products: ProductDef[] = [
+    {
+      title: t('0.title'),
+      description: t('0.desc'),
+      cost: {
+        price: '€600',
+        unit: t('0.unit'),
+      },
+      type: t('0.type'),
+    },
+    {
+      title: t('1.title'),
+      description: t('1.desc'),
+      cost: {
+        from: true,
+        price: '€1,500',
+        unit: t('1.unit'),
+      },
+      type: t('1.type'),
+    },
+    {
+      title: t('2.title'),
+      description: t('2.desc'),
+      cost: {
+        price: '€1,000',
+        unit: t('2.unit'),
+      },
+      type: t('2.type'),
+    },
+    {
+      title: t('3.title'),
+      description: t('3.desc'),
+      cost: {
+        price: '€750',
+        unit: t('3.unit'),
+      },
+      type: t('3.type'),
+    },
+    {
+      title: t('4.title'),
+      description: t('4.desc'),
+      cost: {
+        price: '€800',
+        unit: t('4.unit'),
+      },
+      type: t('4.type'),
+    },
+    {
+      title: t('5.title'),
+      description: t('5.desc'),
+      cost: {
+        from: true,
+        price: '€1,000',
+        unit: t('5.unit'),
+      },
+      type: t('5.type'),
+    },
+    {
+      title: t('6.title'),
+      description: t('6.desc'),
+      cost: {
+        price: '€600',
+        unit: t('6.unit'),
+      },
+      type: t('6.type'),
+    },
+    {
+      title: t('7.title'),
+      description: t('7.desc'),
+      cost: {
+        from: true,
+        price: '€1,500',
+        unit: t('7.unit'),
+      },
+      type: t('7.type'),
+    },
+    {
+      title: t('8.title'),
+      description: t('8.desc'),
+      cost: {
+        from: true,
+        price: '€1,000',
+        unit: t('8.unit'),
+      },
+      type: t('8.type'),
+    },
+    {
+      title: t('9.title'),
+      description: t('9.desc'),
+      cost: {
+        price: '€1,000',
+        unit: t('9.unit'),
+      },
+      type: t('9.type'),
+    },
+  ];
+
+  return <ProductTemplate title={t('title')} products={products} number={3} />;
 }

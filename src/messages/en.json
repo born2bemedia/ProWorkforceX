@@ -890,5 +890,588 @@
         "desc": "Our process has helped many businesses streamline their HR functions, enhance employee engagement, and achieve significant growth."
       }
     }
+  },
+  "pricingAndPackages": {
+    "hero": {
+      "label": "Packages & Pricing",
+      "title": "Discover Our Premium HR Packages & Pricing",
+      "text": "ProWorkforceX offers comprehensive and customizable HR solutions to meet your business’s unique needs. Whether you’re looking for one-time expert services or ongoing HR support, our pricing models are transparent and tailored to ensure maximum value."
+    },
+    "packages": {
+      "packages": "Packages",
+      "oneTime": "One-Time Purchase",
+      "subscription": "Subscription",
+      "oneTimePurchase": {
+        "title": "One-Time Purchase HR Solutions",
+        "text": "These high-value packages are designed for businesses that need specific, one-time HR support, whether for strategic HR overhauls, compliance checks, or leadership training. Each package provides a comprehensive solution to meet your business’s needs.",
+        "whyChoose": {
+          "title": "Why Choose Our One-Time HR Solutions?",
+          "desc": "These high-value packages are designed for businesses that need specific, one-time HR support, whether for strategic HR overhauls, compliance checks, or leadership training. Each package provides a comprehensive solution to meet your business’s needs.",
+          "0": {
+            "title": "One-Time High-Impact Solutions",
+            "desc": "Ideal for businesses needing focused, comprehensive HR services for a specific need"
+          },
+          "1": {
+            "title": "Expert HR Support",
+            "desc": "Receive strategic guidance and actionable HR solutions tailored to your business’s needs."
+          },
+          "2": {
+            "title": "Tailored for All Business Sizes",
+            "desc": "From small businesses to large enterprises, we provide solutions that work for you."
+          },
+          "3": {
+            "title": "End-to-End HR Services",
+            "desc": "Our services cover all HR needs, from recruitment to compliance, leadership development, and performance management."
+          },
+          "4": {
+            "title": "Cost-Effective Packages",
+            "desc": "Each package is designed to provide maximum value with a one-time investment."
+          }
+        }
+      },
+      "subscriptionPurchase": {
+        "title": "Subscription-Based HR Services",
+        "text": "For businesses that want ongoing, comprehensive HR support, our subscription services provide expert guidance and tailored solutions to optimize workforce management at all times.",
+        "whyChoose": {
+          "title": "Why Choose Our Subscription-Based HR Services?",
+          "desc": "For businesses that want ongoing, comprehensive HR support, our subscription services provide expert guidance and tailored solutions to optimize workforce management at all times.",
+          "0": {
+            "title": "Comprehensive, Ongoing Support",
+            "desc": "Get access to a dedicated team of HR experts who work with your business to ensure seamless HR operations."
+          },
+          "1": {
+            "title": "Tailored Solutions",
+            "desc": "We provide solutions specifically designed to meet your unique business needs, whether a small business or a large enterprise."
+          },
+          "2": {
+            "title": "Flexible & Scalable",
+            "desc": "Our subscription services can evolve as your business grows, ensuring you get the right support when needed."
+          },
+          "3": {
+            "title": "Proactive HR Management",
+            "desc": "We don’t wait for problems to arise — we help you proactively address potential issues and optimize your HR strategy."
+          },
+          "4": {
+            "title": "Long-Term Partnership",
+            "desc": "Our services are designed to build long-term, sustainable success for your workforce and HR operations."
+          }
+        }
+      }
+    },
+    "pricingTitle": {
+      "title": "Pricing"
+    },
+    "productCard": {
+      "from": "From"
+    },
+    "talentAcquisitionRecruitment": {
+      "title": "Talent Acquisition & Recruitment",
+      "0": {
+        "title": "Recruitment Strategy Development",
+        "desc": "We work with you to create a strategy that best fits your company's needs and culture.",
+        "unit": "per hour",
+        "type": "buy"
+      },
+      "1": {
+        "title": "Executive Search Services",
+        "desc": "We provide high-level executive search for senior and specialized roles to ensure the right leadership for your company.",
+        "unit": "per search",
+        "type": "order"
+      },
+      "2": {
+        "title": "Employee Referral Programs",
+        "desc": "We help you create a referral program that incentivizes your employees to refer new hires.",
+        "unit": "per program",
+        "type": "order"
+      },
+      "3": {
+        "title": "Campus Recruitment",
+        "desc": "We help you recruit fresh talent by partnering with universities and colleges for campus recruitment events and initiatives.",
+        "unit": "per event",
+        "type": "order"
+      },
+      "4": {
+        "title": "Talent Sourcing & Screening",
+        "desc": "We assist with sourcing top candidates and screening resumes to deliver high-quality candidates.",
+        "unit": "per hour",
+        "type": "buy"
+      },
+      "5": {
+        "title": "Job Advertisement & Campaigns",
+        "desc": "We create and distribute targeted job ads across multiple platforms to ensure maximum reach.",
+        "unit": "per campaign",
+        "type": "buy"
+      },
+      "6": {
+        "title": "Diversity Recruitment Strategies",
+        "desc": "We provide strategies to help you build a diverse and inclusive workforce, fostering innovation and creativity.",
+        "unit": "per hour",
+        "type": "buy"
+      },
+      "7": {
+        "title": "Candidate Interviews & Assessments",
+        "desc": "Our experts conduct interviews and use assessments to evaluate candidates based on skills, experience, and cultural fit.",
+        "unit": "per interview",
+        "type": "buy"
+      },
+      "8": {
+        "title": "Recruitment Process Outsourcing (RPO)",
+        "desc": "We can manage your entire recruitment process or specific parts depending on your needs.",
+        "unit": "per campaign",
+        "type": "order"
+      },
+      "9": {
+        "title": "Temporary & Contract Staffing",
+        "desc": "We provide temporary and contract staffing solutions to meet short-term workforce needs or specific project demands.",
+        "unit": "per placement",
+        "type": "order"
+      }
+    },
+    "employeeBenefitsOptimization": {
+      "title": "Employee Benefits Optimization",
+      "0": {
+        "title": "Comprehensive Benefits Analysis",
+        "desc": "We conduct a full analysis of your current benefits packages to identify areas for improvement.",
+        "unit": "per analysis",
+        "type": "buy"
+      },
+      "1": {
+        "title": "Employee Wellness Programs",
+        "desc": "We design and implement wellness programs that improve employees’ physical and mental health.",
+        "unit": "per program",
+        "type": "order"
+      },
+      "2": {
+        "title": "Paid Time Off & Leave Policies",
+        "desc": "We help create fair and transparent leave policies that balance company needs with employee well-being.",
+        "unit": "per policy",
+        "type": "buy"
+      },
+      "3": {
+        "title": "Employee Recognition Programs",
+        "desc": "We assist in creating employee recognition programs to acknowledge and celebrate achievements and milestones.",
+        "unit": "per program",
+        "type": "order"
+      },
+      "4": {
+        "title": "Benefits Benchmarking",
+        "desc": "We compare your benefits packages with industry standards and offer guidance on adjustments to stay competitive.",
+        "unit": "per comparison",
+        "type": "buy"
+      },
+      "5": {
+        "title": "Retirement Plans & Pension Schemes",
+        "desc": "We assist in developing retirement solutions that ensure employees’ future financial security and align with your business needs.",
+        "unit": "per plan",
+        "type": "order"
+      },
+      "6": {
+        "title": "Flexible Working Arrangements",
+        "desc": "We help implement flexible working policies, including remote, flextime, and compressed workweeks.",
+        "unit": "per arrangement setup",
+        "type": "buy"
+      },
+      "7": {
+        "title": "Custom Benefits Design",
+        "desc": "We tailor benefits programs to your company’s goals and budget, ensuring employee satisfaction.",
+        "unit": "per design",
+        "type": "order"
+      },
+      "8": {
+        "title": "Healthcare & Insurance Plans",
+        "desc": "We provide expert advice on creating comprehensive healthcare and insurance plans for your workforce.",
+        "unit": "per plan",
+        "type": "buy"
+      },
+      "9": {
+        "title": "Performance-Based Benefits",
+        "desc": "We help design performance-based incentives and bonuses to motivate and reward employees for their contributions.",
+        "unit": "per program",
+        "type": "игн"
+      }
+    },
+    "employeeDevelopment": {
+      "title": "Employee Development & Career Advancement",
+      "0": {
+        "title": "Career Coaching & Counseling",
+        "desc": "We provide career coaching services to help employees navigate their career paths and professional development.",
+        "unit": "per session",
+        "type": "buy"
+      },
+      "1": {
+        "title": "Skill Development & Certification Programs",
+        "desc": "We help implement skill development programs that lead to certifications, enhancing employee competencies.",
+        "unit": "per program",
+        "type": "buy"
+      },
+      "2": {
+        "title": "Workplace Learning & Knowledge Sharing",
+        "desc": "We help foster a learning culture through internal knowledge-sharing initiatives and learning platforms.",
+        "unit": "per program",
+        "type": "buy"
+      },
+      "3": {
+        "title": "Feedback & Performance Reviews",
+        "desc": "We help implement regular feedback and performance review systems to track employee progress and foster continuous improvement.",
+        "unit": "per review system",
+        "type": "buy"
+      },
+      "4": {
+        "title": "Training Needs Analysis",
+        "desc": "We assess your company’s training needs to ensure employees receive relevant and impactful learning opportunities.",
+        "unit": "per analysis",
+        "type": "buy"
+      },
+      "5": {
+        "title": "Mentorship Programs",
+        "desc": "We facilitate mentorship programs that pair experienced leaders with emerging talent to foster knowledge transfer.",
+        "unit": "per program",
+        "type": "order"
+      },
+      "6": {
+        "title": "Personalized Employee Growth Plans",
+        "desc": "We create individualized growth plans for employees based on their goals, skills, and company needs.",
+        "unit": "per plan",
+        "type": "buy"
+      },
+      "7": {
+        "title": "Leadership & Management Training",
+        "desc": "We develop leadership skills across all levels, from emerging managers to senior executives, ensuring effective team leadership.",
+        "unit": "per program",
+        "type": "order"
+      },
+      "8": {
+        "title": "Succession Planning",
+        "desc": "We assist in creating a succession plan to ensure your organization has a strong pipeline of future leaders.",
+        "unit": "per plan",
+        "type": "buy"
+      },
+      "9": {
+        "title": "Cross-Training Programs",
+        "desc": "We design cross-training initiatives to enhance employee flexibility and promote collaboration across departments.",
+        "unit": "per program",
+        "type": "buy"
+      }
+    },
+    "workplaceConflictResolution": {
+      "title": "Workplace Conflict Resolution",
+      "0": {
+        "title": "Conflict Diagnosis & Prevention",
+        "desc": "We help identify potential conflict areas within your organization and prevent issues before they escalate.",
+        "unit": "per assessment",
+        "type": "buy"
+      },
+      "1": {
+        "title": "Employee Relations Strategy",
+        "desc": "We help you develop an employee relations strategy that fosters positive workplace dynamics and addresses grievances promptly.",
+        "unit": "per strategy development",
+        "type": "buy"
+      },
+      "2": {
+        "title": "Team Building & Conflict Prevention",
+        "desc": "We organize team-building exercises and workshops to promote collaboration and reduce the likelihood of conflicts.",
+        "unit": "per workshop",
+        "type": "buy"
+      },
+      "3": {
+        "title": "Employee Mediation Programs",
+        "desc": "We offer long-term mediation programs to support employees in resolving ongoing conflicts and building stronger working relationships.",
+        "unit": "per program",
+        "type": "order"
+      },
+      "4": {
+        "title": "Mediation Services",
+        "desc": "Our trained mediators facilitate productive discussions to resolve conflicts and disputes between employees.",
+        "unit": "per mediation session",
+        "type": "buy"
+      },
+      "5": {
+        "title": "Disciplinary Action Procedures",
+        "desc": "We assist in developing fair and consistent disciplinary policies and ensure compliance with legal requirements.",
+        "unit": "per procedure development",
+        "type": "buy"
+      },
+      "6": {
+        "title": "Resolution of Workplace Grievances",
+        "desc": "We guide businesses in establishing clear channels for employees to raise concerns and grievances, resolving them efficiently.",
+        "unit": "per grievance resolution",
+        "type": "buy"
+      },
+      "7": {
+        "title": "Conflict Management Training",
+        "desc": "We train managers and employees on conflict resolution techniques to address issues professionally and effectively.",
+        "unit": "per training session",
+        "type": "buy"
+      },
+      "8": {
+        "title": "Workplace Harassment Prevention",
+        "desc": "We offer training and policy development to prevent harassment and create a respectful workplace culture.",
+        "unit": "per program",
+        "type": "order"
+      },
+      "9": {
+        "title": "Restorative Justice Practices",
+        "desc": "We implement restorative practices to help resolve conflicts by repairing relationships and rebuilding trust.",
+        "unit": "per program",
+        "type": "buy"
+      }
+    },
+    "hrCompliance": {
+      "title": "HR Compliance & Risk Management",
+      "0": {
+        "title": "Labor Law Compliance Audits",
+        "desc": "We conduct thorough audits to ensure your company complies with all local, state, and federal labor laws.",
+        "unit": "per audit",
+        "type": "buy"
+      },
+      "1": {
+        "title": "HR Policies & Procedure Development",
+        "desc": "We help you develop clear, compliant HR policies and procedures that align with best practices and legal requirements.",
+        "unit": "per policy development",
+        "type": "buy"
+      },
+      "2": {
+        "title": "Risk Mitigation Strategies",
+        "desc": "We create comprehensive employee handbooks outlining workplace rules, expectations, and company policies.",
+        "unit": "per handbook",
+        "type": "buy"
+      },
+      "3": {
+        "title": "Audit & Compliance Reporting",
+        "desc": "We ensure your business fully complies with HR laws and generates necessary reports to maintain compliance standards.",
+        "unit": "per report",
+        "type": "buy"
+      },
+      "4": {
+        "title": "Employee Rights Protection",
+        "desc": "We guide businesses in protecting employee rights and promoting fair treatment in all workplace policies and practices.",
+        "unit": "per consultation",
+        "type": "buy"
+      },
+      "5": {
+        "title": "Data Protection & Privacy Compliance",
+        "desc": "We offer expert advice on data protection laws, ensuring your company meets GDPR and other privacy regulations.",
+        "unit": "per consultation",
+        "type": "buy"
+      },
+      "6": {
+        "title": "Contract Management & Employee Agreements",
+        "desc": "We assist in creating legally compliant contracts and employee agreements that protect your business and your employees.",
+        "unit": "per contract/agreement",
+        "type": "order"
+      },
+      "7": {
+        "title": "Health & Safety Compliance",
+        "desc": "We ensure your company adheres to health and safety regulations, reducing workplace accidents and risks.",
+        "unit": "per assessment",
+        "type": "order"
+      },
+      "8": {
+        "title": "Risk Mitigation Strategies",
+        "desc": "We help businesses identify and mitigate HR-related risks, including employee disputes, compliance violations, and workforce issues.",
+        "unit": "per consultation",
+        "type": "buy"
+      },
+      "9": {
+        "title": "Workplace Investigations",
+        "desc": "We conduct thorough investigations into workplace issues, ensuring fair and transparent outcomes.",
+        "unit": "per investigation",
+        "type": "buy"
+      }
+    },
+    "employeeEngagement": {
+      "title": "Employee Engagement & Retention",
+      "0": {
+        "title": "Employee Engagement Surveys",
+        "desc": "We design and conduct surveys to gauge employee engagement and identify areas for improvement.",
+        "unit": "per survey",
+        "type": "buy"
+      },
+      "1": {
+        "title": "Workplace Culture Assessment",
+        "desc": "We assess your company culture and provide recommendations to create a positive, inclusive, and motivating environment.",
+        "unit": "per assessment",
+        "type": "buy"
+      },
+      "2": {
+        "title": "Flexible Work Environment Strategies",
+        "desc": "We assist in implementing flexible work arrangements to increase job satisfaction and work-life balance.",
+        "unit": "per program",
+        "type": "buy"
+      },
+      "3": {
+        "title": "Exit Interviews & Turnover Analysis",
+        "desc": "We conduct exit interviews and analyze turnover data to help businesses understand and reduce employee attrition.",
+        "unit": "per interview and analysis",
+        "type": "buy"
+      },
+      "4": {
+        "title": "Recognition Programs",
+        "desc": "We help create employee recognition programs that reward and acknowledge contributions, enhancing job satisfaction.",
+        "unit": "per program",
+        "type": "buy"
+      },
+      "5": {
+        "title": "Employee Satisfaction Programs",
+        "desc": "We develop and implement satisfaction programs that enhance morale and improve employee retention.",
+        "unit": "per program",
+        "type": "buy"
+      },
+      "6": {
+        "title": "Employee Feedback Programs",
+        "desc": "We help businesses collect and analyze employee feedback to drive improvements in the workplace environment.",
+        "unit": "per program",
+        "type": "order"
+      },
+      "7": {
+        "title": "Retention Strategy Development",
+        "desc": "We assist in developing strategies to retain top talent, including career development plans and competitive compensation.",
+        "unit": "per strategy",
+        "type": "order"
+      },
+      "8": {
+        "title": "Professional Development Opportunities",
+        "desc": "We help you create career development initiatives that allow employees to grow within your organization.",
+        "unit": "per program",
+        "type": "buy"
+      },
+      "9": {
+        "title": "Workforce Engagement Initiatives",
+        "desc": "We guide you in creating engaging initiatives to enhance employee commitment and productivity.",
+        "unit": "per initiative",
+        "type": "buy"
+      }
+    },
+    "leadershipManagementTraining": {
+      "title": "Leadership & Management Training",
+      "0": {
+        "title": "Executive Leadership Development",
+        "desc": "We provide tailored development programs for senior leaders to refine their strategic thinking, decision-making, and leadership skills, ensuring they lead with vision and confidence.",
+        "unit": "per program",
+        "type": "buy"
+      },
+      "1": {
+        "title": "Change Management Training",
+        "desc": "We help leaders navigate organizational changes, equipping them with the tools to lead teams through transitions smoothly and maintain employee morale during periods of change.",
+        "unit": "per session",
+        "type": "buy"
+      },
+      "2": {
+        "title": "Conflict Resolution for Managers",
+        "desc": "We train managers to identify, address, and resolve conflicts constructively, promoting a harmonious work environment.",
+        "unit": "per workshop",
+        "type": "buy"
+      },
+      "3": {
+        "title": "Exit Interviews & Turnover Analysis",
+        "desc": "We conduct exit interviews and analyze turnover data to help businesses understand and reduce employee attrition.",
+        "unit": "per analysis",
+        "type": "buy"
+      },
+      "4": {
+        "title": "Management Skills Training",
+        "desc": "We empower middle managers with the skills to manage teams effectively, from communication and delegation to conflict resolution and performance management.",
+        "unit": "per session",
+        "type": "buy"
+      },
+      "5": {
+        "title": "Leadership Communication Skills",
+        "desc": "Our programs foster collaboration, teamwork, and effective communication, ensuring your leaders can motivate and unite teams toward common goals.",
+        "unit": "per training session",
+        "type": "buy"
+      },
+      "6": {
+        "title": "Performance Management & Appraisal",
+        "desc": "Our programs help leaders understand how to conduct effective performance reviews, set clear goals, and provide feedback that promotes continuous improvement.",
+        "unit": "per session",
+        "type": "buy"
+      },
+      "7": {
+        "title": "Emotional Intelligence for Leaders",
+        "desc": "Develop emotionally intelligent leaders who can understand and manage emotions to build stronger relationships and navigate workplace challenges effectively.",
+        "unit": "per workshop",
+        "type": "buy"
+      },
+      "8": {
+        "title": "Coaching & Mentoring Programs",
+        "desc": "We offer customized coaching and mentoring programs for leaders at all levels, fostering personal growth and the development of high-potential employees.",
+        "unit": "per program",
+        "type": "order"
+      },
+      "9": {
+        "title": "Succession Planning & Talent Development",
+        "desc": "We assist in building strong leadership pipelines, helping organizations identify and nurture future leaders to ensure long-term organizational success.",
+        "unit": "per program",
+        "type": "buy"
+      }
+    },
+    "riskManagement": {
+      "title": "HR Compliance & Risk Management",
+      "0": {
+        "title": "Labor Law Compliance Audits",
+        "desc": "We conduct thorough audits to ensure your company’s HR practices comply with local, state, and federal labor laws, helping you avoid costly legal issues.",
+        "unit": "per audit",
+        "type": "buy"
+      },
+      "1": {
+        "title": "Employee Rights Protection",
+        "desc": "We guide businesses in implementing practices that protect employee rights, including fair treatment, non-discriminatory policies, and equal opportunities.",
+        "unit": "per consultation",
+        "type": "buy"
+      },
+      "2": {
+        "title": "Anti-Discrimination & Equal Employment",
+        "desc": "Our services ensure that your organization has effective anti-discrimination policies, promoting an inclusive and equitable work environment for all employees.",
+        "unit": "per policy review",
+        "type": "buy"
+      },
+      "3": {
+        "title": "Legal HR Documentation",
+        "desc": "We help you draft and review essential HR documents such as employment contracts, non-disclosure agreements, and severance packages to ensure they are legally compliant.",
+        "unit": "per document review",
+        "type": "buy"
+      },
+      "4": {
+        "title": "HR Policies & Procedure Development",
+        "desc": "We help you develop clear, compliant HR policies and procedures that align with best practices and legal requirements.",
+        "unit": "per policy development",
+        "type": "buy"
+      },
+      "5": {
+        "title": "Disciplinary & Grievance Procedures",
+        "desc": "We help businesses develop transparent, fair, and legally sound disciplinary procedures, ensuring that all actions are taken in line with legal requirements and organizational values.",
+        "unit": "per procedure development",
+        "type": "buy"
+      },
+      "6": {
+        "title": "Employee Benefits Compliance",
+        "desc": "We assist in ensuring that your employee benefits programs comply with relevant tax, legal, and healthcare regulations, safeguarding your company and employees.",
+        "unit": "per consultation",
+        "type": "buy"
+      },
+      "7": {
+        "title": "Workplace Safety Compliance",
+        "desc": "Our team assists businesses in meeting health and safety regulations, ensuring that their workplaces are safe and compliant with OSHA and other relevant safety standards.",
+        "unit": "per assessment",
+        "type": "buy"
+      },
+      "8": {
+        "title": "Data Protection & Privacy Compliance",
+        "desc": "We guide data protection laws, including GDPR compliance, helping businesses protect sensitive employee information and avoid data breaches.",
+        "unit": "per consultation",
+        "type": "buy"
+      },
+      "9": {
+        "title": "Internal Investigations & Reporting",
+        "desc": "We offer expertise in conducting internal investigations of employee misconduct, harassment, or workplace disputes, ensuring fairness and compliance with laws.",
+        "unit": "per investigation",
+        "type": "buy"
+      }
+    },
+    "downloadPricing": {
+      "title": "Download Your Comprehensive Pricing Guide",
+      "desc": "Need a detailed view of our services and pricing? Download our complete price list in PDF format, and you’ll have all the information you need right at your fingertips.",
+      "btn": "Download Price List"
+    }
   }
 }

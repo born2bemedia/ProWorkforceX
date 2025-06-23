@@ -6,5 +6,5 @@ export type ProductDef = {
     unit: string;
     from?: boolean;
   };
-  type: 'buy' | 'order';
+  type: string;
 };

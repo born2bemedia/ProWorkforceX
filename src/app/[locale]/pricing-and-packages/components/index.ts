@@ -2,6 +2,7 @@ export * from './download-pricing';
 export * from './employee-benefits-optimization';
 export * from './employee-development';
 export * from './employee-engagement';
+export * from './hero';
 export * from './hr-compliance';
 export * from './leadership-management-training';
 export * from './packages';

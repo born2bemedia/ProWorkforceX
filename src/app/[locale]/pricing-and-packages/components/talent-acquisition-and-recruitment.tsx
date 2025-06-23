@@ -1,123 +1,111 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import type { ProductDef } from '@/features/product/lib';
 
 import { ProductTemplate } from './product-template';
 
-const products: ProductDef[] = [
-  {
-    title: 'Recruitment Strategy Development',
-    description:
-      "We work with you to create a strategy that best fits your company's needs and culture.",
-    type: 'buy',
-    cost: {
-      unit: 'per hour',
-      price: '€700',
-    },
-  },
-  {
-    title: 'Executive Search Services',
-    description:
-      'We provide high-level executive search for senior and specialized roles to ensure the right leadership for your company.',
-    type: 'order',
-    cost: {
-      from: true,
-      unit: 'per search',
-      price: '€1,800',
-    },
-  },
-  {
-    title: 'Employee Referral Programs',
-    description:
-      'Ensuring new hires seamlessly integrate into your company culture.',
-    type: 'order',
-    cost: {
-      from: true,
-      unit: 'per program',
-      price: '€500',
-    },
-  },
-  {
-    title: 'Campus Recruitment',
-    description:
-      'We assist in attracting fresh talent by partnering with universities and colleges for campus recruitment events and initiatives.',
-    type: 'order',
-    cost: {
-      from: true,
-      unit: 'per event',
-      price: '€2,000',
-    },
-  },
-  {
-    title: 'Talent Sourcing & Screening',
-    description:
-      'We assist with sourcing top candidates and screening resumes to deliver high-quality candidates.',
-    type: 'buy',
-    cost: {
-      unit: 'per hour',
-      price: '€750',
-    },
-  },
-  {
-    title: 'Job Advertisement & Campaigns',
-    description:
-      'We create and distribute targeted job ads across multiple platforms to ensure maximum reach.',
-    type: 'buy',
-    cost: {
-      unit: 'per campaign',
-      price: '€350',
-    },
-  },
-  {
-    title: 'Diversity Recruitment Strategies',
-    description:
-      'We provide strategies to help you build a diverse and inclusive workforce, fostering innovation and creativity.',
-    type: 'buy',
-    cost: {
-      unit: 'per hour',
-      price: '€700',
-    },
-  },
-  {
-    title: 'Candidate Interviews & Assessments',
-    description:
-      'Our experts conduct interviews and use assessments to evaluate candidates based on skills, experience, and cultural fit.',
-    type: 'buy',
-    cost: {
-      unit: 'per interview',
-      price: '€850',
-    },
-  },
-  {
-    title: 'Recruitment Process Outsourcing (RPO)',
-    description:
-      'We can manage your entire recruitment process or specific parts depending on your needs.',
-    type: 'order',
-    cost: {
-      from: true,
-      unit: 'per campaign',
-      price: '€1,200',
-    },
-  },
-  {
-    title: 'Temporary & Contract Staffing',
-    description:
-      'We provide temporary and contract staffing solutions to meet short-term workforce needs or specific project demands.',
-    type: 'order',
-    cost: {
-      from: true,
-      unit: 'per placement',
-      price: '€1,000',
-    },
-  },
-];
-
 export function TalentAcquisitionRecruitment() {
-  return (
-    <ProductTemplate
-      title="Talent Acquisition & Recruitment"
-      products={products}
-      number={1}
-    />
-  );
+  const t = useTranslations('pricingAndPackages.talentAcquisitionRecruitment');
+
+  const products: ProductDef[] = [
+    {
+      title: t('0.title'),
+      description: t('0.desc'),
+      type: t('0.type'),
+      cost: {
+        unit: t('0.unit'),
+        price: '€700',
+      },
+    },
+    {
+      title: t('1.title'),
+      description: t('1.desc'),
+      type: t('1.type'),
+      cost: {
+        from: true,
+        unit: t('1.unit'),
+        price: '€1,800',
+      },
+    },
+    {
+      title: t('2.title'),
+      description: t('2.desc'),
+      type: t('2.type'),
+      cost: {
+        from: true,
+        unit: t('2.unit'),
+        price: '€500',
+      },
+    },
+    {
+      title: t('3.title'),
+      description: t('3.desc'),
+      type: t('3.type'),
+      cost: {
+        from: true,
+        unit: t('3.unit'),
+        price: '€2,000',
+      },
+    },
+    {
+      title: t('4.title'),
+      description: t('4.desc'),
+      type: t('4.type'),
+      cost: {
+        unit: t('4.unit'),
+        price: '€750',
+      },
+    },
+    {
+      title: t('5.title'),
+      description: t('5.desc'),
+      type: t('5.type'),
+      cost: {
+        unit: t('5.unit'),
+        price: '€350',
+      },
+    },
+    {
+      title: t('6.title'),
+      description: t('6.desc'),
+      type: t('6.type'),
+      cost: {
+        unit: t('6.unit'),
+        price: '€700',
+      },
+    },
+    {
+      title: t('7.title'),
+      description: t('7.desc'),
+      type: t('7.type'),
+      cost: {
+        unit: t('7.unit'),
+        price: '€850',
+      },
+    },
+    {
+      title: t('8.title'),
+      description: t('8.desc'),
+      type: t('8.type'),
+      cost: {
+        from: true,
+        unit: t('8.unit'),
+        price: '€1,200',
+      },
+    },
+    {
+      title: t('9.title'),
+      description: t('9.desc'),
+      type: t('9.type'),
+      cost: {
+        from: true,
+        unit: t('9.unit'),
+        price: '€1,000',
+      },
+    },
+  ];
+
+  return <ProductTemplate title={t('title')} products={products} number={1} />;
 }
