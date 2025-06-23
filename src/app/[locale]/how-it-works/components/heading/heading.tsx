@@ -1,24 +1,24 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
 
 import st from './heading.module.scss';
 
 export function Heading() {
+  const t = useTranslations('howItWorks.heading');
+
   return (
     <section className={st.layout}>
-      <Title>A Transformative HR Journey for Your Business</Title>
+      <Title>{t('title')}</Title>
       <div className={st.text}>
         <Text color="primary" size="xl">
-          We offer more than just HR solutions — we craft a transformative
-          journey designed to optimize your workforce and maximize your
-          organizational success.
+          {t('text.0')}
         </Text>
         <Text color="primary" size="xl">
-          From the first consultation to continuous support, we work with your
-          team to build an HR strategy that drives sustainable growth, ensures
-          compliance, and fosters a high-performing culture.
+          {t('text.1')}
         </Text>
       </div>
     </section>

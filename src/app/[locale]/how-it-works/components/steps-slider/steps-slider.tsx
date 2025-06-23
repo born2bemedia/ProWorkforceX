@@ -2,6 +2,7 @@
 
 import type { ReactNode } from 'react';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 
@@ -15,135 +16,6 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import './steps-slider.scss';
 
-const slides = [
-  {
-    title: 'Book Your Consultation – Understanding Your Business Needs',
-    desc: (
-      <>
-        <Text color="primary" size="lg">
-          The first step in our process is to understand your business deeply.
-          During our initial consultation, we take the time to get to know your
-          unique challenges, goals, and current HR practices.
-        </Text>
-        <Text color="primary" size="lg">
-          This collaborative session allows us to pinpoint the areas needing
-          immediate attention and map out how to support your business’s
-          success.
-        </Text>
-      </>
-    ),
-    list: [
-      'Comprehensive Business Assessment: We learn about your industry, company culture, team dynamics, and HR pain points to ensure a comprehensive understanding of your business.',
-      'Identify Key HR Challenges: Whether you’re dealing with high turnover, recruitment struggles, or compliance issues, we help identify the root causes.',
-      'Clarify Business Goals: We align HR initiatives with your overall business objectives, ensuring HR strategies directly support your growth plans.',
-      'Tailored Consultation: This is a bespoke, tailored session for your business needs.\n',
-    ],
-  },
-  {
-    title: 'Develop a Custom HR Strategy – Tailored to Your Business Vision',
-    desc: (
-      <>
-        <Text color="primary" size="lg">
-          Once we understand your business needs, we develop a custom HR
-          strategy. We work with your team to design an HR roadmap that aligns
-          with your business goals, company culture, and future aspirations.
-        </Text>
-        <Text color="primary" size="lg">
-          This strategy focuses on key HR areas such as talent acquisition,
-          employee engagement, leadership development, and more.
-        </Text>
-      </>
-    ),
-    list: [
-      'HR Strategy Design: We design a comprehensive HR strategy that aligns with your company’s needs, whether it’s improving recruitment, reducing turnover, or enhancing workplace culture.',
-      'Targeted Solutions for Growth:  Our strategy includes actionable steps to address your most pressing HR challenges, with clear timelines and measurable objectives.',
-      'Integration with Business Goals: The HR strategy seamlessly integrates with your business goals, ensuring that every HR initiative supports your company’s broader objectives.',
-      'Focus Areas: Depending on your needs, we’ll focus on recruitment, employee development, compliance, benefits, or other crucial HR areas.\n',
-    ],
-  },
-  {
-    title: 'Implement Your HR Strategy – Bringing Your Vision to Life',
-    desc: (
-      <>
-        <Text color="primary" size="lg">
-          With the HR strategy in place, we move into the implementation phase,
-          where our team works closely with yours to implement the plan.
-        </Text>
-        <Text color="primary" size="lg">
-          This is where we bring the HR solutions to life, ensuring everything
-          runs smoothly, and the changes positively impact your workforce.
-        </Text>
-      </>
-    ),
-    list: [
-      'Hands-On Support: Our experts manage the execution of the plan, from recruitment to employee development programs and leadership training.',
-      'Seamless Integration:  We ensure the HR strategy is integrated into your existing systems and processes, minimizing disruptions.',
-      'Onboarding & Communication: We ensure smooth communication and proper onboarding for new HR processes, ensuring your team adapts quickly to the changes.',
-      'Support for Every Stage: From talent acquisition to training, we are here to help at every implementation stage.\n',
-    ],
-  },
-  {
-    title:
-      'Ongoing Monitoring & Continuous Improvement – Tracking Your Progress',
-    desc: (
-      <>
-        <Text color="primary" size="lg">
-          We don’t stop at implementation. Our job is to ensure that your HR
-          solutions continue to work effectively so we monitor progress and make
-          ongoing adjustments.
-        </Text>
-        <Text color="primary" size="lg">
-          We believe in the power of continuous improvement, adapting HR
-          solutions as your business evolves.
-        </Text>
-      </>
-    ),
-    list: [
-      'Continuous Feedback Loop: We regularly track and assess the impact of HR solutions, ensuring they are achieving the desired results.',
-      'Quarterly Progress Reviews:  Regularly scheduled check-ins allow us to review the success of the HR strategy and identify areas for further optimization.',
-      'Real-time Adjustments:  As your business grows and your HR needs change, we make data-driven adjustments to keep the strategy relevant and effective.',
-      'Measurable Results: We provide reports that detail each initiative’s success, including key metrics like employee satisfaction, turnover rates, and recruitment success.',
-    ],
-  },
-  {
-    title: 'Reporting & Data-Driven Insights – Making Informed Decisions',
-    desc: (
-      <Text color="primary" size="lg">
-        Our approach emphasizes the importance of data. We provide actionable
-        insights and comprehensive reports to ensure that your HR strategies
-        continually evolve with your business’s needs.
-      </Text>
-    ),
-    list: [
-      'Comprehensive HR Reports: Receive detailed reports covering each solution’s key performance indicators (KPIs), progress, and effectiveness.',
-      'Data-Driven Insights: Our reports provide the insights necessary for making strategic HR decisions, helping you refine your HR operations and strategies.',
-      'Feedback Analysis: We collect feedback from your employees to understand the changes’ effectiveness and ensure employee satisfaction.',
-      'Ongoing Improvement: With these insights, we ensure that your business adapts to changing HR needs and achieves long-term success.',
-    ],
-  },
-  {
-    title: 'Scaling & Future-Proofing – Evolving with Your Business',
-    desc: (
-      <>
-        <Text color="primary" size="lg">
-          As your business grows, your HR needs will evolve. Our approach
-          ensures that your HR strategy scales with your company, ensuring
-          long-term success.
-        </Text>
-        <Text color="primary" size="lg">
-          We provide future-proof HR solutions to prepare your organization for
-          tomorrow’s challenges.
-        </Text>
-      </>
-    ),
-    list: [
-      'Scalable HR Solutions:  We make sure that as your workforce expands, your HR strategies grow with it, ensuring the smooth integration of new talent and processes.',
-      'Preparing for Future HR Needs: We anticipate future HR challenges and ensure your organization is ready for change, whether scaling, restructuring, or entering new markets.',
-      'Long-Term Partnership: Our relationship with you doesn’t end once the strategy is implemented. We are your long-term HR partner, committed to helping your business evolve.',
-    ],
-  },
-];
-
 function NextBtn() {
   const swiper = useSwiper();
 
@@ -155,6 +27,90 @@ function NextBtn() {
 }
 
 export function StepsSlider() {
+  const t = useTranslations('howItWorks.stepsOfTheWay');
+
+  const slides = [
+    {
+      title: t('0.title'),
+      desc: (
+        <>
+          <Text color="primary" size="lg">
+            {t('0.desc.0')}
+          </Text>
+          <Text color="primary" size="lg">
+            {t('0.desc.1')}
+          </Text>
+        </>
+      ),
+      list: [t('0.list.0'), t('0.list.1'), t('0.list.2'), t('0.list.3')],
+    },
+    {
+      title: t('1.title'),
+      desc: (
+        <>
+          <Text color="primary" size="lg">
+            {t('1.desc.0')}
+          </Text>
+          <Text color="primary" size="lg">
+            {t('1.desc.1')}
+          </Text>
+        </>
+      ),
+      list: [t('1.list.0'), t('1.list.1'), t('1.list.2'), t('1.list.3')],
+    },
+    {
+      title: t('2.title'),
+      desc: (
+        <>
+          <Text color="primary" size="lg">
+            {t('2.desc.0')}
+          </Text>
+          <Text color="primary" size="lg">
+            {t('2.desc.1')}
+          </Text>
+        </>
+      ),
+      list: [t('2.list.0'), t('2.list.1'), t('2.list.2'), t('2.list.3')],
+    },
+    {
+      title: t('3.title'),
+      desc: (
+        <>
+          <Text color="primary" size="lg">
+            {t('3.desc.0')}
+          </Text>
+          <Text color="primary" size="lg">
+            {t('3.desc.1')}
+          </Text>
+        </>
+      ),
+      list: [t('3.list.0'), t('3.list.1'), t('3.list.2'), t('3.list.3')],
+    },
+    {
+      title: t('4.title'),
+      desc: (
+        <Text color="primary" size="lg">
+          {t('4.desc.0')}
+        </Text>
+      ),
+      list: [t('4.list.0'), t('4.list.1'), t('4.list.2'), t('4.list.3')],
+    },
+    {
+      title: t('5.title'),
+      desc: (
+        <>
+          <Text color="primary" size="lg">
+            {t('5.desc.0')}
+          </Text>
+          <Text color="primary" size="lg">
+            {t('5.desc.1')}
+          </Text>
+        </>
+      ),
+      list: [t('5.list.0'), t('5.list.1'), t('5.list.2')],
+    },
+  ];
+
   return (
     <Swiper
       spaceBetween={30}

@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { useRequestDialogStore } from '@/features/request-form/services';
 
 import { cn } from '@/shared/lib/styles';
@@ -17,40 +19,41 @@ import { Title } from '@/shared/ui/kit/title';
 
 import st from './choose-our-process.module.scss';
 
-const reasons = [
-  {
-    icon: <ChampIcon />,
-    title: 'Tailored to Your Business',
-    desc: 'Every process step is customized to fit your company’s unique needs and goals.',
-  },
-  {
-    icon: <PersonsIcon />,
-    title: 'Expert HR Team',
-    desc: 'Work with experienced HR who deeply understand business needs and employee satisfaction.',
-  },
-  {
-    icon: <HandshakeIcon />,
-    title: 'Continuous Support',
-    desc: 'We don’t just implement and leave; we offer ongoing support to ensure long-term success.',
-  },
-  {
-    icon: <GraphUp />,
-    title: 'Data-Driven Decisions',
-    desc: 'Our approach is rooted in data and measurable results, ensuring your business always gets the best value',
-  },
-  {
-    icon: <RoadIcon />,
-    title: 'Proven Track Record',
-    desc: 'Our process has helped many businesses streamline their HR functions, enhance employee engagement, and achieve significant growth.',
-  },
-];
-
 export function ChooseOurProcess() {
+  const t = useTranslations('howItWorks.chooseOurProcess');
   const { setOpen } = useRequestDialogStore();
+
+  const reasons = [
+    {
+      icon: <ChampIcon />,
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      icon: <PersonsIcon />,
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      icon: <HandshakeIcon />,
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+    {
+      icon: <GraphUp />,
+      title: t('3.title'),
+      desc: t('3.desc'),
+    },
+    {
+      icon: <RoadIcon />,
+      title: t('4.title'),
+      desc: t('4.desc'),
+    },
+  ];
 
   return (
     <section className={st.layout}>
-      <Title className={st.title}>Why Choose Our Process?</Title>
+      <Title className={st.title}>{t('title')}</Title>
       <section className={st.cards}>
         <div className={cn(st.row, st.firstRow)}>
           {reasons.slice(0, 3).map(({ desc, title, icon }) => (
@@ -69,7 +72,7 @@ export function ChooseOurProcess() {
         className={st.btn}
         onClick={() => setOpen(true)}
       >
-        Get Started with ProWorkforceX <ArrowTopRight />
+        {t('getStarted')} <ArrowTopRight />
       </Button>
     </section>
   );

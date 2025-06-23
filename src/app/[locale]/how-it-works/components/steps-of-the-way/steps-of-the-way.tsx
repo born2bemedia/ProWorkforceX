@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { Headline } from '@/shared/ui/components/headline';
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
@@ -17,19 +18,15 @@ const StepsSlider = dynamic(
 );
 
 export function StepsOfTheWay() {
+  const t = useTranslations('howItWorks.stepsOfTheWay');
+
   return (
     <section className={st.layout}>
-      <Headline
-        title="Steps of the way"
-        description="Explore how we work with you every step of the way
-            to elevate your business and employee
-            experience."
-        number={1}
-      />
+      <Headline title={t('title')} description={t('desc')} number={1} />
       <StepsSlider />
       <Link className={st.link} href="/contact-us">
         <Button variant="primaryInverted" size="md">
-          Contact Us for Future-Proof HR Solutions <ArrowTopRight />
+          {t('contactUs')} <ArrowTopRight />
         </Button>
       </Link>
     </section>
