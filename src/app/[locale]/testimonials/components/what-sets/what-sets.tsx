@@ -2,6 +2,7 @@
 
 import type { JSX } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { Headline } from '@/shared/ui/components/headline';
 import { ChartsIcon, CheckUser, Puzzle } from '@/shared/ui/icons/yellow';
@@ -9,36 +10,30 @@ import { Text } from '@/shared/ui/kit/text';
 
 import st from './what-sets.module.scss';
 
-const items = [
-  {
-    icon: <CheckUser />,
-    title: 'Comprehensive Expertise',
-    desc: 'Our team of seasoned HR professionals offers broad expertise in HR management, from compliance to employee development.',
-  },
-  {
-    icon: <Puzzle />,
-    title: 'Bespoke Solutions',
-    desc: 'We don’t believe in a one-size-fits-all approach. Every business is unique, so we create HR solutions tailored to your needs.',
-  },
-  {
-    icon: <ChartsIcon />,
-    title: 'Proven Track Record',
-    desc: 'Our clients consistently report measurable improvements in workforce productivity, employee retention, and overall HR performance.',
-  },
-];
-
 export function WhatSets() {
+  const t = useTranslations('testimonials.whatSetsUsApart');
+
+  const items = [
+    {
+      icon: <CheckUser />,
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      icon: <Puzzle />,
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      icon: <ChartsIcon />,
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+  ];
+
   return (
     <section className={st.layout}>
-      <Headline
-        title="What Sets Us Apart"
-        description="At ProWorkforceX, it’s not just about providing HR services — it’s
-            about creating lasting partnerships. We aim
-            to help your business thrive through innovative, tailored HR solutions
-            that align with your goals and foster long-term success. Here’s what
-            sets us apart:"
-        number={4}
-      />
+      <Headline title={t('title')} description={t('desc')} number={4} />
       <section className={st.contentLayout}>
         <section className={st.cards}>
           {items.map(item => (

@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { useRequestDialogStore } from '@/features/request-form/services';
 
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
@@ -10,17 +12,15 @@ import { Title } from '@/shared/ui/kit/title';
 import st from './get-in-touch.module.scss';
 
 export function GetInTouch() {
+  const t = useTranslations('testimonials.getInTouch');
   const { setOpen } = useRequestDialogStore();
 
   return (
     <section className={st.layout}>
       <section className={st.titleLayout}>
-        <Title>Get in Touch to Learn More</Title>
+        <Title>{t('title')}</Title>
         <Text color="primary" size="lg">
-          Are you ready to advance your HR strategy?{' '}
-          <strong>Contact us today</strong> to learn more about how
-          ProWorkforceX can help you optimize your HR functions and drive
-          business success.
+          {t('desc.0')} <strong>{t('desc.1')}</strong> {t('desc.2')}
         </Text>
       </section>
       <Button
@@ -29,7 +29,7 @@ export function GetInTouch() {
         style={{ zIndex: 5 }}
         onClick={() => setOpen(true)}
       >
-        Request a Consultation <ArrowTopRight />
+        {t('request')} <ArrowTopRight />
       </Button>
     </section>
   );

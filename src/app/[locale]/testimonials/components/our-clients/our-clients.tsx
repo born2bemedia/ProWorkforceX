@@ -1,6 +1,7 @@
 'use client';
 
 import type { JSX } from 'react';
+import { useTranslations } from 'next-intl';
 
 import {
   CartIcon,
@@ -17,61 +18,60 @@ import { Title } from '@/shared/ui/kit/title';
 
 import st from './our-clients.module.scss';
 
-const domains = [
-  {
-    icon: <ChipIcon />,
-    title: 'Technology',
-    desc: 'Helping tech companies build high-performing teams and develop agile HR solutions to drive innovation.',
-  },
-  {
-    icon: <Money />,
-    title: 'Finance',
-    desc: 'Offering strategic HR services to financial institutions, ensuring talent acquisition and retention in a highly competitive industry.',
-  },
-  {
-    icon: <Health />,
-    title: 'Healthcare',
-    desc: 'Providing specialized HR services to healthcare organizations, ensuring compliance and employee well-being.',
-  },
-  {
-    icon: <OrderHand />,
-    title: 'Hospitality',
-    desc: 'Supporting hospitality businesses with efficient HR management, and creating a culture of service excellence.',
-  },
-  {
-    icon: <CartIcon />,
-    title: 'Retail',
-    desc: 'Supporting retail businesses in managing a dynamic workforce and enhancing customer-facing HR operations.',
-  },
-  {
-    icon: <EducationIcon />,
-    title: 'Education',
-    desc: 'Assisting educational institutions with staffing, compliance, and development programs for administrative staff.',
-  },
-  {
-    icon: <Tool />,
-    title: 'Manufacturing',
-    desc: 'Helping manufacturing companies optimize their workforce, manage compliance, and improve employee engagement.',
-  },
-  {
-    icon: <Hammers />,
-    title: 'Construction',
-    desc: 'Helping construction companies with labor compliance, safety regulations, and an efficient HR system for managing large teams.',
-  },
-];
-
 export function OurClients() {
+  const t = useTranslations('testimonials.ourClients');
+
+  const domains = [
+    {
+      icon: <ChipIcon />,
+      title: t('0.title'),
+      desc: t('0.desc'),
+    },
+    {
+      icon: <Money />,
+      title: t('1.title'),
+      desc: t('1.desc'),
+    },
+    {
+      icon: <Health />,
+      title: t('2.title'),
+      desc: t('2.desc'),
+    },
+    {
+      icon: <OrderHand />,
+      title: t('3.title'),
+      desc: t('3.desc'),
+    },
+    {
+      icon: <CartIcon />,
+      title: t('4.title'),
+      desc: t('4.desc'),
+    },
+    {
+      icon: <EducationIcon />,
+      title: t('5.title'),
+      desc: t('5.desc'),
+    },
+    {
+      icon: <Tool />,
+      title: t('6.title'),
+      desc: t('6.desc'),
+    },
+    {
+      icon: <Hammers />,
+      title: t('7.title'),
+      desc: t('7.desc'),
+    },
+  ];
+
   return (
     <section className={st.layout}>
       <section className={st.titleLayout}>
         <Title level={2} className={st.title}>
-          Our Clients Across Industries
+          {t('title')}
         </Title>
         <Text color="primary" size="lg" className={st.text}>
-          We work with companies of all sizes, across a broad range of
-          industries. From small businesses to large enterprises, ProWorkforceX
-          provides customized HR solutions to meet the specific needs of each
-          industry.
+          {t('desc')}
         </Text>
       </section>
       <section className={st.cards}>

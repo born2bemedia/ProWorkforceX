@@ -1,5 +1,5 @@
 .divider {
-  background-color: #D2D8D5;
+  background-color: #d2d8d5;
   flex-shrink: 0;
 }
 
@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  height: 268px;
+  height: 280px;
 
   @media (max-width: 768px) {
     height: 238px;
@@ -50,7 +50,8 @@
     flex-direction: column;
   }
 
-  .marginB, .marginT {
+  .marginB,
+  .marginT {
     margin-top: 0;
   }
 }
