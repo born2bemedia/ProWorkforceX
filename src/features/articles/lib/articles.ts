@@ -1,18 +1,20 @@
-export const articles = [
+import type { useTranslations } from 'next-intl';
+
+export const getArticles = (t: ReturnType<typeof useTranslations>) => [
   {
-    label: 'The Future of Career Development',
+    label: t('0'),
     value: 'the-future-of-career-development',
   },
   {
-    label: 'Effective Conflict Resolution in the Workplace',
+    label: t('1'),
     value: 'effective-conflict-resolution',
   },
   {
-    label: 'Navigating Employee Benefits: A Complete Guide for Employers',
+    label: t('2'),
     value: 'navigating-employee-benefits',
   },
   {
-    label: 'Building a Work-Life Balance in the Modern Workplace',
+    label: t('3'),
     value: 'work-life-balance',
   },
 ];

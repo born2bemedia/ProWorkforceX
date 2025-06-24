@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { getTranslations } from 'next-intl/server';
 
 import {
-  articles,
   articlesFallback,
+  getArticles,
   images,
   imagesFallback,
 } from '@/features/articles/lib';
@@ -35,8 +36,9 @@ export default async function Resources({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const ta = await getTranslations('resources.articles');
 
-  const articleValues = articles.map(({ value }) => value);
+  const articleValues = getArticles(ta).map(({ value }) => value);
   const currentArticle = articleValues.includes(slug) ? slug : undefined;
   const imageSrc = images.get(slug);
 
