@@ -1823,5 +1823,17 @@
     },
     "sending": "Sending...",
     "submit": "Submit Your Request"
+  },
+  "header": {
+    "routes": {
+      "home": "Home",
+      "aboutUs": "About Us",
+      "solutions": "Solutions",
+      "howItWorks": "How It Works",
+      "pricingAndPackages": "Pricing & Packages",
+      "testimonials": "Testimonials",
+      "resources": "Resources",
+      "contactUs": "Contact Us"
+    }
   }
 }
