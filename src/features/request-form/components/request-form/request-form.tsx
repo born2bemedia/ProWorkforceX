@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { Controller, useForm, zodResolver } from '@/shared/lib/forms';
 import { Dropdzone } from '@/shared/ui/components/dropzone';
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
@@ -21,8 +23,8 @@ import { Title } from '@/shared/ui/kit/title';
 import {
   budgets,
   contactMethods,
+  createRequestFormSchema,
   type RequestFormSchema,
-  requestFormSchema,
   services,
   timelines,
 } from '../../lib';
@@ -31,7 +33,10 @@ import { DataChoice } from '../data-choice';
 import st from './request-form.module.scss';
 
 export function RequestForm({ className }: { className?: string }) {
+  const te = useTranslations('requestForm.errors');
   const { setOpen, setSent } = useRequestDialogStore();
+
+  const requestFormSchema = createRequestFormSchema(te);
 
   const {
     handleSubmit,

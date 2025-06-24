@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 import { DataOption } from '@/features/request-form/components/data-option';
 import { SuccessDialog } from '@/features/request-form/components/success-dialog';
@@ -8,7 +9,7 @@ import type { RequestFormSchema } from '@/features/request-form/lib';
 import {
   budgets,
   contactMethods,
-  requestFormSchema,
+  createRequestFormSchema,
   timelines,
 } from '@/features/request-form/lib';
 import { sendRequestForm } from '@/features/request-form/services';
@@ -28,7 +29,11 @@ import { services } from '../../lib';
 import st from './contact-form.module.scss';
 
 export function ContactForm() {
+  const t = useTranslations('contactForm');
+  const te = useTranslations('contactForm.errors');
   const [isSuccess, setIsSuccess] = useState(false);
+
+  const requestFormSchema = createRequestFormSchema(te);
 
   const {
     handleSubmit,
@@ -73,7 +78,7 @@ export function ContactForm() {
     <form id="contact-form" className={st.form} onSubmit={onSubmit}>
       <SuccessDialog isOpen={isSuccess} setOpen={setIsSuccess} />
       <section className={st.innerFormLayout}>
-        <Title level={5}>Personal & Company Data</Title>
+        <Title level={5}>{t('personalData.title')}</Title>
         <section>
           <div className={st.formRow}>
             <Controller
@@ -81,8 +86,8 @@ export function ContactForm() {
               control={control}
               render={({ field, fieldState: { error } }) => (
                 <TextField
-                  label="Full Name"
-                  placeholder="Enter your full name"
+                  label={t('personalData.fields.fullName.label')}
+                  placeholder={t('personalData.fields.fullName.placeholder')}
                   intent={error?.message ? 'danger' : 'primary'}
                   hint={error?.message}
                   color="white"
@@ -96,8 +101,8 @@ export function ContactForm() {
               control={control}
               render={({ field, fieldState: { error } }) => (
                 <TextField
-                  label="Email Address"
-                  placeholder="Enter your email address"
+                  label={t('personalData.fields.email.label')}
+                  placeholder={t('personalData.fields.email.placeholder')}
                   intent={error?.message ? 'danger' : 'primary'}
                   hint={error?.message}
                   type="email"
@@ -114,8 +119,8 @@ export function ContactForm() {
               control={control}
               render={({ field, fieldState: { error } }) => (
                 <PhoneField
-                  label="Phone Number"
-                  placeholder="Enter your phone number"
+                  label={t('personalData.fields.phone.label')}
+                  placeholder={t('personalData.fields.phone.placeholder')}
                   hint={error?.message}
                   {...field}
                 />
@@ -126,8 +131,8 @@ export function ContactForm() {
               control={control}
               render={({ field, fieldState: { error } }) => (
                 <TextField
-                  label="Company Name (optional)"
-                  placeholder="Required if your company seeks HR support for managing your workforce or business operations."
+                  label={t('personalData.fields.companyName.label')}
+                  placeholder={t('personalData.fields.companyName.placeholder')}
                   intent={error?.message ? 'danger' : 'primary'}
                   hint={error?.message}
                   height={72}
@@ -143,8 +148,8 @@ export function ContactForm() {
             control={control}
             render={({ field, fieldState: { error } }) => (
               <TextField
-                label="Your Website (optional)"
-                placeholder="Please provide your company's website if you feel it's relevant to understanding your business needs or HR requirements."
+                label={t('personalData.fields.website.label')}
+                placeholder={t('personalData.fields.website.placeholder')}
                 intent={error?.message ? 'danger' : 'primary'}
                 hint={error?.message}
                 height={72}
@@ -157,7 +162,7 @@ export function ContactForm() {
         </section>
       </section>
       <section className={st.innerFormLayout}>
-        <Title level={5}>Career & HR Preferences</Title>
+        <Title level={5}>{t('careerAndHRPreferences.title')}</Title>
         <section className={st.servicesLayout}>
           <Controller
             name="services"
@@ -165,7 +170,9 @@ export function ContactForm() {
             render={({ field, fieldState: { error } }) => (
               <div>
                 <div className={st.labelOptions}>
-                  <Text size="lg">Select the Service You’re Interested In</Text>
+                  <Text size="lg">
+                    {t('careerAndHRPreferences.fields.services.label')}
+                  </Text>
                   {error && <Text color="danger">{error.message}</Text>}
                 </div>
                 <section className={st.grid}>
@@ -193,7 +200,9 @@ export function ContactForm() {
             render={({ field, fieldState: { error } }) => (
               <div>
                 <div className={st.labelOptions}>
-                  <Text size="lg">Select your preferred investment range:</Text>
+                  <Text size="lg">
+                    {t('careerAndHRPreferences.fields.budget.label')}
+                  </Text>
                   {error && <Text color="danger">{error.message}</Text>}
                 </div>
                 <section className={st.grid}>
@@ -216,11 +225,13 @@ export function ContactForm() {
             render={({ field, fieldState: { error } }) => (
               <div className={st.goalsLayout}>
                 <Text size="lg" color="primary">
-                  Your Goals & Challenges:
+                  {t('careerAndHRPreferences.fields.goals.title')}
                 </Text>
                 <TextField
-                  label="What are your key business objectives and HR challenges?"
-                  placeholder="Type here..."
+                  label={t('careerAndHRPreferences.fields.goals.label')}
+                  placeholder={t(
+                    'careerAndHRPreferences.fields.goals.placeholder',
+                  )}
                   intent={error?.message ? 'danger' : 'primary'}
                   hint={error?.message}
                   color="white"
@@ -232,7 +243,7 @@ export function ContactForm() {
           />
           <section className={st.goalsLayout}>
             <Text size="lg" color="primary">
-              Tell us about your ideal workforce and organizational needs:
+              {t('careerAndHRPreferences.fields.jobRoles.title')}
             </Text>
             <div className={st.formRow}>
               <Controller
@@ -240,8 +251,10 @@ export function ContactForm() {
                 control={control}
                 render={({ field, fieldState: { error } }) => (
                   <TextField
-                    label="Job Role(s): "
-                    placeholder="Type here..."
+                    label={t('careerAndHRPreferences.fields.jobRoles.label')}
+                    placeholder={t(
+                      'careerAndHRPreferences.fields.jobRoles.placeholder',
+                    )}
                     intent={error?.message ? 'danger' : 'primary'}
                     hint={error?.message}
                     color="white"
@@ -255,8 +268,10 @@ export function ContactForm() {
                 control={control}
                 render={({ field, fieldState: { error } }) => (
                   <TextField
-                    label="Skills Required: "
-                    placeholder="Type here..."
+                    label={t('careerAndHRPreferences.fields.skills.label')}
+                    placeholder={t(
+                      'careerAndHRPreferences.fields.skills.placeholder',
+                    )}
                     intent={error?.message ? 'danger' : 'primary'}
                     hint={error?.message}
                     color="white"
@@ -272,8 +287,10 @@ export function ContactForm() {
                 control={control}
                 render={({ field, fieldState: { error } }) => (
                   <TextField
-                    label="Industry:"
-                    placeholder="Type here..."
+                    label={t('careerAndHRPreferences.fields.industry.label')}
+                    placeholder={t(
+                      'careerAndHRPreferences.fields.industry.placeholder',
+                    )}
                     intent={error?.message ? 'danger' : 'primary'}
                     hint={error?.message}
                     color="white"
@@ -287,8 +304,12 @@ export function ContactForm() {
                 control={control}
                 render={({ field, fieldState: { error } }) => (
                   <TextField
-                    label="Company Interests:"
-                    placeholder="Type here..."
+                    label={t(
+                      'careerAndHRPreferences.fields.careerInterests.label',
+                    )}
+                    placeholder={t(
+                      'careerAndHRPreferences.fields.careerInterests.placeholder',
+                    )}
                     intent={error?.message ? 'danger' : 'primary'}
                     hint={error?.message}
                     color="white"
@@ -306,8 +327,7 @@ export function ContactForm() {
               <section>
                 <div className={st.labelOptions}>
                   <Text size="lg" color="primary">
-                    When would you like to start implementing these HR
-                    solutions?
+                    {t('careerAndHRPreferences.fields.projectTimeline.label')}
                   </Text>
                   {error && <Text color="danger">{error.message}</Text>}
                 </div>
@@ -332,7 +352,7 @@ export function ContactForm() {
               <section>
                 <div className={st.labelOptions}>
                   <Text size="lg" color="primary">
-                    How would you like to connect?
+                    {t('careerAndHRPreferences.fields.contactMethod.label')}
                   </Text>
                   {error && <Text color="danger">{error.message}</Text>}
                 </div>
@@ -355,7 +375,9 @@ export function ContactForm() {
             control={control}
             render={({ field }) => (
               <div className={st.dropdzone}>
-                <Text size="lg">Upload Any Relevant Files (optional)</Text>
+                <Text size="lg">
+                  {t('careerAndHRPreferences.fields.file.label')}
+                </Text>
                 <Dropdzone
                   name="file"
                   onDrop={field.onChange}
@@ -367,7 +389,7 @@ export function ContactForm() {
         </section>
       </section>
       <Button className={st.sendBtn} variant="primaryInverted">
-        {isSubmitting ? 'Sending...' : 'Submit Your Request'}
+        {isSubmitting ? t('sending') : t('submit')}
         <ArrowTopRight />
       </Button>
     </form>

@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
@@ -29,20 +30,17 @@ export function Hero() {
 }
 
 function Card() {
+  const t = useTranslations('contactUs.hero');
+
   return (
     <section className={st.cardLayout}>
       <section className={st.cardContent}>
-        <Title>Get in Touch with ProWorkforceX</Title>
-        <Text className={st.text}>
-          We’d love to hear from you! Whether you have questions about our
-          services, want to request a consultation, or need additional
-          information, we are here to help. Contact us via phone or email, or
-          use the contact form below.
-        </Text>
+        <Title>{t('title')}</Title>
+        <Text className={st.text}>{t('text')}</Text>
       </section>
       <Link href="#contact-form">
         <Button variant="primaryInverted">
-          Contact us <ArrowTopRight />
+          {t('contact')} <ArrowTopRight />
         </Button>
       </Link>
     </section>

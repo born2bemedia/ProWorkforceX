@@ -1716,5 +1716,112 @@
       },
       "request": "Request a Consultation"
     }
+  },
+  "contactUs": {
+    "hero": {
+      "title": "Get in Touch with ProWorkforceX",
+      "text": "We’d love to hear from you! Whether you have questions about our services, want to request a consultation, or need additional information, we are here to help. Contact us via phone or email, or use the contact form below.",
+      "contact": "Contact us"
+    },
+    "info": {
+      "title": "Our Contact Information",
+      "registeredAddress": "Registered Address",
+      "officeAddress": "Office Address",
+      "phoneNumber": "Phone Number",
+      "email": "Email"
+    },
+    "socials": {
+      "title": "Follow Us on Social Media",
+      "desc": "Stay connected with us through our social media channels for updates, HR insights, and business tips",
+      "follow": "Follow"
+    },
+    "form": {
+      "title": "Contact Form",
+      "desc": "Request a Consultation or More Information"
+    }
+  },
+  "contactForm": {
+    "personalData": {
+      "title": "Personal & Company Data",
+      "fields": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "label": "Email Address",
+          "placeholder": "Enter your email address"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "Enter your phone number"
+        },
+        "companyName": {
+          "label": "Company Name",
+          "placeholder": "Enter your company name"
+        },
+        "website": {
+          "label": "Your Website (optional)",
+          "placeholder": "Please provide your company's website if you feel it's relevant to understanding your business needs or HR requirements."
+        }
+      }
+    },
+    "errors": {
+      "fullName": "Please enter a full name",
+      "email": "Please enter a email address",
+      "phone": "Please enter a phone number",
+      "budget": "Please provide your budget",
+      "goals": "Please provide your Goals & Challenges",
+      "jobRoles": "Please provide your job roles",
+      "skills": "Please provide your required skills",
+      "industry": "Please provide your industry",
+      "careerInterests": "Please enter a career interests",
+      "projectTimeline": "Please provide your project timeline",
+      "contactMethod": "Please provide your Contact Method"
+    },
+    "careerAndHRPreferences": {
+      "title": "Career & HR Preferences",
+      "fields": {
+        "services": {
+          "label": "Select the Service You’re Interested In"
+        },
+        "budget": {
+          "label": "Select your preferred investment range:"
+        },
+        "goals": {
+          "title": "Your Goals & Challenges:",
+          "label": "What are your key business objectives and HR challenges?",
+          "placeholder": "Type here..."
+        },
+        "jobRoles": {
+          "title": "Tell us about your ideal workforce and organizational needs:",
+          "label": "Job Role(s):",
+          "placeholder": "Type here..."
+        },
+        "skills": {
+          "label": "Skills Required:",
+          "placeholder": "Type here..."
+        },
+        "industry": {
+          "label": "Industry:",
+          "placeholder": "Type here..."
+        },
+        "careerInterests": {
+          "label": "Company Interests:",
+          "placeholder": "Type here..."
+        },
+        "projectTimeline": {
+          "label": "When would you like to start implementing these HR solutions?"
+        },
+        "contactMethod": {
+          "label": "How would you like to connect?"
+        },
+        "file": {
+          "label": "Upload Any Relevant Files (optional)"
+        }
+      }
+    },
+    "sending": "Sending...",
+    "submit": "Submit Your Request"
   }
 }

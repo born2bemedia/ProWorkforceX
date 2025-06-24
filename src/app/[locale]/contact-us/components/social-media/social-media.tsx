@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
@@ -16,15 +17,16 @@ const socials = [
 ];
 
 export function SocialMedia() {
+  const t = useTranslations('contactUs.socials');
+
   return (
     <section className={st.layout}>
       <section className={st.titleLayout}>
         <Title level={2} className={st.title}>
-          Follow Us on Social Media
+          {t('title')}
         </Title>
         <Text className={st.text} color="primary">
-          Stay connected with us through our social media channels for updates,
-          HR insights, and business tips
+          {t('desc')}
         </Text>
       </section>
       <section className={st.socials}>
@@ -37,12 +39,14 @@ export function SocialMedia() {
 }
 
 function Card({ url, name }: { name: string; url: string }) {
+  const t = useTranslations('contactUs.socials');
+
   return (
     <article className={st.socialCardLayout}>
       <Title level={3}>{name}</Title>
       <Link href={url} target="_blank" rel="noopener noreferrer">
         <Button variant="primaryInverted">
-          Follow <ArrowTopRight />
+          {t('follow')} <ArrowTopRight />
         </Button>
       </Link>
     </article>
