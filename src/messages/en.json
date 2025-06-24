@@ -1769,7 +1769,8 @@
     "errors": {
       "fullName": "Please enter a full name",
       "email": "Please enter a email address",
-      "phone": "Please enter a phone number",
+      "phoneIsRequired": "Phone is required",
+      "phoneInvalid": "Invalid phone number format",
       "budget": "Please provide your budget",
       "goals": "Please provide your Goals & Challenges",
       "jobRoles": "Please provide your job roles",
@@ -1835,5 +1836,199 @@
       "resources": "Resources",
       "contactUs": "Contact Us"
     }
+  },
+  "footer": {
+    "navigation": {
+      "company": "Company",
+      "requestAService": "Request a Service",
+      "insights": "Insights",
+      "legal": "Legal",
+      "solutions": "Solutions",
+      "howItWorks": "How It Works",
+      "testimonials": "Testimonials",
+      "resources": "Resources",
+      "packagesAndPricing": "Packages & Pricing",
+      "termsAndConditions": "Terms and Conditions",
+      "privacyPolicy": "Privacy Policy",
+      "cookiePolicy": "Cookie Policy",
+      "refundPolicy": "Refund Policy",
+      "home": "Home",
+      "aboutUs": "About Us",
+      "contactUs": "Contact Us"
+    },
+    "officeAddress": "Office address",
+    "registeredAddress": "Registered address",
+    "registeredNumber": "Registered number"
+  },
+  "thankYouOrder": {
+    "title": "Thank you for submission!",
+    "desc": "Your request has been successfully received. Our HR experts are reviewing your information and will contact you soon to discuss your company’s HR needs and provide customized solutions to optimize your workforce and operations."
+  },
+  "orderForm": {
+    "errors": {
+      "fullName": "Please enter a full name",
+      "email": "Please enter a email address",
+      "phoneIsRequired": "Phone is required",
+      "phoneInvalid": "Invalid phone number format",
+      "budget": "Please provide your budget"
+    },
+    "title": {
+      "0": "Begin Your Journey",
+      "1": "with ProWorkforceX"
+    },
+    "label": "Let’s Shape Your Path to Career Growth",
+    "text": "Tell us about your career goals, challenges, and aspirations, and we’ll create a personalized plan to help you succeed. Fill out the form below, and let’s take the first step toward achieving your career ambitions.",
+    "personalData": {
+      "title": "Personal Data",
+      "fields": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "label": "Email Address",
+          "placeholder": "Enter your email address"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "Enter your phone number"
+        },
+        "companyName": {
+          "label": "Company Name (optional)",
+          "placeholder": "Required if your company seeks HR support for managing your workforce or business operations."
+        },
+        "website": {
+          "label": "Your Website (optional)",
+          "placeholder": "Please provide your company's website if you feel it's relevant to understanding your business needs or HR requirements."
+        },
+        "budget": {
+          "label": "Your Budget Range",
+          "placeholder": "Select your investment range"
+        }
+      }
+    },
+    "submit": "Submit Your Request",
+    "sending": "Submitting..."
+  },
+  "services": {
+    "0": "HR Consultations & Advice",
+    "1": "Resume Writing & Interview Coaching",
+    "2": "Employee Benefits Optimization",
+    "3": "Workplace Conflict Resolution",
+    "4": "Career Development Programs",
+    "5": "Personalized Job Search Assistance",
+    "6": "Onboarding & Employee Integration",
+    "7": "Leadership & Management Training",
+    "8": "Work-Life Balance Coaching",
+    "9": "HR Compliance Assistance",
+    "10": "Other"
+  },
+  "budgets": {
+    "under": "Under"
+  },
+  "timelines": {
+    "within1Month": "Within 1 Month",
+    "1-3Months": "1-3 Months",
+    "3-6Months": "3-6 Months",
+    "flexibleTimeline": "Flexible Timeline"
+  },
+  "contactMethods": {
+    "email": "Email",
+    "phone": "Phone",
+    "videoCall": "Video Call"
+  },
+  "requestForm": {
+    "errors": {
+      "fullName": "Please enter a full name",
+      "email": "Please enter a email address",
+      "phoneIsRequired": "Phone is required",
+      "phoneInvalid": "Invalid phone number format",
+      "budget": "Please provide your budget",
+      "goals": "Please provide your Goals & Challenges",
+      "jobRoles": "Please provide your job roles",
+      "skills": "Please provide your required skills",
+      "industry": "Please provide your industry",
+      "careerInterests": "Please enter a career interests",
+      "projectTimeline": "Please provide your project timeline",
+      "contactMethod": "Please provide your Contact Method"
+    },
+    "title": {
+      "0": "Begin Your Journey",
+      "1": "with ProWorkforceX"
+    },
+    "label": "Let’s Shape Your Path to Career Growth",
+    "text": "Tell us about your career goals, challenges, and aspirations, and we’ll create a personalized plan to help you succeed. Fill out the form below, and let’s take the first step toward achieving your career ambitions.",
+    "personalData": {
+      "title": "Personal Data",
+      "fields": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "label": "Email Address",
+          "placeholder": "Enter your email address"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "Enter your phone number"
+        },
+        "companyName": {
+          "label": "Company Name (optional)",
+          "placeholder": "Required if your company seeks HR support for managing your workforce or business operations."
+        },
+        "website": {
+          "label": "Your Website (optional)",
+          "placeholder": "Please provide your company's website if you feel it's relevant to understanding your business needs or HR requirements."
+        }
+      }
+    },
+    "careerAndHRPreferences": {
+      "title": "Career & HR Data",
+      "fields": {
+        "services": {
+          "label": "Select the Service You’re Interested In"
+        },
+        "budget": {
+          "label": "Your Budget Range",
+          "placeholder": "Select your investment range"
+        },
+        "goals": {
+          "label": "Your Goals & Challenges",
+          "placeholder": "What are your key career objectives and current challenges?"
+        }
+      }
+    },
+    "careerProfile": {
+      "title": "Your Career Profile",
+      "text": "Tell us about your ideal professional role and work environment:",
+      "fields": {
+        "jobRoles": {
+          "placeholder": "Job Role(s)"
+        },
+        "skills": {
+          "placeholder": "Skills Required"
+        },
+        "industry": {
+          "placeholder": "Industry"
+        },
+        "careerInterests": {
+          "placeholder": "Company Interests"
+        },
+        "projectTimeline": {
+          "label": "Project Timeline",
+          "placeholder": "When would you like to start implementing these HR solutions?"
+        },
+        "contactMethod": {
+          "label": "Preferred Contact Method",
+          "placeholder": "How would you like to connect?"
+        },
+        "file": {
+          "placeholder": "Upload Any Relevant Files (optional)"
+        }
+      }
+    },
+    "submit": "Submit Your Request",
+    "sending": "Submitting..."
   }
 }

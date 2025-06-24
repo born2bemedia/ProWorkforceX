@@ -8,26 +8,22 @@ export const createRequestFormSchema = (
 ) =>
   z.object({
     fullName: z.string().min(1, { message: t('fullName') }),
-    email: z.string().email({ message: 'Please enter a email address' }),
+    email: z.string().email({ message: t('email') }),
     phone: z
       .string()
-      .nonempty('Phone is required')
-      .refine(isPhoneValid, 'Invalid phone number format'),
+      .nonempty(t('phoneIsRequired'))
+      .refine(isPhoneValid, t('phoneInvalid')),
     companyName: z.string().optional(),
     website: z.string().optional(),
     services: z.array(z.string()),
-    budget: z.string().nonempty('Please provide your budget'),
-    goals: z.string().nonempty('Please provide your Goals & Challenges'),
-    jobRoles: z.string().nonempty('Please provide your job roles'),
-    skills: z.string().nonempty('Please provide your required skills'),
-    industry: z.string().nonempty('Please provide your industry'),
-    careerInterests: z
-      .string()
-      .nonempty('Please provide your career interests'),
-    projectTimeline: z
-      .string()
-      .nonempty('Please provide your project timeline'),
-    contactMethod: z.string().nonempty('Please provide your Contact Method'),
+    budget: z.string().nonempty(t('budget')),
+    goals: z.string().nonempty(t('goals')),
+    jobRoles: z.string().nonempty(t('jobRoles')),
+    skills: z.string().nonempty(t('skills')),
+    industry: z.string().nonempty(t('industry')),
+    careerInterests: z.string().nonempty(t('careerInterests')),
+    projectTimeline: z.string().nonempty(t('projectTimeline')),
+    contactMethod: z.string().nonempty(t('contactMethod')),
     file: z.instanceof(File).optional(),
   });
 

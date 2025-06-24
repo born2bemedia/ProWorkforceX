@@ -6,12 +6,6 @@ import { useTranslations } from 'next-intl';
 import { DataOption } from '@/features/request-form/components/data-option';
 import { SuccessDialog } from '@/features/request-form/components/success-dialog';
 import type { RequestFormSchema } from '@/features/request-form/lib';
-import {
-  budgets,
-  contactMethods,
-  createRequestFormSchema,
-  timelines,
-} from '@/features/request-form/lib';
 import { sendRequestForm } from '@/features/request-form/services';
 
 import { Controller, useForm, zodResolver } from '@/shared/lib/forms';
@@ -25,15 +19,31 @@ import { Text } from '@/shared/ui/kit/text';
 import { TextField } from '@/shared/ui/kit/text-field';
 import { Title } from '@/shared/ui/kit/title';
 
-import { services } from '../../lib';
+import {
+  createRequestFormSchema,
+  getBudgets,
+  getContactMethods,
+  getServices,
+  getTimelines,
+} from '../../lib';
 import st from './contact-form.module.scss';
 
 export function ContactForm() {
-  const t = useTranslations('contactForm');
-  const te = useTranslations('contactForm.errors');
   const [isSuccess, setIsSuccess] = useState(false);
 
+  const t = useTranslations('contactForm');
+  const te = useTranslations('contactForm.errors');
+  const ts = useTranslations('services');
+  const tb = useTranslations('budgets');
+  const tt = useTranslations('timelines');
+  const tc = useTranslations('contactMethods');
+
   const requestFormSchema = createRequestFormSchema(te);
+  
+  const services = getServices(ts);
+  const budgets = getBudgets(tb);
+  const timelines = getTimelines(tt);
+  const contactMethods = getContactMethods(tc);
 
   const {
     handleSubmit,

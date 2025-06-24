@@ -2,51 +2,57 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
 
 import st from './footer.module.scss';
 
-const navigation = [
+const getNavigation = (t: ReturnType<typeof useTranslations>) => [
   {
-    title: 'Company',
+    title: t('company'),
     list: [
-      { label: 'Home', link: '/' },
-      { label: 'About Us', link: '/about-us' },
-      { label: 'Contact Us', link: '/contact-us' },
+      { label: t('home'), link: '/' },
+      { label: t('aboutUs'), link: '/about-us' },
+      { label: t('contactUs'), link: '/contact-us' },
     ],
   },
   {
-    title: 'Request a Service',
+    title: t('requestAService'),
     list: [
-      { label: 'Solutions', link: '/solutions' },
-      { label: 'How It Works', link: '/how-it-works' },
-      { label: 'Packages & Pricing', link: '/pricing-and-packages' },
+      { label: t('solutions'), link: '/solutions' },
+      { label: t('howItWorks'), link: '/how-it-works' },
+      { label: t('packagesAndPricing'), link: '/pricing-and-packages' },
     ],
   },
   {
-    title: 'Insights',
+    title: t('insights'),
     list: [
-      { label: 'Testimonials', link: '/testimonials' },
+      { label: t('testimonials'), link: '/testimonials' },
       {
-        label: 'Resources',
+        label: t('resources'),
         link: '/resources/the-future-of-career-development',
       },
     ],
   },
   {
-    title: 'Legal',
+    title: t('legal'),
     list: [
-      { label: 'Terms and Conditions', link: '/legal/terms-and-conditions' },
-      { label: 'Privacy Policy', link: '/legal/privacy-policy' },
-      { label: 'Cookie Policy', link: '/legal/cookie-policy' },
-      { label: 'Refund Policy', link: '/legal/refund-policy' },
+      { label: t('termsAndConditions'), link: '/legal/terms-and-conditions' },
+      { label: t('privacyPolicy'), link: '/legal/privacy-policy' },
+      { label: t('cookiePolicy'), link: '/legal/cookie-policy' },
+      { label: t('refundPolicy'), link: '/legal/refund-policy' },
     ],
   },
 ];
 
 export function FooterTop() {
+  const tn = useTranslations('footer.navigation');
+  const t = useTranslations('footer');
+
+  const navigation = getNavigation(tn);
+
   return (
     <section className={st.footerTopLayout}>
       <section className={st.logoLayout}>
@@ -55,15 +61,15 @@ export function FooterTop() {
         </Link>
         <address className={st.addressLayout}>
           <Text color="primary" weight={300}>
-            Office address: 9 Albert Embankment (Unit C), Lambeth, London,
+            {t('officeAddress')}: 9 Albert Embankment (Unit C), Lambeth, London,
             United Kingdom, SE1 7HD
           </Text>
           <Text color="primary" weight={300}>
-            Registered addresses: 2nd Floor College House, 17 King Edwards Road,
-            Ruislip, London, United Kingdom, HA4 7AE
+            {t('registeredAddress')}: 2nd Floor College House, 17 King Edwards
+            Road, Ruislip, London, United Kingdom, HA4 7AE
           </Text>
           <Text color="primary" weight={300}>
-            Registered number: 16342190
+            {t('registeredNumber')}: 16342190
           </Text>
         </address>
       </section>
