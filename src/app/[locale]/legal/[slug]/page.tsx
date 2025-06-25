@@ -40,6 +40,7 @@ export default async function PolicyPage({
   const awaitedParams = await params;
   const { slug } = awaitedParams;
   const page = await getPage(slug);
+
   return (
     <>
       <section className={st.policy}>
