@@ -10,8 +10,14 @@ type PageParams = {
 };
 
 export async function generateStaticParams(): Promise<PageParams[]> {
+  const params: PageParams[] = [];
+
   const slugs = await getPageSlugs();
-  return slugs.map(slug => ({ slug }));
+  for (const slug of slugs) {
+    params.push({ slug });
+  }
+
+  return params;
 }
 
 export async function generateMetadata({
