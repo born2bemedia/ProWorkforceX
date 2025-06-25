@@ -1,24 +1,9 @@
 import React from 'react';
 import type { Metadata } from 'next';
 
-import { getPage, getPageSlugs } from '@/features/policy/policy';
+import { getPage } from '@/features/policy/policy';
 
 import st from './page.module.scss';
-
-type PageParams = {
-  slug: string;
-};
-
-export async function generateStaticParams(): Promise<PageParams[]> {
-  const params: PageParams[] = [];
-
-  const slugs = await getPageSlugs();
-  for (const slug of slugs) {
-    params.push({ slug });
-  }
-
-  return params;
-}
 
 export async function generateMetadata({
   params,
