@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 
 import { getPage } from '@/features/policy/policy';
 
@@ -13,23 +14,23 @@ import st from './page.module.scss';
 //   return slugs.map(slug => ({ slug }));
 // }
 
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: Promise<{ slug: string }>;
-// }): Promise<Metadata> {
-//   const awaitedParams = await params;
-//   const { slug } = awaitedParams;
-//   const page = await getPage(slug);
-//   const pageTitle = `${page.title} | ProWorkforceX`;
-//   return {
-//     title: pageTitle,
-//     openGraph: {
-//       title: pageTitle,
-//       images: 'https://i.ibb.co/1t2ZCF6J/1024-518.png',
-//     },
-//   };
-// }
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const awaitedParams = await params;
+  const { slug } = awaitedParams;
+  const page = await getPage(slug);
+  const pageTitle = `${page.title} | ProWorkforceX`;
+  return {
+    title: pageTitle,
+    openGraph: {
+      title: pageTitle,
+      images: 'https://i.ibb.co/1t2ZCF6J/1024-518.png',
+    },
+  };
+}
 
 export default async function PolicyPage({
   params,
