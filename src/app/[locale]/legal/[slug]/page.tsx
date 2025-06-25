@@ -1,18 +1,18 @@
 import React from 'react';
 import type { Metadata } from 'next';
 
-import { getPage, getPageSlugs } from '@/features/policy/policy';
+import { getPage } from '@/features/policy/policy';
 
 import st from './page.module.scss';
 
-type PageParams = {
-  slug: string;
-};
-
-export async function generateStaticParams(): Promise<PageParams[]> {
-  const slugs = await getPageSlugs();
-  return slugs.map(slug => ({ slug }));
-}
+// export async function generateStaticParams(): Promise<
+//   {
+//     slug: string;
+//   }[]
+// > {
+//   const slugs = await getPageSlugs();
+//   return slugs.map(slug => ({ slug }));
+// }
 
 export async function generateMetadata({
   params,
@@ -39,7 +39,9 @@ export default async function PolicyPage({
 }) {
   const awaitedParams = await params;
   const { slug } = awaitedParams;
+  console.log('@slug', slug);
   const page = await getPage(slug);
+
   return (
     <>
       <section className={st.policy}>
