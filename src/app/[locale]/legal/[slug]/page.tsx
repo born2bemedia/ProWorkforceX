@@ -38,6 +38,7 @@ export default async function PolicyPage({
 }) {
   const awaitedParams = await params;
   const { slug } = awaitedParams;
+  console.log('@slug', slug);
   const page = await getPage(slug);
 
   return (
