@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import {
   Close,
   Content,
@@ -14,7 +15,7 @@ import {
   Trigger,
 } from '@radix-ui/react-dialog';
 
-import { routes } from '@/shared/lib/routes';
+import { getRoutes } from '@/shared/lib/routes';
 import { ShortAddress } from '@/shared/ui/components/short-address';
 import { SocialNetworks } from '@/shared/ui/components/social-networks';
 import { MenuIcon } from '@/shared/ui/icons/outline';
@@ -35,6 +36,7 @@ export function BurgerMenu() {
 function Menu() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const th = useTranslations('header.routes');
 
   useEffect(() => {
     setOpen(false);
@@ -51,6 +53,8 @@ function Menu() {
       document.documentElement.style.overflow = '';
     };
   }, [open]);
+
+  const routes = getRoutes(th);
 
   return (
     <Root open={open} onOpenChange={setOpen}>

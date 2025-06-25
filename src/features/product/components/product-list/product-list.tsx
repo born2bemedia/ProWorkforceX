@@ -13,7 +13,6 @@ export function ProductList({ values }: { values: ProductDef[] }) {
 
   const onOrder = useCallback(
     (product: ProductDef) => {
-      console.log('Order product:', product);
       setProduct(product);
       setOpen(true);
     },

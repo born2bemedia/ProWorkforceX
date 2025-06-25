@@ -1,12 +1,12 @@
 'use client';
 
 import type { JSX } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import { useLocale } from 'next-intl';
 
 import { Switcher } from '@/features/lang-switcher/components/switcher';
 
 import { English, Germany, Italy } from '@/shared/ui/icons/countries';
-
-import { useLanguageSwitcher } from '../../lib';
 
 const langIcons: Record<string, JSX.Element> = {
   en: <English />,
@@ -15,12 +15,16 @@ const langIcons: Record<string, JSX.Element> = {
 };
 
 export function LangSwitcher() {
-  const { currentLanguage, switchLanguage, languageConfig } =
-    useLanguageSwitcher();
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
 
-  if (!languageConfig) {
-    return null;
-  }
+  const switchLanguage = (value: string) => {
+    const segments = pathname.split('/');
+    segments[1] = value;
+    const newPath = segments.join('/');
+    router.replace(newPath);
+  };
 
   return (
     <Switcher
@@ -67,8 +71,8 @@ export function LangSwitcher() {
           className="notranslate"
           style={{ display: 'flex', gap: '4px', alignItems: 'center' }}
         >
-          {langIcons[currentLanguage.toLowerCase()]}
-          {currentLanguage.toUpperCase()}
+          {langIcons[locale.toLowerCase()]}
+          {locale.toUpperCase()}
         </span>
       }
       onChange={switchLanguage}

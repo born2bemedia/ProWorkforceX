@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
 import { Button } from '@/shared/ui/kit/button';
 import { Text } from '@/shared/ui/kit/text';
@@ -15,6 +17,8 @@ export function ProductCard({
   type,
   onOrder,
 }: ProductDef & { onOrder: (product: ProductDef) => void }) {
+  const t = useTranslations('pricingAndPackages.productCard');
+
   return (
     <article className={st.cardLayout}>
       <Title level={3}>{title}</Title>
@@ -23,7 +27,7 @@ export function ProductCard({
       </Text>
       <section className={st.cardCost}>
         <div className={st.cardPrice}>
-          {cost.from && <Text color="primary">From</Text>}
+          {cost.from && <Text color="primary">{t('from')}</Text>}
           <span className={st.cardPrice}>{cost.price}</span>
         </div>
         <Text color="primary">{cost.unit}</Text>

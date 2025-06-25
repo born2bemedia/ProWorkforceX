@@ -1,10 +1,15 @@
-export const routes = [
-  { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about-us' },
-  { label: 'Solutions', href: '/solutions' },
-  { label: 'How it Works', href: '/how-it-works' },
-  { label: 'Pricing & Packages', href: '/pricing-and-packages' },
-  { label: 'Testimonials', href: '/testimonials' },
-  { label: 'Resources', href: '/resources/the-future-of-career-development' },
-  { label: 'Contact Us', href: '/contact-us' },
+import type { useTranslations } from 'next-intl';
+
+export const getRoutes = (t: ReturnType<typeof useTranslations>) => [
+  { label: t('home'), href: '/' },
+  { label: t('aboutUs'), href: '/about-us' },
+  { label: t('solutions'), href: '/solutions' },
+  { label: t('howItWorks'), href: '/how-it-works' },
+  { label: t('pricingAndPackages'), href: '/pricing-and-packages' },
+  { label: t('testimonials'), href: '/testimonials' },
+  {
+    label: t('resources'),
+    href: '/resources/the-future-of-career-development',
+  },
+  { label: t('contactUs'), href: '/contact-us' },
 ];

@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { Controller, useForm, zodResolver } from '@/shared/lib/forms';
 import { Dropdzone } from '@/shared/ui/components/dropzone';
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
@@ -19,19 +21,33 @@ import { TextField } from '@/shared/ui/kit/text-field';
 import { Title } from '@/shared/ui/kit/title';
 
 import {
-  budgets,
-  contactMethods,
+  createRequestFormSchema,
+  getBudgets,
+  getContactMethods,
+  getServices,
+  getTimelines,
   type RequestFormSchema,
-  requestFormSchema,
-  services,
-  timelines,
 } from '../../lib';
 import { sendRequestForm, useRequestDialogStore } from '../../services';
 import { DataChoice } from '../data-choice';
 import st from './request-form.module.scss';
 
 export function RequestForm({ className }: { className?: string }) {
+  const te = useTranslations('requestForm.errors');
+  const ts = useTranslations('services');
+  const tb = useTranslations('budgets');
+  const tt = useTranslations('timelines');
+  const tc = useTranslations('contactMethods');
+  const t = useTranslations('requestForm');
+
   const { setOpen, setSent } = useRequestDialogStore();
+
+  const services = getServices(ts);
+  const budgets = getBudgets(tb);
+  const timelines = getTimelines(tt);
+  const contactMethods = getContactMethods(tc);
+
+  const requestFormSchema = createRequestFormSchema(te);
 
   const {
     handleSubmit,
@@ -74,19 +90,16 @@ export function RequestForm({ className }: { className?: string }) {
     <form onSubmit={onSubmit} className={className}>
       <section className={st.titleLayout}>
         <Title level={3}>
-          Begin Your Journey <br /> with ProWorkforceX
+          {t('title.0')} <br /> {t('title.1')}
         </Title>
-        <Chip variant="secondary">Let’s Shape Your Path to Career Growth</Chip>
+        <Chip variant="secondary">{t('label')}</Chip>
         <Text color="primary" size="lg" weight={400}>
-          Tell us about your career goals, challenges, and aspirations, and
-          we’ll create a personalized plan to help you succeed. Fill out the
-          form below, and let’s take the first step toward achieving your career
-          ambitions.
+          {t('text')}
         </Text>
       </section>
       <section className={st.formSection}>
         <Text size="2xl" weight={500}>
-          Personal Data
+          {t('personalData.title')}
         </Text>
         <Divider />
         <Controller
@@ -94,8 +107,8 @@ export function RequestForm({ className }: { className?: string }) {
           control={control}
           render={({ field, fieldState: { error } }) => (
             <TextField
-              label="Full Name"
-              placeholder="Enter your full name"
+              label={t('personalData.fields.fullName.label')}
+              placeholder={t('personalData.fields.fullName.placeholder')}
               intent={error?.message ? 'danger' : 'primary'}
               hint={error?.message}
               {...field}
@@ -107,8 +120,8 @@ export function RequestForm({ className }: { className?: string }) {
           control={control}
           render={({ field, fieldState: { error } }) => (
             <TextField
-              label="Email Address"
-              placeholder="Enter your email address"
+              label={t('personalData.fields.email.label')}
+              placeholder={t('personalData.fields.email.placeholder')}
               intent={error?.message ? 'danger' : 'primary'}
               hint={error?.message}
               type="email"
@@ -121,8 +134,8 @@ export function RequestForm({ className }: { className?: string }) {
           control={control}
           render={({ field, fieldState: { error } }) => (
             <TextField
-              label="Phone Number"
-              placeholder="Enter your phone number"
+              label={t('personalData.fields.phone.label')}
+              placeholder={t('personalData.fields.phone.placeholder')}
               intent={error?.message ? 'danger' : 'primary'}
               hint={error?.message}
               {...field}
@@ -134,8 +147,8 @@ export function RequestForm({ className }: { className?: string }) {
           control={control}
           render={({ field, fieldState: { error } }) => (
             <TextArea
-              label="Company Name (optional)"
-              placeholder="Required if your company seeks HR support for managing your workforce or business operations."
+              label={t('personalData.fields.companyName.label')}
+              placeholder={t('personalData.fields.companyName.placeholder')}
               intent={error?.message ? 'danger' : 'primary'}
               hint={error?.message}
               height={72}
@@ -148,8 +161,8 @@ export function RequestForm({ className }: { className?: string }) {
           control={control}
           render={({ field, fieldState: { error } }) => (
             <TextArea
-              label="Your Website (optional)"
-              placeholder="Please provide your company's website if you feel it's relevant to understanding your business needs or HR requirements."
+              label={t('personalData.fields.website.label')}
+              placeholder={t('personalData.fields.website.placeholder')}
               intent={error?.message ? 'danger' : 'primary'}
               hint={error?.message}
               height={72}
@@ -160,7 +173,7 @@ export function RequestForm({ className }: { className?: string }) {
       </section>
       <section className={st.formSection}>
         <Text size="2xl" weight={500}>
-          Career & HR Data
+          {t('careerAndHRPreferences.title')}
         </Text>
         <Divider />
         <Controller
@@ -184,7 +197,7 @@ export function RequestForm({ className }: { className?: string }) {
                     ))
                   ) : (
                     <span className={st.placeholder}>
-                      Select the Service You’re Interested In
+                      {t('careerAndHRPreferences.fields.services.label')}
                     </span>
                   )}
                 </div>
@@ -216,12 +229,16 @@ export function RequestForm({ className }: { className?: string }) {
             <div>
               <Dropdown>
                 <div className={st.titleLabel}>
-                  <Text size="lg">Your Budget Range</Text>
+                  <Text size="lg">
+                    {t('careerAndHRPreferences.fields.budget.label')}
+                  </Text>
                   {error && <Text color="danger">{error.message}</Text>}
                 </div>
                 <DropdownTrigger>
                   <span className={st.placeholder}>
-                    {field.value ? field.value : 'Select your investment range'}
+                    {field.value
+                      ? field.value
+                      : t('careerAndHRPreferences.fields.budget.placeholder')}
                   </span>
                 </DropdownTrigger>
                 <DropdownMenu>
@@ -243,8 +260,8 @@ export function RequestForm({ className }: { className?: string }) {
           control={control}
           render={({ field, fieldState: { error } }) => (
             <TextArea
-              label="Your Goals & Challenges"
-              placeholder="What are your key career objectives and current challenges?"
+              label={t('careerAndHRPreferences.fields.goals.label')}
+              placeholder={t('careerAndHRPreferences.fields.goals.placeholder')}
               intent={error?.message ? 'danger' : 'primary'}
               hint={error?.message}
               {...field}
@@ -252,16 +269,16 @@ export function RequestForm({ className }: { className?: string }) {
           )}
         />
         <section className={st.detailsLayout}>
-          <Text size="lg">Your Career Profile</Text>
+          <Text size="lg">{t('careerProfile.title')}</Text>
           <Text size="lg" color="neutral">
-            Tell us about your ideal professional role and work environment:
+            {t('careerProfile.text')}
           </Text>
           <Controller
             name="jobRoles"
             control={control}
             render={({ field, fieldState: { error } }) => (
               <TextField
-                placeholder="Job Role(s)"
+                placeholder={t('careerProfile.fields.jobRoles.placeholder')}
                 intent={error?.message ? 'danger' : 'primary'}
                 hint={error?.message}
                 {...field}
@@ -273,7 +290,7 @@ export function RequestForm({ className }: { className?: string }) {
             control={control}
             render={({ field, fieldState: { error } }) => (
               <TextField
-                placeholder="Skills Required"
+                placeholder={t('careerProfile.fields.skills.placeholder')}
                 intent={error?.message ? 'danger' : 'primary'}
                 hint={error?.message}
                 {...field}
@@ -285,7 +302,7 @@ export function RequestForm({ className }: { className?: string }) {
             control={control}
             render={({ field, fieldState: { error } }) => (
               <TextField
-                placeholder="Industry"
+                placeholder={t('careerProfile.fields.industry.placeholder')}
                 intent={error?.message ? 'danger' : 'primary'}
                 hint={error?.message}
                 {...field}
@@ -297,7 +314,9 @@ export function RequestForm({ className }: { className?: string }) {
             control={control}
             render={({ field, fieldState: { error } }) => (
               <TextField
-                placeholder="Career Interests"
+                placeholder={t(
+                  'careerProfile.fields.careerInterests.placeholder',
+                )}
                 intent={error?.message ? 'danger' : 'primary'}
                 hint={error?.message}
                 {...field}
@@ -312,12 +331,16 @@ export function RequestForm({ className }: { className?: string }) {
             <div>
               <Dropdown>
                 <div className={st.titleLabel}>
-                  <Text size="lg">Project Timeline</Text>
+                  <Text size="lg">
+                    {t('careerProfile.fields.projectTimeline.label')}
+                  </Text>
                   {error && <Text color="danger">{error.message}</Text>}
                 </div>
                 <DropdownTrigger>
                   <span className={st.placeholder}>
-                    {field.value ? field.value : 'When do you plan to start?'}
+                    {field.value
+                      ? field.value
+                      : t('careerProfile.fields.projectTimeline.placeholder')}
                   </span>
                 </DropdownTrigger>
                 <DropdownMenu>
@@ -341,14 +364,16 @@ export function RequestForm({ className }: { className?: string }) {
             <div>
               <Dropdown>
                 <div className={st.titleLabel}>
-                  <Text size="lg">Preferred Contact Methode</Text>
+                  <Text size="lg">
+                    {t('careerProfile.fields.contactMethod.label')}
+                  </Text>
                   {error && <Text color="danger">{error.message}</Text>}
                 </div>
                 <DropdownTrigger>
                   <span className={st.placeholder}>
                     {field.value
                       ? field.value
-                      : 'How would you like to connect?'}
+                      : t('careerProfile.fields.contactMethod.placeholder')}
                   </span>
                 </DropdownTrigger>
                 <DropdownMenu>
@@ -370,7 +395,9 @@ export function RequestForm({ className }: { className?: string }) {
           control={control}
           render={({ field }) => (
             <div className={st.dropdzone}>
-              <Text size="lg">Upload Any Relevant Files (optional)</Text>
+              <Text size="lg">
+                {t('careerProfile.fields.file.placeholder')}
+              </Text>
               <Dropdzone
                 name="file"
                 onDrop={field.onChange}
@@ -388,10 +415,10 @@ export function RequestForm({ className }: { className?: string }) {
         fullWidth
       >
         {isSubmitting ? (
-          'Submitting...'
+          t('sending')
         ) : (
           <>
-            Submit Your Request <ArrowTopRight />
+            {t('submit')} <ArrowTopRight />
           </>
         )}
       </Button>

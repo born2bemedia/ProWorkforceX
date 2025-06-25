@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { List } from '@/shared/ui/components/list';
 import { Text } from '@/shared/ui/kit/text';
@@ -12,48 +13,36 @@ import { ArticleLayout } from '../article-layout';
 import st from './effective-conflict-resolution.module.scss';
 
 export function EffectiveConflictResolution() {
+  const t = useTranslations('resources.effectiveConflictResolution');
+
   return (
     <ArticleLayout>
       <ArticleHeading
-        title="Effective Conflict Resolution in the Workplace"
-        excerpt="Effective Conflict Resolution in the Workplace"
+        title={t('heading.title')}
+        excerpt={t('heading.excerpt')}
         number={2}
       />
       <Text color="primary" size="lg" weight={300}>
-        Conflict is inevitable in any organization, but it doesn’t have to
-        disrupt productivity, morale, or teamwork. If handled correctly,
-        conflict can provide opportunities for growth, better communication, and
-        stronger relationships. Effective conflict resolution in the workplace
-        is essential for maintaining a positive work environment and ensuring
-        the long-term success of both the individuals involved and the
-        organization. <br />
-        <br /> This article explores the{' '}
-        <strong>importance of managing conflict</strong>, common workplace
-        conflicts, and proven strategies to resolve them effectively.
+        {t('text1.0')}
+        <br />
+        <br /> {t('text1.1')} <strong>{t('text1.2')}</strong>
+        {t('text1.3')}
       </Text>
       <section>
-        <ArticleHeader>1. Why Conflict Resolution is Important</ArticleHeader>
+        <ArticleHeader>{t('header2')}</ArticleHeader>
         <Text
           color="primary"
           size="lg"
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          Workplace conflict can arise for various reasons: differing
-          communication styles, unclear job roles, competition for resources, or
-          personality clashes. While some conflict levels occur daily,
-          unresolved issues can quickly escalate into significant disruptions.
+          {t('text2.0')}
           <br />
           <br />
-          These disruptions can lead to:
+          {t('text2.1')}
         </Text>
         <List
-          values={[
-            'Decreased productivity: When team members are distracted by conflict, their focus on tasks and responsibilities diminishes.',
-            'Lowered morale: Ongoing employee tension can create a toxic work environment, affecting the team’s overall mood.',
-            'Increased turnover: Employees consistently involved in conflicts may become disengaged and seek employment elsewhere.',
-            'Damaged reputation: A reputation for poor conflict management can negatively affect your company’s internal and external image.',
-          ]}
+          values={[t('list2.0'), t('list2.1'), t('list2.2'), t('list2.3')]}
           gap={16}
           opacityText={false}
           weight={300}
@@ -64,33 +53,24 @@ export function EffectiveConflictResolution() {
           style={{ margin: '16px 0' }}
           weight={300}
         >
-          However, when managed effectively, conflict can lead to positive
-          outcomes like:
+          {t('text2.2')}
         </Text>
         <List
-          values={[
-            'Better communication: Addressing issues head-on improves communication and clarifies misunderstandings.',
-            'Improved problem-solving: Conflict resolution fosters creative thinking and the development of new solutions to challenges.',
-            'Stronger relationships: Successfully resolving conflicts can help build trust and collaboration between employees.',
-          ]}
+          values={[t('list2.4'), t('list2.5'), t('list2.6')]}
           gap={16}
           opacityText={false}
           weight={300}
         />
       </section>
       <section>
-        <ArticleHeader>
-          2. Understanding the Types of Workplace Conflict
-        </ArticleHeader>
+        <ArticleHeader>{t('header3')}</ArticleHeader>
         <Text
           color="primary"
           size="lg"
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          Before diving into conflict resolution strategies, it’s essential to
-          recognize the conflicts that commonly arise in the workplace. These
-          include:
+          {t('text3.0')}
         </Text>
         <Text
           color="primary"
@@ -99,7 +79,7 @@ export function EffectiveConflictResolution() {
           weight={400}
           underline
         >
-          Interpersonal Conflicts
+          {t('text3.1')}
         </Text>
         <Text
           color="primary"
@@ -107,10 +87,7 @@ export function EffectiveConflictResolution() {
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          Interpersonal conflicts occur when individuals have personality
-          clashes or differing work styles. They can manifest as direct
-          disagreements or passive-aggressive behavior. A lack of understanding
-          or communication often fuels interpersonal conflicts.
+          {t('text3.2')}
         </Text>
         <Text
           color="primary"
@@ -119,7 +96,7 @@ export function EffectiveConflictResolution() {
           weight={400}
           underline
         >
-          Team Conflicts
+          {t('text3.3')}
         </Text>
         <Text
           color="primary"
@@ -127,10 +104,7 @@ export function EffectiveConflictResolution() {
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          When a group of employees fails to collaborate effectively, it can
-          lead to frustration and poor performance. These conflicts may arise
-          from differences in work approaches, competition, or leadership issues
-          within the team.
+          {t('text3.4')}
         </Text>
         <Text
           color="primary"
@@ -139,7 +113,7 @@ export function EffectiveConflictResolution() {
           weight={400}
           underline
         >
-          Organizational Conflicts
+          {t('text3.5')}
         </Text>
         <Text
           color="primary"
@@ -147,10 +121,7 @@ export function EffectiveConflictResolution() {
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          Conflicts may emerge at an organizational level due to structural
-          issues, unclear policies, or resource allocation. Employees may feel
-          that their roles or workloads are unfair, leading to frustration and
-          disengagement.
+          {t('text3.6')}
         </Text>
         <Text
           color="primary"
@@ -159,7 +130,7 @@ export function EffectiveConflictResolution() {
           weight={400}
           underline
         >
-          Role Conflicts
+          {t('text3.7')}
         </Text>
         <Text
           color="primary"
@@ -167,10 +138,7 @@ export function EffectiveConflictResolution() {
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          When job roles and responsibilities aren’t clearly defined, employees
-          may feel overwhelmed or underappreciated. These conflicts often arise
-          when there’s ambiguity about who is responsible for specific tasks or
-          projects.
+          {t('text3.8')}
         </Text>
         <Text
           color="primary"
@@ -179,7 +147,7 @@ export function EffectiveConflictResolution() {
           weight={400}
           underline
         >
-          Values and Belief Conflicts
+          {t('text3.9')}
         </Text>
         <Text
           color="primary"
@@ -187,10 +155,7 @@ export function EffectiveConflictResolution() {
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          Sometimes, conflicts can stem from differing personal values or
-          beliefs, especially in diverse workplaces. These conflicts may involve
-          cultural misunderstandings, differing ethical standards, or policy
-          disagreements.
+          {t('text3.10')}
         </Text>
       </section>
       <div className={st.imgLayout}>
@@ -203,18 +168,14 @@ export function EffectiveConflictResolution() {
         />
       </div>
       <section>
-        <ArticleHeader>
-          3. Proven Strategies for Effective Conflict Resolution
-        </ArticleHeader>
+        <ArticleHeader>{t('header4')}</ArticleHeader>
         <Text
           color="primary"
           size="lg"
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          A clear, empathetic, and structured approach is the key to managing
-          conflict effectively. Below are the strategies you can implement to
-          resolve workplace conflict and restore harmony:
+          {t('text4.0')}
         </Text>
         <Text
           color="primary"
@@ -223,7 +184,7 @@ export function EffectiveConflictResolution() {
           weight={400}
           underline
         >
-          Encourage Open Communication
+          {t('text4.1')}
         </Text>
         <Text
           color="primary"
@@ -231,16 +192,10 @@ export function EffectiveConflictResolution() {
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          The first step in resolving any conflict is to ensure open and honest
-          communication. Encourage employees to share their thoughts and
-          feelings about the issue, ensuring that both parties are heard. Often,
-          misunderstandings can be resolved simply by allowing each side to
-          express their perspectives.
+          {t('text4.2')}
         </Text>
         <List
-          values={[
-            'Tip: Create a safe space where employees feel comfortable speaking openly without fear of judgment or retaliation.',
-          ]}
+          values={[t('list4.0')]}
           gap={16}
           opacityText={false}
           weight={300}
@@ -252,7 +207,7 @@ export function EffectiveConflictResolution() {
           weight={400}
           underline
         >
-          Use Active Listening
+          {t('text4.3')}
         </Text>
         <Text
           color="primary"
@@ -260,16 +215,10 @@ export function EffectiveConflictResolution() {
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          Listening is one of the most essential skills in conflict resolution.
-          Active listening involves hearing the words and understanding the
-          emotions behind them. Allow each party to fully explain their
-          perspective before responding. This can help to de-escalate tension
-          and promote empathy between individuals.
+          {t('text4.4')}
         </Text>
         <List
-          values={[
-            'Tip: Practice reflective listening by paraphrasing what the other person has said to ensure you fully understand their point of view.',
-          ]}
+          values={[t('list4.1')]}
           gap={16}
           opacityText={false}
           weight={300}
@@ -281,7 +230,7 @@ export function EffectiveConflictResolution() {
           weight={400}
           underline
         >
-          Stay Neutral and Avoid Taking Sides
+          {t('text4.5')}
         </Text>
         <Text
           color="primary"
@@ -289,15 +238,10 @@ export function EffectiveConflictResolution() {
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          As a manager or mediator, it’s essential to remain neutral and
-          impartial during conflict resolution. Taking sides can intensify the
-          conflict and make one party feel unsupported. Focus on finding a
-          solution that benefits all parties rather than aligning with one side.
+          {t('text4.6')}
         </Text>
         <List
-          values={[
-            'Tip: Focus on the issue, not personal grievances or emotions. Frame the conflict as a problem to be solved rather than a battle to win.\n',
-          ]}
+          values={[t('list4.2')]}
           gap={16}
           opacityText={false}
           weight={300}
@@ -309,7 +253,7 @@ export function EffectiveConflictResolution() {
           weight={400}
           underline
         >
-          Focus on Interests, Not Positions
+          {t('text4.7')}
         </Text>
         <Text
           color="primary"
@@ -317,15 +261,10 @@ export function EffectiveConflictResolution() {
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          Instead of focusing on each party’s positions or demands, shift the
-          conversation to their underlying interests. This can lead to more
-          creative solutions and a win-win outcome where both parties feel heard
-          and satisfied.
+          {t('text4.8')}
         </Text>
         <List
-          values={[
-            'Tip: Ask questions like, “What is important to you in this situation?” to understand the core interests and not just the surface-level demands.\n',
-          ]}
+          values={[t('list4.3')]}
           gap={16}
           opacityText={false}
           weight={300}
@@ -337,7 +276,7 @@ export function EffectiveConflictResolution() {
           weight={400}
           underline
         >
-          Collaborate on Finding a Solution
+          {t('text4.9')}
         </Text>
         <Text
           color="primary"
@@ -345,15 +284,10 @@ export function EffectiveConflictResolution() {
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          Encourage both parties to work together to find a mutually agreeable
-          solution. A collaborative approach is often the most effective way to
-          resolve conflict because it allows employees to feel involved in the
-          process and invested in the outcome.
+          {t('text4.10')}
         </Text>
         <List
-          values={[
-            'Tip: Use problem-solving techniques to brainstorm potential solutions that meet the needs of both sides. Be willing to compromise when necessary.\n',
-          ]}
+          values={[t('list4.4')]}
           gap={16}
           opacityText={false}
           weight={300}
@@ -365,7 +299,7 @@ export function EffectiveConflictResolution() {
           weight={400}
           underline
         >
-          Follow Up and Provide Support
+          {t('text4.11')}
         </Text>
         <Text
           color="primary"
@@ -373,15 +307,10 @@ export function EffectiveConflictResolution() {
           style={{ marginBottom: '16px' }}
           weight={300}
         >
-          Once the conflict is resolved, it’s essential to follow up and ensure
-          the solution works. If necessary, provide additional support to the
-          employees involved to ensure that the resolution is lasting and that
-          no new issues arise.
+          {t('text4.12')}
         </Text>
         <List
-          values={[
-            'Tip: Check in periodically with the parties involved to ensure that the resolution is held and that no new conflicts have emerged.\n',
-          ]}
+          values={[t('list4.5')]}
           gap={16}
           opacityText={false}
           weight={300}
@@ -404,26 +333,17 @@ export function EffectiveConflictResolution() {
         />
       </div>
       <section>
-        <ArticleHeader>
-          4. Preventing Future Conflicts: Creating a Positive Work Culture
-        </ArticleHeader>
+        <ArticleHeader>{t('header5')}</ArticleHeader>
         <Text
           color="primary"
           size="lg"
           weight={300}
           style={{ marginBottom: '16px' }}
         >
-          While addressing conflicts when they arise is important, prevention is
-          always better than cure. A positive, inclusive work culture that
-          emphasizes respect, open communication, and collaboration can go a
-          long way in minimizing conflicts.
+          {t('text5.0')}
         </Text>
         <List
-          values={[
-            'Create clear policies and procedures: that outline how conflicts should be handled.',
-            'Promote teamwork and respect: through team-building exercises and inclusive workplace practices.',
-            'Provide conflict resolution training: for managers and employees to equip them with the skills to handle disputes effectively.\n',
-          ]}
+          values={[t('list5.0'), t('list5.1'), t('list5.2')]}
           gap={16}
           opacityText={false}
           weight={300}
@@ -434,36 +354,20 @@ export function EffectiveConflictResolution() {
           weight={300}
           style={{ marginTop: '16px' }}
         >
-          By fostering a positive environment and equipping your employees with
-          the tools they need to resolve conflicts constructively, you can
-          create a workplace where everyone feels respected, valued, and able to
-          perform at their best.
+          {t('text5.1')}
         </Text>
       </section>
       <footer>
-        <ArticleHeader>
-          Conclusion: Mastering Conflict for a Stronger Workplace
-        </ArticleHeader>
+        <ArticleHeader>{t('header6')}</ArticleHeader>
         <Text
           color="primary"
           size="lg"
           weight={300}
           style={{ marginBottom: '16px' }}
         >
-          Effective conflict resolution is a cornerstone of any successful
-          organization. By addressing conflicts early, fostering open
-          communication, and promoting a collaborative approach, businesses can
-          turn workplace challenges into opportunities for growth. Conflict
-          resolution skills improve relationships and contribute to a healthier,
-          more productive work environment where employees feel supported and
-          valued.
+          {t('text6.0')}
           <br />
-          <br /> At ProWorkforceX, we specialize in helping organizations
-          resolve conflicts and build stronger teams. Our expert mediation
-          services and training programs are designed to equip your team with
-          the skills they need to navigate workplace challenges effectively. If
-          you’re ready to implement better conflict resolution strategies in
-          your workplace,{' '}
+          <br /> {t('text6.1')}
           <Link href="/contact-us">
             <strong
               style={{
@@ -471,10 +375,10 @@ export function EffectiveConflictResolution() {
                 textUnderlineOffset: '3px',
               }}
             >
-              contact us
+              {t('text6.2')}
             </strong>
           </Link>{' '}
-          to learn how we can help.
+          {t('text6.3')}
         </Text>
       </footer>
     </ArticleLayout>
