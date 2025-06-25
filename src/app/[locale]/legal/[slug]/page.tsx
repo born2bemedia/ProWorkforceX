@@ -21,7 +21,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const awaitedParams = await params;
   const { slug } = awaitedParams;
-  console.log(slug);
+  console.log('@slug', slug);
   const page = await getPage(slug);
   const pageTitle = `${page.title} | ProWorkforceX`;
   return {
