@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import type { ProductDef } from '@/features/product/lib';
 
 import { ArrowTopRight } from '@/shared/ui/icons/yellow';
@@ -19,13 +21,15 @@ export function PackageCard({
   description,
   onOrder,
 }: PackageDef & { onOrder: (product: ProductDef) => void }) {
+  const t = useTranslations('packages');
+
   return (
     <article className={st.layout}>
       <Title level={3}>{title}</Title>
       <section>
         <span className={st.price}>{price}</span>
         <Text color="primary">
-          {type === 'one-time' ? 'One-Time' : 'month'}
+          {type === 'one-time' ? t('oneTime') : t('month')}
         </Text>
       </section>
       <Divider color="primary" />
@@ -63,10 +67,10 @@ export function PackageCard({
           })
         }
       >
-        <span style={{opacity: 0}}>
+        <span style={{ opacity: 0 }}>
           <ArrowTopRight />
         </span>
-        Buy
+        {t('buy')}
         <ArrowTopRight />
       </Button>
     </article>
