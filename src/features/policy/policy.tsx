@@ -3,9 +3,9 @@ import matter from 'gray-matter';
 import { marked } from 'marked';
 import { join } from 'path';
 
-export async function getPage(slug: string) {
+export async function getPage(slug: string, locale: string) {
   const text = await readFile(
-    join(process.cwd(), `src/shared/lib/policies`, `${slug}.md`),
+    join(process.cwd(), `src/shared/lib/policies/${locale}`, `${slug}.md`),
     'utf8',
   );
   const {
