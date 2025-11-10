@@ -46,7 +46,7 @@ Se hai domande o hai bisogno di ulteriori chiarimenti riguardo alla nostra Polit
 <img src="/images/policy/email.svg"> <span>Via email all’indirizzo: <a href="mailto:info@proworkforcex.com">info@proworkforcex.com</a>;</span></div>
 
 <div class="contact-info">
-<img src="/images/policy/phone.svg"> <span>Tramite telefono al numero: <a href="tel:+447878591056">+447878591056</a></span>
+<img src="/images/policy/phone.svg"> <span>Tramite telefono al numero: <a href="tel:+447476956490">+447476956490</a></span>
 </div>
 
 <div class="contact-info">
