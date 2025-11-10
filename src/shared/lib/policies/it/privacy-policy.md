@@ -144,7 +144,7 @@ Per qualsiasi domanda, non esitare a contattarci:
 <img src="/images/policy/email.svg"> <span>Tramite email all’indirizzo: <a href="mailto:info@proworkforcex.com">info@proworkforcex.com</a>;</span></div>
 
 <div class="contact-info">
-<img src="/images/policy/phone.svg"> <span>Tramite telefono al numero: <a href="tel:+447878591056">+447878591056</a></span>
+<img src="/images/policy/phone.svg"> <span>Tramite telefono al numero: <a href="tel:+447476956490">+447476956490</a></span>
 </div>
 
 <div class="contact-info">
