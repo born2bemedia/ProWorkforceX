@@ -38,7 +38,6 @@ export default async function PolicyPage({
         <div className={st.policy__body}>
           <div className={st.sectionTitle}>
             <h1>{page.title}</h1>
-            <div className={st.date}>Updated On {page.date}</div>
           </div>
           <article
             dangerouslySetInnerHTML={{ __html: page.body }}
