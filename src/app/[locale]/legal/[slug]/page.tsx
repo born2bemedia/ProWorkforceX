@@ -5,15 +5,6 @@ import { getPage } from '@/features/policy/policy';
 
 import st from './page.module.scss';
 
-// export async function generateStaticParams(): Promise<
-//   {
-//     slug: string;
-//   }[]
-// > {
-//   const slugs = await getPageSlugs();
-//   return slugs.map(slug => ({ slug }));
-// }
-
 export async function generateMetadata({
   params,
 }: {
@@ -39,8 +30,6 @@ export default async function PolicyPage({
 }) {
   const awaitedParams = await params;
   const { slug, locale } = awaitedParams;
-  console.log('@slug', slug);
-  console.log('@locale', locale);
   const page = await getPage(slug, locale);
 
   return (
@@ -49,7 +38,6 @@ export default async function PolicyPage({
         <div className={st.policy__body}>
           <div className={st.sectionTitle}>
             <h1>{page.title}</h1>
-            <div className={st.date}>Updated On {page.date}</div>
           </div>
           <article
             dangerouslySetInnerHTML={{ __html: page.body }}
