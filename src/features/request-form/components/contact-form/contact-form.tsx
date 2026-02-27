@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import ReCaptcha from 'react-google-recaptcha';
 import { useTranslations } from 'next-intl';
 
 import { DataOption } from '@/features/request-form/components/data-option';
@@ -29,6 +30,7 @@ import {
 import st from './contact-form.module.scss';
 
 export function ContactForm() {
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
   const t = useTranslations('contactForm');
@@ -39,7 +41,7 @@ export function ContactForm() {
   const tc = useTranslations('contactMethods');
 
   const requestFormSchema = createRequestFormSchema(te);
-  
+
   const services = getServices(ts);
   const budgets = getBudgets(tb);
   const timelines = getTimelines(tt);
@@ -83,6 +85,10 @@ export function ContactForm() {
       notifyError('Failed to send the form. Please try again later.');
     }
   });
+
+  const onCaptchaVerify = (token: string | null) => {
+    setIsCaptchaVerified(!!token);
+  };
 
   return (
     <form id="contact-form" className={st.form} onSubmit={onSubmit}>
@@ -398,10 +404,21 @@ export function ContactForm() {
           />
         </section>
       </section>
-      <Button className={st.sendBtn} variant="primaryInverted">
-        {isSubmitting ? t('sending') : t('submit')}
-        <ArrowTopRight />
-      </Button>
+      <div className={st.buttonLayout}>
+        <Button
+          className={st.sendBtn}
+          variant="primaryInverted"
+          disabled={!isCaptchaVerified || isSubmitting}
+        >
+          {isSubmitting ? t('sending') : t('submit')}
+          <ArrowTopRight />
+        </Button>
+        <ReCaptcha
+          className={st.captcha}
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''}
+          onChange={onCaptchaVerify}
+        />
+      </div>
     </form>
   );
 }

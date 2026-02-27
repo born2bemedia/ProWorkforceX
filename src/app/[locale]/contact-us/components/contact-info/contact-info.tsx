@@ -60,8 +60,8 @@ export function ContactInfo() {
           </div>
           <div className={st.cardContent}>
             <Title level={3}>{t('phoneNumber')}</Title>
-            <Link href="tel:+447878591056">
-              <Text className={st.text}>+447878591056</Text>
+            <Link href="tel:+447476956490">
+              <Text className={st.text}>+447476956490</Text>
             </Link>
           </div>
         </div>

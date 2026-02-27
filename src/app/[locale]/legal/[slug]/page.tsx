@@ -8,11 +8,11 @@ import st from './page.module.scss';
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }): Promise<Metadata> {
   const awaitedParams = await params;
-  const { slug } = awaitedParams;
-  const page = await getPage(slug);
+  const { slug, locale } = awaitedParams;
+  const page = await getPage(slug, locale);
   const pageTitle = `${page.title} | ProWorkforceX`;
   return {
     title: pageTitle,
@@ -26,11 +26,11 @@ export async function generateMetadata({
 export default async function PolicyPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }) {
   const awaitedParams = await params;
-  const { slug } = awaitedParams;
-  const page = await getPage(slug);
+  const { slug, locale } = awaitedParams;
+  const page = await getPage(slug, locale);
 
   return (
     <>

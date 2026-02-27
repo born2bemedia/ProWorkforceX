@@ -15,8 +15,8 @@ export function FooterBottom() {
       </Text>
       <section className={st.contacts}>
         <div className={st.links}>
-          <Link href="tel:+447878591056">
-            <Text color="white">+447878591056</Text>
+          <Link href="tel:+447476956490">
+            <Text color="white">+447476956490</Text>
           </Link>
           <Link href="mailto:info@proworkforcex.com">
             <Text color="white">info@proworkforcex.com</Text>
